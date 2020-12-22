@@ -86,7 +86,7 @@
                 <input type="checkbox" id="drop"/>
                 <ul class="menu mt-2">
                     <li><a href="index.jsp">TRANG CHỦ</a></li>
-                    <li><a href="main/product.jsp">SẢN PHẨM</a></li>
+                    <li><a href="/product">SẢN PHẨM</a></li>
                     <li><a href="main/contact.jsp">LIÊN HỆ</a></li>
                     <li>
                         <label for="drop-2" class="toggle">DANH MỤC</label>
@@ -124,7 +124,7 @@
         <h4 class="tagret">MỤC TIÊU HÀNG ĐẦU</h4>
         <h3 class="mb-4">Sneaker Chính Hãng</h3>
         <div class="ban-buttons">
-            <a href="main/product.jsp" class="btn">Mua Sắm Ngay</a>
+            <a href="product.jsp" class="btn">Mua Sắm Ngay</a>
         </div>
         <div class="seachForm">
             <input class="inputSearch" type="text" placeholder="Tìm kiếm"/>
@@ -410,7 +410,7 @@
                 <div class="product-shoe-info shoe text-center">
                     <img src="main/images/img1.png" class="img-fluid" alt=""/>
                     <div class="shop-now img1">
-                        <a href="main/product.jsp" class="btn">CHI TIẾT</a>
+                        <a href="product.jsp" class="btn">CHI TIẾT</a>
                     </div>
                 </div>
             </div>
@@ -425,7 +425,7 @@
                                         alt=""
                                 />
                                 <div class="shop-now img2">
-                                    <a href="main/product.jsp" class="btn">CHI TIẾT</a>
+                                    <a href="product.jsp" class="btn">CHI TIẾT</a>
                                 </div>
                             </div>
                         </div>
@@ -435,7 +435,7 @@
                             <div class="men-thumb-item">
                                 <img src="main/images/img3.png" class="img-fluid" alt=""/>
                                 <div class="shop-now img3">
-                                    <a href="main/product.jsp" class="btn">CHI TIẾT</a>
+                                    <a href="product.jsp" class="btn">CHI TIẾT</a>
                                 </div>
                             </div>
                         </div>

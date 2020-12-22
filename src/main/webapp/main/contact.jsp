@@ -65,7 +65,7 @@
             <input type="checkbox" id="drop" />
             <ul class="menu mt-2">
               <li><a href="../index.jsp">TRANG CHỦ</a></li>
-              <li><a href="product.jsp">SẢN PHẨM</a></li>
+              <li><a href="../product.jsp">SẢN PHẨM</a></li>
               <li><a href="contact.jsp">LIÊN HỆ</a></li>
               <li>
                 <label for="drop-2" class="toggle">DANH MỤC</label>

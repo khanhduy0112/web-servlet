@@ -4,6 +4,7 @@ public class Product {
 
     private Integer productId;
     private String name;
+    private Integer price;
     private Integer status;
     private String description;
     private String img;
@@ -12,24 +13,21 @@ public class Product {
     public Product() {
     }
 
-    public Product(String name, Integer status, String description, String img, Integer categoryId) {
+    public Product(String name, Integer price, Integer status, String description, String img, Integer categoryId) {
         this.name = name;
+        this.price = price;
         this.status = status;
         this.description = description;
         this.img = img;
         this.categoryId = categoryId;
     }
 
-    @Override
-    public String toString() {
-        return "Product{" +
-                "productId=" + productId +
-                ", name='" + name + '\'' +
-                ", status=" + status +
-                ", description='" + description + '\'' +
-                ", img='" + img + '\'' +
-                ", categoryId=" + categoryId +
-                '}';
+    public Integer getPrice() {
+        return price;
+    }
+
+    public void setPrice(Integer price) {
+        this.price = price;
     }
 
     public Integer getProductId() {
