@@ -12,8 +12,10 @@ import java.util.List;
 
 public class ProductUtils {
 
+    public static List<Product> products;
+
     public static List<Product> findAll() throws SQLException {
-        List<Product> products = new ArrayList<>();
+        products = new ArrayList<>();
         Connection connection = DBConnection.getConnection();
         Statement statement = null;
         ResultSet resultSet = null;

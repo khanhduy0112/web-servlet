@@ -16,8 +16,8 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-@WebServlet(name = "productdfsfsdf", urlPatterns = "/product")
-public class ProductController extends HttpServlet {
+@WebServlet(name = "index",urlPatterns = "")
+public class IndexController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -34,6 +34,6 @@ public class ProductController extends HttpServlet {
         req.setAttribute("products", products);
         req.setAttribute("categories", categories);
         req.setAttribute("tags", tags);
-        req.getRequestDispatcher("./main/product.jsp").forward(req, resp);
+        req.getRequestDispatcher("index.jsp").forward(req, resp);
     }
 }
