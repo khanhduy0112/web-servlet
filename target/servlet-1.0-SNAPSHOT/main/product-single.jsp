@@ -10,7 +10,7 @@
     <title>Sản Phẩm Chi Tiết</title>
     <link
             rel="shortcut icon"
-            href="./images/Jordan1-Retro.jpg"
+            href="images/jordan1_retro.jpg"
             type="image/x-icon"
     />
     <!-- Meta tag Keywords -->

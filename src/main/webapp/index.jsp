@@ -8,7 +8,7 @@
     <title>Trang Chủ</title>
     <link
             rel="shortcut icon"
-            href="main/images/Jordan1-Retro.jpg"
+            href="main/images/jordan1_retro.jpg"
             type="image/x-icon"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
