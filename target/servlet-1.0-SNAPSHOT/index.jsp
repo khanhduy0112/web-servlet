@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -89,18 +90,11 @@
                     <li><a href="/product">SẢN PHẨM</a></li>
                     <li><a href="main/contact.jsp">LIÊN HỆ</a></li>
                     <li>
-                        <label for="drop-2" class="toggle">DANH MỤC</label>
-                        <a href="#"
-                        >DANH MỤC<span
-                                class="fa fa-angle-down"
-                                aria-hidden="true"
-                        ></span
-                        ></a>
-                        <input type="checkbox" id="drop-2"/>
+                        <a href="#">DANH MỤC<span class="fa fa-angle-down" aria-hidden="true"></span></a>
                         <ul>
-                            <li><a href="nike.html">NIKE</a></li>
-                            <li><a href="adidas.html">ADIDAS</a></li>
-                            <li><a href="vans.html">VANS</a></li>
+                            <c:forEach items="${categories}" var="item">
+                                <li><a href="nike.html">${item.name}</a></li>
+                            </c:forEach>
                         </ul>
                     </li>
                     <li>
