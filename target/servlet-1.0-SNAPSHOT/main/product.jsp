@@ -111,22 +111,28 @@
                 <div class="left-side my-4">
                     <h3 class="sear-head">TÌM THEO NHU CẦU</h3>
                     <ul class="w3layouts-box-list">
-                        <li>
-                            <input type="checkbox" class="checked"/>
-                            <span class="span">CHẠY BỘ</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked"/>
-                            <span class="span">DÃ NGOẠI</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked"/>
-                            <span class="span">ĐI HỌC</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked"/>
-                            <span class="span">ĐI LÀM</span>
-                        </li>
+<%--                        <li>--%>
+<%--                            <input type="checkbox" class="checked"/>--%>
+<%--                            <span class="span">CHẠY BỘ</span>--%>
+<%--                        </li>--%>
+<%--                        <li>--%>
+<%--                            <input type="checkbox" class="checked"/>--%>
+<%--                            <span class="span">DÃ NGOẠI</span>--%>
+<%--                        </li>--%>
+<%--                        <li>--%>
+<%--                            <input type="checkbox" class="checked"/>--%>
+<%--                            <span class="span">ĐI HỌC</span>--%>
+<%--                        </li>--%>
+<%--                        <li>--%>
+<%--                            <input type="checkbox" class="checked"/>--%>
+<%--                            <span class="span">ĐI LÀM</span>--%>
+<%--                        </li>--%>
+                        <c:forEach items="${tags}" var="item">
+                            <li>
+                                <input type="checkbox" class="checked"/>
+                                <span class="span">${item.name}</span>
+                            </li>
+                        </c:forEach>
                     </ul>
                 </div>
                 <!-- // preference -->

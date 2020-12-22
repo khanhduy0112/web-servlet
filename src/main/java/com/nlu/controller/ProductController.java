@@ -1,10 +1,11 @@
 package com.nlu.controller;
 
-import com.nlu.db.DBConnection;
 import com.nlu.model.Category;
 import com.nlu.model.Product;
+import com.nlu.model.Tag;
 import com.nlu.utils.CategoryUtil;
 import com.nlu.utils.ProductUtils;
+import com.nlu.utils.TagUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -22,15 +23,17 @@ public class ProductController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Product> products = null;
         List<Category> categories = null;
+        List<Tag> tags = null;
         try {
             products = ProductUtils.findAll();
             categories = CategoryUtil.findAll();
+            tags = TagUtils.findAll();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         req.setAttribute("products", products);
         req.setAttribute("categories", categories);
+        req.setAttribute("tags", tags);
         req.getRequestDispatcher("./main/product.jsp").forward(req, resp);
     }
 }
