@@ -30,6 +30,7 @@ public class ProductUtils {
                 product.setImg(resultSet.getString(5));
                 product.setCategoryId(resultSet.getInt(6));
                 product.setPrice(resultSet.getInt(7));
+                product.setSalesPercent(resultSet.getInt(8));
                 products.add(product);
             }
         } catch (SQLException e) {

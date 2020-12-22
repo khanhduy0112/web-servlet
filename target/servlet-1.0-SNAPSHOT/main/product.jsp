@@ -10,25 +10,19 @@
     <title>Tất Cả Sản Phẩm</title>
     <link
             rel="shortcut icon"
-            href="main/images/jordan1_retro.jpg"
+            href="../main/images/jordan1_retro.jpg"
             type="image/x-icon"
     />
-    <!-- Meta tag Keywords -->
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta charset="UTF-8"/>
     <meta
             name="keywords"
             content="Bootie Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"
     />
-    <!-- //Meta tag Keywords -->
 
-    <!-- Custom-Files -->
-    <link rel="stylesheet" href="main/css/bootstrap.css"/>
-    <!-- Bootstrap-Core-CSS -->
-    <link rel="stylesheet" href="main/css/style.css" type="text/css" media="all"/>
-    <!-- Style-CSS -->
-    <!-- font-awesome-icons -->
-    <link href="main/css/font-awesome.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../main/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../main/css/style.css" type="text/css" media="all"/>
+    <link href="css/font-awesome.css" rel="stylesheet"/>
 
 </head>
 
@@ -50,15 +44,15 @@
             <!-- nav -->
             <nav class="py-4">
                 <div id="logo">
-                    <h1><a href="index.jsp">SKED</a></h1>
+                    <h1><a href="../index.jsp">SKED</a></h1>
                 </div>
 
                 <label for="drop" class="toggle">Menu</label>
                 <input type="checkbox" id="drop"/>
                 <ul class="menu mt-2">
-                    <li><a href="index.jsp">TRANG CHỦ</a></li>
+                    <li><a href="../index.jsp">TRANG CHỦ</a></li>
                     <li><a href="product.jsp">SẢN PHẨM</a></li>
-                    <li><a href="main/contact.jsp">LIÊN HỆ</a></li>
+                    <li><a href="contact.jsp">LIÊN HỆ</a></li>
                     <li>
                         <label for="drop-2" class="toggle">DANH MỤC</label>
                         <a href="#"
@@ -75,7 +69,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="main/cart.jsp"
+                        <a href="cart.jsp"
                         ><i class="fa fa-shopping-cart" aria-hidden="true"></i>GIỎ
                             HÀNG</a
                         >
@@ -98,7 +92,7 @@
 <!---->
 <ol class="breadcrumb">
     <li class="breadcrumb-item">
-        <a href="index.jsp">TRANG CHỦ</a>
+        <a href="../index.jsp">TRANG CHỦ</a>
     </li>
     <li class="breadcrumb-item active">SẢN PHẨM</li>
 </ol>
@@ -222,14 +216,14 @@
                                 </div>
                                 <div class="item-info-product">
                                     <h4>
-                                        <a href="main/product-single.jsp"
+                                        <a href="../main/product-single.jsp"
                                         >${product.name}
                                         </a>
                                     </h4>
 
                                     <div class="product_price">
                                         <div class="grid-price">
-                                            <span class="money"></span>
+                                            <span class="money">${product.price}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -459,7 +453,7 @@
             <div class="row footer-top">
                 <div class="col-lg-4 footer-grid_section_w3layouts">
                     <h2 class="logo-2 mb-lg-4 mb-3">
-                        <a href="index.jsp">SKED</a>
+                        <a href="../index.jsp">SKED</a>
                     </h2>
                     <p class="titleShop">Cam kết sneakers chính hãng nhập khẩu Mỹ</p>
                     <h4 class="sub-con-fo ad-info my-4">Mạng Xã Hội</h4>
@@ -486,7 +480,7 @@
                         </li>
                     </ul>
                     <div style="margin: 1rem 0">
-                        <a style="color: #D3EFDE ;font-family: Tahoma;font-size: 18px" href="admin/login.jsp"
+                        <a style="color: #D3EFDE ;font-family: Tahoma;font-size: 18px" href="../admin/login.jsp"
                         >Quản lí cửa hàng
                         </a>
                     </div>
@@ -499,7 +493,7 @@
                             </h3>
                             <ul class="list-unstyled w3layouts-icons">
                                 <li>
-                                    <a href="index.jsp">Home</a>
+                                    <a href="../index.jsp">Home</a>
                                 </li>
                                 <li>
                                     <a href="nike.html">Nike</a>
@@ -511,7 +505,7 @@
                                     <a href="vans.html">VANS</a>
                                 </li>
                                 <li class="mt-3">
-                                    <a href="main/contact.jsp">Liên Hệ</a>
+                                    <a href="contact.jsp">Liên Hệ</a>
                                 </li>
                             </ul>
                         </div>
@@ -521,7 +515,7 @@
                             </h3>
                             <ul class="list-unstyled w3layouts-icons">
                                 <li>
-                                    <a href="index.jsp">Chạy Bộ</a>
+                                    <a href="../index.jsp">Chạy Bộ</a>
                                 </li>
                                 <li>
                                     <a href="shop.html">DÃ NGOẠI</a>
@@ -630,9 +624,9 @@
             "
             >
             <span class="psw"
-            >Quên <a href="main/forgot-password.jsp">mật khẩu?</a></span
+            >Quên <a href="forgot-password.jsp">mật khẩu?</a></span
             >
-                <span class="psw">Chưa <a href="main/register.jsp">đăng kí?</a></span>
+                <span class="psw">Chưa <a href="register.jsp">đăng kí?</a></span>
             </div>
         </div>
     </form>
@@ -641,5 +635,5 @@
 
 <!-- form login -->
 </body>
-<script src="main/script/main.js"></script>
+<script src="script/main.js"></script>
 </html>

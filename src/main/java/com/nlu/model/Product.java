@@ -9,17 +9,27 @@ public class Product {
     private String description;
     private String img;
     private Integer categoryId;
+    private Integer salesPercent;
 
     public Product() {
     }
 
-    public Product(String name, Integer price, Integer status, String description, String img, Integer categoryId) {
+    public Product(String name, Integer price, Integer status, String description, String img, Integer categoryId, Integer salesPercent) {
         this.name = name;
         this.price = price;
         this.status = status;
         this.description = description;
         this.img = img;
         this.categoryId = categoryId;
+        this.salesPercent = salesPercent;
+    }
+
+    public Integer getSalesPercent() {
+        return salesPercent;
+    }
+
+    public void setSalesPercent(Integer salesPercent) {
+        this.salesPercent = salesPercent;
     }
 
     public Integer getPrice() {
