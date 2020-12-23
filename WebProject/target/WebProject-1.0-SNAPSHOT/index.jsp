@@ -411,7 +411,7 @@
                 <div class="product-shoe-info shoe text-center">
                   <div class="men-thumb-item">
                     <img
-                      src="main/images/Adidas%20Alphabounce%20Íntinct.jpg"
+                      src="main/images/jordan1_tokyo.png"
                       class="img-fluid"
                       alt=""
                     />
@@ -438,22 +438,22 @@
     </section>
     <!-- //ab -->
 
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="main/images/logoAdidas.png" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="main/images/logoConverse.png" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="main/images/logoVans.png" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="main/images/logoNewBalance.png" alt="" />
-        </div>
-      </div>
-    </div>
+<%--    <div class="swiper-container">--%>
+<%--      <div class="swiper-wrapper">--%>
+<%--        <div class="swiper-slide">--%>
+<%--          <img src="main/images/logoAdidas.png" alt="" />--%>
+<%--        </div>--%>
+<%--        <div class="swiper-slide">--%>
+<%--          <img src="main/images/logoConverse.png" alt="" />--%>
+<%--        </div>--%>
+<%--        <div class="swiper-slide">--%>
+<%--          <img src="main/images/logoVans.png" alt="" />--%>
+<%--        </div>--%>
+<%--        <div class="swiper-slide">--%>
+<%--          <img src="main/images/logoNewBalance.png" alt="" />--%>
+<%--        </div>--%>
+<%--      </div>--%>
+<%--    </div>--%>
 
     <!-- footer -->
     <div class="footer_container">
