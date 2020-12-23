@@ -40,6 +40,7 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+<<<<<<< HEAD
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -50,6 +51,8 @@
             <artifactId>jstl</artifactId>
             <version>1.2</version>
         </dependency>
+=======
+>>>>>>> parent of edb67fe... kết nối db
     </dependencies>
 
     <build>
