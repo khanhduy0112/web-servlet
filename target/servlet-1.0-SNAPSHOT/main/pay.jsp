@@ -7,9 +7,15 @@
     />
     <title>Thanh Toán</title>
     <link
+<<<<<<< HEAD
             rel="shortcut icon"
             href="images/jordan1_retro.jpg"
             type="image/x-icon"
+=======
+      rel="shortcut icon"
+      href="./images/Jordan1-Retro.jpg"
+      type="image/x-icon"
+>>>>>>> parent of b18f935... chỉnh sửa mốt số lỗi hiển thị
     />
     <!-- Meta tag Keywords -->
     <meta name="viewport" content="width=device-width, initial-scale=1"/>

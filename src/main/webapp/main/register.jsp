@@ -91,7 +91,7 @@
 
         body {
             /* background-color: #2143a0; */
-            background: url("images/jordan1_retro.jpg");
+            background: url("./images/Jordan1-Retro.jpg");
             background-position: center;
             /* background-repeat: no-repeat; */
         }

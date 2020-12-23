@@ -10,8 +10,7 @@
     <link
             rel="shortcut icon"
             href="images/jordan1_retro.jpg"
-            type="image/x-icon"
-    />
+            type="image/x-icon">
     <!-- Meta tag Keywords -->
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta charset="UTF-8"/>

@@ -6,7 +6,7 @@
     <title>Quên mật khẩu</title>
     <link
       rel="shortcut icon"
-      href="images/jordan1_retro.jpg"
+      href="./images/Jordan1-Retro.jpg"
       type="image/x-icon"
     />
     <style>
