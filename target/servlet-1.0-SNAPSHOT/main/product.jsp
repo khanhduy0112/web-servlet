@@ -10,11 +10,7 @@
     <title>Tất Cả Sản Phẩm</title>
     <link
             rel="shortcut icon"
-<<<<<<< HEAD
             href="../main/images/jordan1_retro.jpg"
-=======
-            href="./images/Jordan1-Retro.jpg"
->>>>>>> parent of b18f935... chỉnh sửa mốt số lỗi hiển thị
             type="image/x-icon"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
