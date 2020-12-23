@@ -20,12 +20,12 @@
     <!-- //Meta tag Keywords -->
 
     <!-- Custom-Files -->
-    <link rel="stylesheet" href="main/css/bootstrap.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/main/css/bootstrap.css"/>
     <!-- Bootstrap-Core-CSS -->
-    <link rel="stylesheet" href="main/css/style.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/main/css/style.css" type="text/css" media="all"/>
     <!-- Style-CSS -->
     <!-- font-awesome-icons -->
-    <link href="main/css/font-awesome.css" rel="stylesheet"/>
+    <link href="${pageContext.request.contextPath}/main/css/font-awesome.css" rel="stylesheet"/>
     <!-- //font-awesome-icons -->
     <!-- /Fonts -->
     <link
@@ -213,7 +213,7 @@
                         </li>
                     </ul>
                     <div style="margin: 1rem 0">
-                        <a style="color: #D3EFDE ;font-family: Tahoma;font-size: 18px" href="../admin/login.html"
+                        <a style="color: #D3EFDE ;font-family: Tahoma;font-size: 18px" href="../admin/login.jsp"
                         >Quản lí cửa hàng
                         </a>
                     </div>

@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8"  %>
 
 <html>
 <head>
@@ -10,7 +10,7 @@
     <title>Tất Cả Sản Phẩm</title>
     <link
             rel="shortcut icon"
-            href="./images/Jordan1-Retro.jpg"
+            href=".//main/images/Jordan1-Retro.jpg"
             type="image/x-icon"
     />
     <!-- Meta tag Keywords -->
@@ -54,7 +54,6 @@
             class="header"
             style="
           background-color: #229434 !important;
-          box-shadow: 0px 0px 10px 5px #c9c9c9;
         "
     >
         <div class="container-fluid px-lg-5">
@@ -227,7 +226,7 @@
                         <div class="product-shoe-info shoe text-center">
                             <div class="men-thumb-item">
                                 <img
-                                        src="images/Vans%20Old%20Skool%20Classic%20Black.jpg"
+                                        src="/main/images/Vans%20Old%20Skool%20Classic%20Black.jpg"
                                         class="img-fluid"
                                         alt=""
                                 />
@@ -251,7 +250,7 @@
                         <div class="product-shoe-info shoe text-center">
                             <div class="men-thumb-item">
                                 <img
-                                        src="images/Adidas%20Alphabounce%20Íntinct.jpg"
+                                        src="/main/images/Adidas%20Alphabounce%20Íntinct.jpg"
                                         class="img-fluid"
                                         alt=""
                                 />
@@ -275,7 +274,7 @@
                         <div class="product-shoe-info shoe text-center">
                             <div class="men-thumb-item">
                                 <img
-                                        src="images/New%20Balance%20CRT%20300%20Beige.webp"
+                                        src="/main/images/New%20Balance%20CRT%20300%20Beige.webp"
                                         class="img-fluid"
                                         alt=""
                                 />
@@ -297,7 +296,7 @@
                         <div class="product-shoe-info shoe text-center">
                             <div class="men-thumb-item">
                                 <img
-                                        src="images/Adidas%20Ultra%20Boost.png"
+                                        src="/main/images/Adidas%20Ultra%20Boost.png"
                                         class="img-fluid"
                                         alt=""
                                 />
@@ -319,7 +318,7 @@
                         <div class="product-shoe-info shoe text-center">
                             <div class="men-thumb-item">
                                 <img
-                                        src="images/Nike-Blazer%20mid77.png"
+                                        src="/main/images/Nike-Blazer%20mid77.png"
                                         class="img-fluid"
                                         alt=""
                                 />
@@ -341,7 +340,7 @@
                         <div class="product-shoe-info shoe text-center">
                             <div class="men-thumb-item">
                                 <img
-                                        src="images/Adidas%20Yeezy%20Boost.png"
+                                        src="/main/images/Adidas%20Yeezy%20Boost.png"
                                         class="img-fluid"
                                         alt=""
                                 />
@@ -363,7 +362,7 @@
                         <div class="product-shoe-info shoe text-center">
                             <div class="men-thumb-item">
                                 <img
-                                        src="images/Nike-Dunk%20Low.png"
+                                        src="/main/images/Nike-Dunk%20Low.png"
                                         class="img-fluid"
                                         alt=""
                                 />
@@ -385,7 +384,7 @@
                         <div class="product-shoe-info shoe text-center">
                             <div class="men-thumb-item">
                                 <img
-                                        src="images/Nike%20Free%20X%20Metcon%202.png"
+                                        src="/main/images/Nike%20Free%20X%20Metcon%202.png"
                                         class="img-fluid"
                                         alt=""
                                 />
@@ -407,7 +406,7 @@
                         <div class="product-shoe-info shoe text-center">
                             <div class="men-thumb-item">
                                 <img
-                                        src="images/Nike-Air-Force.png "
+                                        src="/main/images/Nike-Air-Force.png "
                                         class="img-fluid"
                                         alt=""
                                 />
@@ -465,7 +464,7 @@
                         </li>
                     </ul>
                     <div style="margin: 1rem 0">
-                        <a style="color: #D3EFDE ;font-family: Tahoma;font-size: 18px" href="../admin/login.html"
+                        <a style="color: #D3EFDE ;font-family: Tahoma;font-size: 18px" href="../admin/login.jsp"
                         >Quản lí cửa hàng
                         </a>
                     </div>
@@ -557,7 +556,7 @@
 <!-- //footer -->
 <!-- form login -->
 <div class="login-container hidden">
-    <form action="action_page.php" method="post">
+    <form action="" method="post">
         <div class="imgcontainer">
             <h2 style="color: white">Đăng Nhập</h2>
         </div>

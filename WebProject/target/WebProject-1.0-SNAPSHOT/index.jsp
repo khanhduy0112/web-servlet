@@ -1,5 +1,5 @@
-<!DOCTYPE html><%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html lang="zxx">
+<%@ page contentType="text/html;charset=UTF-8"  %>
+<html>
   <head>
     <link
       rel="stylesheet"
@@ -77,7 +77,7 @@
             <input type="checkbox" id="drop" />
             <ul class="menu mt-2">
               <li><a href="index.jsp">TRANG CHỦ</a></li>
-              <li><a href="main/product.jsp">SẢN PHẨM</a></li>
+              <li><a href="/products">SẢN PHẨM</a></li>
               <li><a href="main/contact.jsp">LIÊN HỆ</a></li>
               <li>
                 <label for="drop-2" class="toggle">DANH MỤC</label>
@@ -489,9 +489,7 @@
                 </li>
               </ul>
               <div style="margin: 1rem 0">
-                <a style="color: #D3EFDE ;font-family: Tahoma;font-size: 18px" href="admin/login.html"
-                  >Quản lí cửa hàng
-                </a>
+                <a style="color: #D3EFDE ;font-family: Tahoma;font-size: 18px" href="admin/login.jsp">Quản lí cửa hàng</a>
               </div>
             </div>
             <div class="col-lg-8 footer-right">
@@ -587,16 +585,18 @@
         </div>
 
         <div class="container">
-          <label for="uname"><b>Tên</b></label>
+          <label for="username"><b>Tên</b></label>
           <input
+                  id="username"
             type="text"
             placeholder="Vui lòng nhập tên"
             name="uname"
             required
           />
 
-          <label for="psw"><b>Mật Khẩu</b></label>
+          <label for="password"><b>Mật Khẩu</b></label>
           <input
+                  id="password"
             type="password"
             placeholder="Vui Lòng Nhập Password"
             name="psw"

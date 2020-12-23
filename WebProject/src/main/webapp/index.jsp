@@ -77,7 +77,7 @@
             <input type="checkbox" id="drop" />
             <ul class="menu mt-2">
               <li><a href="index.jsp">TRANG CHỦ</a></li>
-              <li><a href="main/product.jsp">SẢN PHẨM</a></li>
+              <li><a href="/products">SẢN PHẨM</a></li>
               <li><a href="main/contact.jsp">LIÊN HỆ</a></li>
               <li>
                 <label for="drop-2" class="toggle">DANH MỤC</label>
@@ -489,7 +489,7 @@
                 </li>
               </ul>
               <div style="margin: 1rem 0">
-                <a style="color: #D3EFDE ;font-family: Tahoma;font-size: 18px" href="admin/login.html">Quản lí cửa hàng</a>
+                <a style="color: #D3EFDE ;font-family: Tahoma;font-size: 18px" href="admin/login.jsp">Quản lí cửa hàng</a>
               </div>
             </div>
             <div class="col-lg-8 footer-right">

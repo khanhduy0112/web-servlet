@@ -273,7 +273,7 @@
                   </li>
                 </ul>
                 <div style="margin: 1rem 0">
-                  <a style="color: #D3EFDE ;font-family: Tahoma;font-size: 18px" href="../admin/login.html"
+                  <a style="color: #D3EFDE ;font-family: Tahoma;font-size: 18px" href="../admin/login.jsp"
                   >Quản lí cửa hàng
                   </a>
                 </div>
