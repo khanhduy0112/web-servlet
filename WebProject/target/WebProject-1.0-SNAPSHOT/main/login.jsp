@@ -6,7 +6,7 @@
         </div>
 
         <div class="container">
-            <label for="username"><b>Tên</b></label>
+            <label for="username">Tên</label>
             <input
                     id="username"
                     type="text"
@@ -15,7 +15,7 @@
                     required
             />
 
-            <label for="password"><b>Mật Khẩu</b></label>
+            <label for="password">Mật Khẩu</label>
             <input
                     id="password"
                     type="password"

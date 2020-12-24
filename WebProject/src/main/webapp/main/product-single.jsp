@@ -1,6 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
 <html>
 <head>
     <link
@@ -18,24 +17,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta charset="UTF-8"/>
 
-    <!-- Custom-Files -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/main/css/bootstrap.css"/>
-    <!-- Bootstrap-Core-CSS -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/main/css/style.css" type="text/css" media="all"/>
-    <!-- Style-CSS -->
-    <!-- font-awesome-icons -->
     <link href="${pageContext.request.contextPath}/main/css/font-awesome.css" rel="stylesheet"/>
-    <!-- //font-awesome-icons -->
-    <!-- /Fonts -->
-    <link
-            href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700"
-            rel="stylesheet"
-    />
-    <link
-            href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900"
-            rel="stylesheet"
-    />
-    <!-- //Fonts -->
 </head>
 
 <body>
@@ -46,7 +30,6 @@
     <li class="breadcrumb-item"><a href="product.jsp">SẢN PHẨM</a></li>
     <li class="breadcrumb-item active">CHI TIẾT SẢN PHẨM</li>
 </ol>
-<!---->
 <!-- banner -->
 <section class="ab-info-main py-md-5 py-4">
     <div class="container py-md-3">
@@ -168,9 +151,6 @@
                             <c:forEach items="${details}" var="item">
                                 <span class="size size_37"><h4 class="sizeh4 size37">${item.size}</h4></span>
                             </c:forEach>
-                            <%--                  <span class="size size_38"><h4 class="sizeh4 size38">38</h4></span>--%>
-                            <%--                  <span class="size size_39"><h4 class="sizeh4 size39">39</h4></span>--%>
-                            <%--                  <span class="size size_40"><h4 class="sizeh4 size40">40</h4></span>--%>
                         </div>
                         <div
                                 class="product_amount"
@@ -396,70 +376,8 @@
     </footer>
 </div>
 <!-- //footer -->
-<!-- form login -->
-<div class="login-container hidden">
-    <form action="action_page.php" method="post">
-        <div class="imgcontainer">
-            <h2 style="color: white">Đăng Nhập</h2>
-        </div>
-
-        <div class="container">
-            <label for="uname"><b>Tên</b></label>
-            <input
-                    type="text"
-                    placeholder="Vui lòng nhập tên"
-                    name="uname"
-                    required
-            />
-
-            <label for="psw"><b>Mật Khẩu</b></label>
-            <input
-                    type="password"
-                    placeholder="Vui Lòng Nhập Password"
-                    name="psw"
-                    required
-            />
-
-            <button type="submit">Đăng Nhập</button>
-            <label>
-                <input type="checkbox" checked="checked" name="remember"/> Lưu mật
-                khẩu
-            </label>
-        </div>
-
-        <div
-                style="
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            background-color: rgb(255, 182, 47);
-            padding: 0 !important;
-            margin: 0 !important; ;
-          "
-                class="container"
-                style="background-color: #f1f1f1"
-        >
-            <button type="button" class="cancelbtn">Hủy</button>
-            <div
-                    style="
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
-            "
-            >
-            <span class="psw"
-            >Quên <a href="forgot-password.jsp">mật khẩu?</a></span
-            >
-                <span class="psw">Chưa <a href="register.jsp">đăng kí?</a></span>
-            </div>
-        </div>
-    </form>
-</div>
-<div class="wrapper hidden"></div>
-
-<!-- form login -->
-<script src="./script/main.js"></script>
+<jsp:include page="/main/login.jsp"/>
+<script src="main/script/main.js"></script>
 <script>
     const size = Array.from(document.getElementsByClassName("size"));
     size.forEach(changeColor);

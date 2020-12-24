@@ -2,8 +2,10 @@ package com.nlu.controller;
 
 import com.nlu.model.Category;
 import com.nlu.model.Product;
+import com.nlu.model.Tag;
 import com.nlu.service.CategoryService;
 import com.nlu.service.ProductService;
+import com.nlu.service.TagService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,15 +21,18 @@ public class HomeController extends HttpServlet {
 
     ProductService productService = new ProductService();
     CategoryService categoryService = new CategoryService();
+    TagService tagService = new TagService();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Product> products = productService.findAll();
         List<Category> categories = categoryService.findAll();
+        List<Tag> tags = tagService.findAll();
 //        req.setAttribute("products", products);
         HttpSession session = req.getSession();
         session.setAttribute("products", products);
         session.setAttribute("categories", categories);
+        session.setAttribute("tags", tags);
         req.getRequestDispatcher("index.jsp").forward(req, resp);
 
     }
