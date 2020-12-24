@@ -18,4 +18,6 @@ public class Product {
     private Integer price;
     private Double salesPercent;
 
+
+
 }

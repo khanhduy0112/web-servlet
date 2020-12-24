@@ -42,7 +42,7 @@ public class ProductService implements Repository<Product> {
 
     @Override
     public Product findById(Integer id) {
-        String query = "SELECT * FROM products WHERE product_id = ?";
+        String query = "SELECT * FROM product WHERE product_id = ?";
         Product product = null;
         try {
             Connection connection = getConnection();
