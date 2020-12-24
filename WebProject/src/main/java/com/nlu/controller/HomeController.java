@@ -28,7 +28,6 @@ public class HomeController extends HttpServlet {
         List<Product> products = productService.findAll();
         List<Category> categories = categoryService.findAll();
         List<Tag> tags = tagService.findAll();
-//        req.setAttribute("products", products);
         HttpSession session = req.getSession();
         session.setAttribute("products", products);
         session.setAttribute("categories", categories);
