@@ -1,4 +1,4 @@
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="footer_container">
     <footer>
@@ -33,7 +33,8 @@
                         </li>
                     </ul>
                     <div style="margin: 1rem 0">
-                        <a style="color: #D3EFDE ;font-family: Tahoma;font-size: 18px" href="admin/login.jsp">Quản lí cửa hàng</a>
+                        <a style="color: #D3EFDE ;font-family: Tahoma;font-size: 18px" href="admin/login.jsp">Quản lí
+                            cửa hàng</a>
                     </div>
                 </div>
                 <div class="col-lg-8 footer-right">
@@ -65,18 +66,14 @@
                                 Thẻ
                             </h3>
                             <ul class="list-unstyled w3layouts-icons">
-                                <li>
-                                    <a href="index.jsp">Chạy Bộ</a>
-                                </li>
-                                <li>
-                                    <a href="shop.html">DÃ NGOẠI</a>
-                                </li>
-                                <li>
-                                    <a href="shop.html">Đi Học</a>
-                                </li>
-                                <li>
-                                    <a href="shop.html">Đi Làm</a>
-                                </li>
+                                <c:forEach items="${tags}" var="item">
+<%--                                    <c:if test="${tag.status == 1}">--%>
+                                        <li>
+                                            <a href="index.jsp">${item.name}</a>
+                                        </li>
+<%--                                    </c:if>--%>
+                                </c:forEach>
+
                             </ul>
                         </div>
 
