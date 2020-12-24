@@ -6,7 +6,7 @@
             <!-- nav -->
             <nav class="py-4">
                 <div id="logo">
-                    <h1><a href="/">SKED</a></h1>
+                    <h1><a href="/">${shopDetails.shopName}</a></h1>
                 </div>
 
                 <label for="drop" class="toggle">Menu</label>

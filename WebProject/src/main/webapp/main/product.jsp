@@ -116,33 +116,44 @@
                     </ul>
                 </div>
                 <!-- //discounts -->
+<%--                <div class="left-side">--%>
+<%--                    <h3 class="sear-head">TÌM THEO GIÁ</h3>--%>
+<%--                    <ul class="w3layouts-box-list">--%>
+<%--                        <li>--%>
+<%--                            <input type="checkbox" class="checked"/>--%>
+<%--                            <span class="span"><=$50</span>--%>
+<%--                        </li>--%>
+<%--                        <li>--%>
+<%--                            <input type="checkbox" class="checked"/>--%>
+<%--                            <span class="span"><=$100</span>--%>
+<%--                        </li>--%>
+<%--                        <li>--%>
+<%--                            <input type="checkbox" class="checked"/>--%>
+<%--                            <span class="span"><=$150</span>--%>
+<%--                        </li>--%>
+<%--                        <li>--%>
+<%--                            <input type="checkbox" class="checked"/>--%>
+<%--                            <span class="span"><=$200</span>--%>
+<%--                        </li>--%>
+<%--                        <li>--%>
+<%--                            <input type="checkbox" class="checked"/>--%>
+<%--                            <span class="span"><=$250</span>--%>
+<%--                        </li>--%>
+<%--                        <li>--%>
+<%--                            <input type="checkbox" class="checked"/>--%>
+<%--                            <span class="span">>$250></span>--%>
+<%--                        </li>--%>
+<%--                    </ul>--%>
+<%--                </div>--%>
                 <div class="left-side">
-                    <h3 class="sear-head">TÌM THEO GIÁ</h3>
+                    <h3 class="sear-head">TÌM THEO SIZE</h3>
                     <ul class="w3layouts-box-list">
-                        <li>
-                            <input type="checkbox" class="checked"/>
-                            <span class="span"><=$50</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked"/>
-                            <span class="span"><=$100</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked"/>
-                            <span class="span"><=$150</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked"/>
-                            <span class="span"><=$200</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked"/>
-                            <span class="span"><=$250</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked"/>
-                            <span class="span">>$250></span>
-                        </li>
+                      <c:forEach items="${sizes}" var="item">
+                          <li>
+                              <input type="checkbox" class="checked"/>
+                              <span class="span">${item}</span>
+                          </li>
+                      </c:forEach>
                     </ul>
                 </div>
                 <!-- deals -->

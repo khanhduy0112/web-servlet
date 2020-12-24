@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ProductDetails {
+public class ProductDetails implements Comparable<ProductDetails> {
 
     private Integer productDetailsId;
     private Integer size;
@@ -17,4 +17,9 @@ public class ProductDetails {
     private Integer productId;
     private Integer status;
 
+
+    @Override
+    public int compareTo(ProductDetails o) {
+        return this.size - o.size;
+    }
 }
