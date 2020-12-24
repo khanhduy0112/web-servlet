@@ -6,15 +6,14 @@ import com.nlu.repository.Repository;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-
 import static com.nlu.db.Datasource.*;
 
-public class ProductService implements Repository<Product> {
+public class ProductService implements Repository<Product>, {
 
     @Override
     public List<Product> findAll() {
         List<Product> products = new ArrayList<>();
-        String query = "SELECT * FROM products";
+        String query = "SELECT * FROM product";
         try {
             Connection connection = getConnection();
             Statement statement = connection.createStatement();
