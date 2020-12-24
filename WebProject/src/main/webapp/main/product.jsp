@@ -1,5 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
-
 <html>
 <head>
     <link
@@ -153,208 +153,210 @@
             <!-- product right -->
             <div class="left-ads-display col-lg-8">
                 <div class="row">
-                    <div class="col-md-4 product-men">
-                        <div class="product-shoe-info shoe text-center">
-                            <div class="men-thumb-item">
-                                <img
-                                        src="/main/images/Vans%20Old%20Skool%20Classic%20Black.jpg"
-                                        class="img-fluid"
-                                        alt=""
-                                />
-                            </div>
-                            <div class="item-info-product">
-                                <h4>
-                                    <a href="product-single.jsp"
-                                    >Vans Old Skool Classic Black
-                                    </a>
-                                </h4>
+                    <c:forEach items="${products}" var="item">
+                        <div class="col-md-4 product-men">
+                            <div class="product-shoe-info shoe text-center">
+                                <div class="men-thumb-item">
+                                    <img
+                                            src="/main/images/Vans%20Old%20Skool%20Classic%20Black.jpg"
+                                            class="img-fluid"
+                                            alt=""
+                                    />
+                                </div>
+                                <div class="item-info-product">
+                                    <h4>
+                                        <a href="product-single.jsp"
+                                        >${item.name}
+                                        </a>
+                                    </h4>
 
-                                <div class="product_price">
-                                    <div class="grid-price">
-                                        <span class="money">$675.00</span>
+                                    <div class="product_price">
+                                        <div class="grid-price">
+                                            <span class="money">${item.price}</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 product-men">
-                        <div class="product-shoe-info shoe text-center">
-                            <div class="men-thumb-item">
-                                <img
-                                        src="/main/images/Adidas%20Alphabounce%20Íntinct.jpg"
-                                        class="img-fluid"
-                                        alt=""
-                                />
-                            </div>
-                            <div class="item-info-product">
-                                <h4>
-                                    <a href="product-single.jsp"
-                                    >Adidas Alphabounce Instinct</a
-                                    >
-                                </h4>
+                    </c:forEach>
+                    <%--                    <div class="col-md-4 product-men">--%>
+                    <%--                        <div class="product-shoe-info shoe text-center">--%>
+                    <%--                            <div class="men-thumb-item">--%>
+                    <%--                                <img--%>
+                    <%--                                        src="/main/images/Adidas%20Alphabounce%20Íntinct.jpg"--%>
+                    <%--                                        class="img-fluid"--%>
+                    <%--                                        alt=""--%>
+                    <%--                                />--%>
+                    <%--                            </div>--%>
+                    <%--                            <div class="item-info-product">--%>
+                    <%--                                <h4>--%>
+                    <%--                                    <a href="product-single.jsp"--%>
+                    <%--                                    >Adidas Alphabounce Instinct</a--%>
+                    <%--                                    >--%>
+                    <%--                                </h4>--%>
 
-                                <div class="product_price">
-                                    <div class="grid-price">
-                                        <span class="money">$475.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 product-men">
-                        <div class="product-shoe-info shoe text-center">
-                            <div class="men-thumb-item">
-                                <img
-                                        src="/main/images/New%20Balance%20CRT%20300%20Beige.webp"
-                                        class="img-fluid"
-                                        alt=""
-                                />
-                            </div>
-                            <div class="item-info-product">
-                                <h4>
-                                    <a href="product-single.jsp">New Balance CRT 300 Beige</a>
-                                </h4>
+                    <%--                                <div class="product_price">--%>
+                    <%--                                    <div class="grid-price">--%>
+                    <%--                                        <span class="money">$475.00</span>--%>
+                    <%--                                    </div>--%>
+                    <%--                                </div>--%>
+                    <%--                            </div>--%>
+                    <%--                        </div>--%>
+                    <%--                    </div>--%>
+                    <%--                    <div class="col-md-4 product-men">--%>
+                    <%--                        <div class="product-shoe-info shoe text-center">--%>
+                    <%--                            <div class="men-thumb-item">--%>
+                    <%--                                <img--%>
+                    <%--                                        src="/main/images/New%20Balance%20CRT%20300%20Beige.webp"--%>
+                    <%--                                        class="img-fluid"--%>
+                    <%--                                        alt=""--%>
+                    <%--                                />--%>
+                    <%--                            </div>--%>
+                    <%--                            <div class="item-info-product">--%>
+                    <%--                                <h4>--%>
+                    <%--                                    <a href="product-single.jsp">New Balance CRT 300 Beige</a>--%>
+                    <%--                                </h4>--%>
 
-                                <div class="product_price">
-                                    <div class="grid-price">
-                                        <span class="money">$575.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 product-men my-lg-4">
-                        <div class="product-shoe-info shoe text-center">
-                            <div class="men-thumb-item">
-                                <img
-                                        src="/main/images/Adidas%20Ultra%20Boost.png"
-                                        class="img-fluid"
-                                        alt=""
-                                />
-                            </div>
-                            <div class="item-info-product">
-                                <h4>
-                                    <a href="product-single.jsp">Adidas Ultra Boost</a>
-                                </h4>
+                    <%--                                <div class="product_price">--%>
+                    <%--                                    <div class="grid-price">--%>
+                    <%--                                        <span class="money">$575.00</span>--%>
+                    <%--                                    </div>--%>
+                    <%--                                </div>--%>
+                    <%--                            </div>--%>
+                    <%--                        </div>--%>
+                    <%--                    </div>--%>
+                    <%--                    <div class="col-md-4 product-men my-lg-4">--%>
+                    <%--                        <div class="product-shoe-info shoe text-center">--%>
+                    <%--                            <div class="men-thumb-item">--%>
+                    <%--                                <img--%>
+                    <%--                                        src="/main/images/Adidas%20Ultra%20Boost.png"--%>
+                    <%--                                        class="img-fluid"--%>
+                    <%--                                        alt=""--%>
+                    <%--                                />--%>
+                    <%--                            </div>--%>
+                    <%--                            <div class="item-info-product">--%>
+                    <%--                                <h4>--%>
+                    <%--                                    <a href="product-single.jsp">Adidas Ultra Boost</a>--%>
+                    <%--                                </h4>--%>
 
-                                <div class="product_price">
-                                    <div class="grid-price">
-                                        <span class="money">$575.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 product-men my-lg-4">
-                        <div class="product-shoe-info shoe text-center">
-                            <div class="men-thumb-item">
-                                <img
-                                        src="/main/images/Nike-Blazer%20mid77.png"
-                                        class="img-fluid"
-                                        alt=""
-                                />
-                            </div>
-                            <div class="item-info-product">
-                                <h4>
-                                    <a href="product-single.jsp">Nike Blazer Mid77</a>
-                                </h4>
+                    <%--                                <div class="product_price">--%>
+                    <%--                                    <div class="grid-price">--%>
+                    <%--                                        <span class="money">$575.00</span>--%>
+                    <%--                                    </div>--%>
+                    <%--                                </div>--%>
+                    <%--                            </div>--%>
+                    <%--                        </div>--%>
+                    <%--                    </div>--%>
+                    <%--                    <div class="col-md-4 product-men my-lg-4">--%>
+                    <%--                        <div class="product-shoe-info shoe text-center">--%>
+                    <%--                            <div class="men-thumb-item">--%>
+                    <%--                                <img--%>
+                    <%--                                        src="/main/images/Nike-Blazer%20mid77.png"--%>
+                    <%--                                        class="img-fluid"--%>
+                    <%--                                        alt=""--%>
+                    <%--                                />--%>
+                    <%--                            </div>--%>
+                    <%--                            <div class="item-info-product">--%>
+                    <%--                                <h4>--%>
+                    <%--                                    <a href="product-single.jsp">Nike Blazer Mid77</a>--%>
+                    <%--                                </h4>--%>
 
-                                <div class="product_price">
-                                    <div class="grid-price">
-                                        <span class="money">$575.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 product-men my-lg-4">
-                        <div class="product-shoe-info shoe text-center">
-                            <div class="men-thumb-item">
-                                <img
-                                        src="/main/images/Adidas%20Yeezy%20Boost.png"
-                                        class="img-fluid"
-                                        alt=""
-                                />
-                            </div>
-                            <div class="item-info-product">
-                                <h4>
-                                    <a href="product-single.jsp">Adidas Yeezy Boost </a>
-                                </h4>
+                    <%--                                <div class="product_price">--%>
+                    <%--                                    <div class="grid-price">--%>
+                    <%--                                        <span class="money">$575.00</span>--%>
+                    <%--                                    </div>--%>
+                    <%--                                </div>--%>
+                    <%--                            </div>--%>
+                    <%--                        </div>--%>
+                    <%--                    </div>--%>
+                    <%--                    <div class="col-md-4 product-men my-lg-4">--%>
+                    <%--                        <div class="product-shoe-info shoe text-center">--%>
+                    <%--                            <div class="men-thumb-item">--%>
+                    <%--                                <img--%>
+                    <%--                                        src="/main/images/Adidas%20Yeezy%20Boost.png"--%>
+                    <%--                                        class="img-fluid"--%>
+                    <%--                                        alt=""--%>
+                    <%--                                />--%>
+                    <%--                            </div>--%>
+                    <%--                            <div class="item-info-product">--%>
+                    <%--                                <h4>--%>
+                    <%--                                    <a href="product-single.jsp">Adidas Yeezy Boost </a>--%>
+                    <%--                                </h4>--%>
 
-                                <div class="product_price">
-                                    <div class="grid-price">
-                                        <span class="money">$575.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 product-men">
-                        <div class="product-shoe-info shoe text-center">
-                            <div class="men-thumb-item">
-                                <img
-                                        src="/main/images/Nike-Dunk%20Low.png"
-                                        class="img-fluid"
-                                        alt=""
-                                />
-                            </div>
-                            <div class="item-info-product">
-                                <h4>
-                                    <a href="product-single.jsp">Nike Dunk Low</a>
-                                </h4>
+                    <%--                                <div class="product_price">--%>
+                    <%--                                    <div class="grid-price">--%>
+                    <%--                                        <span class="money">$575.00</span>--%>
+                    <%--                                    </div>--%>
+                    <%--                                </div>--%>
+                    <%--                            </div>--%>
+                    <%--                        </div>--%>
+                    <%--                    </div>--%>
+                    <%--                    <div class="col-md-4 product-men">--%>
+                    <%--                        <div class="product-shoe-info shoe text-center">--%>
+                    <%--                            <div class="men-thumb-item">--%>
+                    <%--                                <img--%>
+                    <%--                                        src="/main/images/Nike-Dunk%20Low.png"--%>
+                    <%--                                        class="img-fluid"--%>
+                    <%--                                        alt=""--%>
+                    <%--                                />--%>
+                    <%--                            </div>--%>
+                    <%--                            <div class="item-info-product">--%>
+                    <%--                                <h4>--%>
+                    <%--                                    <a href="product-single.jsp">Nike Dunk Low</a>--%>
+                    <%--                                </h4>--%>
 
-                                <div class="product_price">
-                                    <div class="grid-price">
-                                        <span class="money">$675.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 product-men">
-                        <div class="product-shoe-info shoe text-center">
-                            <div class="men-thumb-item">
-                                <img
-                                        src="/main/images/Nike%20Free%20X%20Metcon%202.png"
-                                        class="img-fluid"
-                                        alt=""
-                                />
-                            </div>
-                            <div class="item-info-product">
-                                <h4>
-                                    <a href="product-single.jsp">Nike Free X metcon2</a>
-                                </h4>
+                    <%--                                <div class="product_price">--%>
+                    <%--                                    <div class="grid-price">--%>
+                    <%--                                        <span class="money">$675.00</span>--%>
+                    <%--                                    </div>--%>
+                    <%--                                </div>--%>
+                    <%--                            </div>--%>
+                    <%--                        </div>--%>
+                    <%--                    </div>--%>
+                    <%--                    <div class="col-md-4 product-men">--%>
+                    <%--                        <div class="product-shoe-info shoe text-center">--%>
+                    <%--                            <div class="men-thumb-item">--%>
+                    <%--                                <img--%>
+                    <%--                                        src="/main/images/Nike%20Free%20X%20Metcon%202.png"--%>
+                    <%--                                        class="img-fluid"--%>
+                    <%--                                        alt=""--%>
+                    <%--                                />--%>
+                    <%--                            </div>--%>
+                    <%--                            <div class="item-info-product">--%>
+                    <%--                                <h4>--%>
+                    <%--                                    <a href="product-single.jsp">Nike Free X metcon2</a>--%>
+                    <%--                                </h4>--%>
 
-                                <div class="product_price">
-                                    <div class="grid-price">
-                                        <span class="money">$775.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 product-men">
-                        <div class="product-shoe-info shoe text-center">
-                            <div class="men-thumb-item">
-                                <img
-                                        src="/main/images/Nike-Air-Force.png "
-                                        class="img-fluid"
-                                        alt=""
-                                />
-                            </div>
-                            <div class="item-info-product">
-                                <h4>
-                                    <a href="product-single.jsp">Nike Air Force</a>
-                                </h4>
+                    <%--                                <div class="product_price">--%>
+                    <%--                                    <div class="grid-price">--%>
+                    <%--                                        <span class="money">$775.00</span>--%>
+                    <%--                                    </div>--%>
+                    <%--                                </div>--%>
+                    <%--                            </div>--%>
+                    <%--                        </div>--%>
+                    <%--                    </div>--%>
+                    <%--                    <div class="col-md-4 product-men">--%>
+                    <%--                        <div class="product-shoe-info shoe text-center">--%>
+                    <%--                            <div class="men-thumb-item">--%>
+                    <%--                                <img--%>
+                    <%--                                        src="/main/images/Nike-Air-Force.png "--%>
+                    <%--                                        class="img-fluid"--%>
+                    <%--                                        alt=""--%>
+                    <%--                                />--%>
+                    <%--                            </div>--%>
+                    <%--                            <div class="item-info-product">--%>
+                    <%--                                <h4>--%>
+                    <%--                                    <a href="product-single.jsp">Nike Air Force</a>--%>
+                    <%--                                </h4>--%>
 
-                                <div class="product_price">
-                                    <div class="grid-price">
-                                        <span class="money">$875.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <%--                                <div class="product_price">--%>
+                    <%--                                    <div class="grid-price">--%>
+                    <%--                                        <span class="money">$875.00</span>--%>
+                    <%--                                    </div>--%>
+                    <%--                                </div>--%>
+                    <%--                            </div>--%>
+                    <%--                        </div>--%>
+                    <%--                    </div>--%>
                 </div>
             </div>
         </div>

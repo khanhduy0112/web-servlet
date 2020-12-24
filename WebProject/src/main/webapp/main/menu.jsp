@@ -11,7 +11,7 @@
                 <label for="drop" class="toggle">Menu</label>
                 <input type="checkbox" id="drop"/>
                 <ul class="menu mt-2">
-                    <li><a href="../index.jsp">TRANG CHỦ</a></li>
+                    <li><a href="/">TRANG CHỦ</a></li>
                     <li><a href="product.jsp">SẢN PHẨM</a></li>
                     <li><a href="contact.jsp">LIÊN HỆ</a></li>
                     <li>
@@ -25,7 +25,7 @@
                         <input type="checkbox" id="drop-2"/>
                         <ul>
                             <li><a href="nike.jsp">NIKE</a></li>
-                            <li><a href="adidas.jsp">ADIDAS</a></li>
+                            <li><a href="../adidas.jsp">ADIDAS</a></li>
                             <li><a href="vans.jsp">VANS</a></li>
                         </ul>
                     </li>

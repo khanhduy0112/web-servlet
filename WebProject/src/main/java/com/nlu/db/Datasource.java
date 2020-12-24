@@ -13,10 +13,11 @@ public class Datasource {
     }
 
     public static Connection getConnection() {
+        System.out.println("lay conn");
         return connectionPool.getConnectionFromPool();
     }
 
-    public static void releaseConnection(Connection conn) {
+    public static void returnConnection(Connection conn) {
         connectionPool.returnConnectionToPool(conn);
     }
 

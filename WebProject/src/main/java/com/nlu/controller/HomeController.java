@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet("/products")
-public class ProductController extends HttpServlet {
+@WebServlet("")
+public class HomeController extends HttpServlet {
 
     ProductService productService = new ProductService();
 
@@ -20,6 +20,7 @@ public class ProductController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Product> products = productService.findAll();
         req.setAttribute("products", products);
-        req.getRequestDispatcher("/main/product.jsp").forward(req, resp);
+        req.getRequestDispatcher("index.jsp").forward(req, resp);
+
     }
 }
