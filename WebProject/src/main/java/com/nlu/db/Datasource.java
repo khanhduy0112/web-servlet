@@ -1,12 +1,14 @@
 package com.nlu.db;
 
 import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Datasource {
 
     private static ConnectionPool connectionPool = new ConnectionPool();
 
-    public  Datasource (){
+    public Datasource() {
 
     }
 
@@ -15,7 +17,7 @@ public class Datasource {
     }
 
     public static void releaseConnection(Connection conn) {
-         connectionPool.returnConnectionToPool(conn);
+        connectionPool.returnConnectionToPool(conn);
     }
 
 }

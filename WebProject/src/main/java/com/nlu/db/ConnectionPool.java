@@ -10,7 +10,7 @@ import static com.nlu.db.DBConfiguration.*;
 
 public class ConnectionPool {
 
-    private List<Connection> availableConnections = new ArrayList<>();
+    public static List<Connection> availableConnections = new ArrayList<>();
 
     public ConnectionPool() {
         this.initConnectionPool();
@@ -46,12 +46,16 @@ public class ConnectionPool {
     //get connection from pool
     public synchronized Connection getConnectionFromPool() {
         Connection connection = null;
-        if (availableConnections.size() > 0) {
+        if (availableConnections.size() > 0 && availableConnections.size() <= DB_MAX_CONNECTION) {
+            System.out.println(availableConnections.size());
             connection = availableConnections.get(0);
             availableConnections.remove(0);
+            System.out.println("Lay ra 1 ket noi");
+            return connection;
         }
-        System.out.println("Lay ra 1 ket noi");
-        return connection;
+        System.out.println("Vui long doi");
+        return null;
+
     }
 
     //return connection to pool
