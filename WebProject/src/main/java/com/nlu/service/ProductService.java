@@ -1,10 +1,12 @@
 package com.nlu.service;
 
 import com.nlu.model.Product;
+import com.nlu.model.ProductDetails;
 import com.nlu.repository.Repository;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import static com.nlu.db.Datasource.*;
@@ -83,5 +85,6 @@ public class ProductService implements Repository<Product> {
 //        List<Product> all = productService.findAll();
 //        System.out.println(all.toString());
         Product byId = productService.findById(10);
+
     }
 }

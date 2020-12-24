@@ -49,10 +49,4 @@ public class TagService implements Repository<Tag> {
     public Tag deleteById() {
         return null;
     }
-
-    public static void main(String[] args) {
-        TagService tagService = new TagService();
-        List<Tag> all = tagService.findAll();
-        System.out.println(all.toString());
-    }
 }

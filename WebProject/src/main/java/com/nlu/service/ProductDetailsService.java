@@ -5,8 +5,7 @@ import com.nlu.model.ProductDetails;
 import com.nlu.repository.Repository;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 import static com.nlu.db.Datasource.*;
 
@@ -85,8 +84,7 @@ public class ProductDetailsService implements Repository<ProductDetails> {
 
     public static void main(String[] args) {
         ProductDetailsService productDetailsService = new ProductDetailsService();
-        List<ProductDetails> all = productDetailsService.findByProductId(1);
-        String s = all.toString();
-        System.out.println(s);
+        List<ProductDetails> all = productDetailsService.findAll();
+
     }
 }

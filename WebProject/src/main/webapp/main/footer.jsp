@@ -6,7 +6,7 @@
             <div class="row footer-top">
                 <div class="col-lg-4 footer-grid_section_w3layouts">
                     <h2 class="logo-2 mb-lg-4 mb-3">
-                        <a href="index.jsp">SKED</a>
+                        <a href="/">${shopDetails.shopName}</a>
                     </h2>
                     <p class="titleShop">Cam kết sneakers chính hãng nhập khẩu Mỹ</p>
                     <h4 class="sub-con-fo ad-info my-4">Mạng Xã Hội</h4>
@@ -86,17 +86,17 @@
                             <div class="contact-info">
                                 <div class="footer-address-inf">
                                     <h4 class="ad-info mb-2">Điện Thoại</h4>
-                                    <p>0869104353</p>
+                                    <p>${shopDetails.phone}</p>
                                 </div>
                                 <div class="footer-address-inf my-4">
                                     <h4 class="ad-info mb-2">Email</h4>
                                     <p>
-                                        khanh2104@gmail.com
+                                       ${shopDetails.email}
                                     </p>
                                 </div>
                                 <div class="footer-address-inf">
                                     <h4 class="ad-info mb-2">Địa Chỉ</h4>
-                                    <p>Tầng 80 Landmark, Bình Thạnh, HCM</p>
+                                    <p>${shopDetails.address}</p>
                                 </div>
                             </div>
                         </div>
