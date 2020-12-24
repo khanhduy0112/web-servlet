@@ -72,28 +72,25 @@
             <!-- nav -->
             <nav class="py-4">
                 <div id="logo">
-                    <h1><a href="index.jsp">SKED</a></h1>
+                    <h1><a href="/">SKED</a></h1>
                 </div>
 
                 <label for="drop" class="toggle">Menu</label>
                 <input type="checkbox" id="drop"/>
                 <ul class="menu mt-2">
-                    <li><a href="index.jsp">TRANG CHỦ</a></li>
+                    <li><a href="/">TRANG CHỦ</a></li>
                     <li><a href="/products">SẢN PHẨM</a></li>
                     <li><a href="main/contact.jsp">LIÊN HỆ</a></li>
                     <li>
                         <label for="drop-2" class="toggle">DANH MỤC</label>
-                        <a href="#"
-                        >DANH MỤC<span
-                                class="fa fa-angle-down"
-                                aria-hidden="true"
-                        ></span
-                        ></a>
+                        <a href="#">DANH MỤC<span class="fa fa-angle-down" aria-hidden="true"></span></a>
                         <input type="checkbox" id="drop-2"/>
                         <ul>
-                            <li><a href="main/nike.jsp">NIKE</a></li>
-                            <li><a href="main/adidas.jsp">ADIDAS</a></li>
-                            <li><a href="main/vans.jsp">VANS</a></li>
+                            <c:forEach items="${categories}" var="item">
+                                <c:if test="${item.status == 1}">
+                                    <li><a href="main/nike.jsp">${item.name}</a></li>
+                                </c:if>
+                            </c:forEach>
                         </ul>
                     </li>
                     <li>

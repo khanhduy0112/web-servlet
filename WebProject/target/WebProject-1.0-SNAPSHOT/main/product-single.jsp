@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <html>
@@ -18,12 +19,12 @@
     <meta charset="UTF-8" />
 
     <!-- Custom-Files -->
-    <link rel="stylesheet" href="main/css/bootstrap.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/main/css/bootstrap.css" />
     <!-- Bootstrap-Core-CSS -->
-    <link rel="stylesheet" href="main/css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/main/css/style.css" type="text/css" media="all" />
     <!-- Style-CSS -->
     <!-- font-awesome-icons -->
-    <link href="main/css/font-awesome.css" rel="stylesheet" />
+    <link href="${pageContext.request.contextPath}/main/css/font-awesome.css" rel="stylesheet" />
     <!-- //font-awesome-icons -->
     <!-- /Fonts -->
     <link
@@ -214,32 +215,25 @@
             <div class="row">
               <div class="desc1-left col-md-6">
                 <img
-                  src="images/Nike-Blazer%20mid77.png"
+                  src="${product.img}"
                   class="img-fluid"
-                  alt=""
+                  alt="anh san pham"
                 />
               </div>
               <div class="details">
-                <h4 class="name_product">Nike Blazer Mid77</h4>
+                <h4 class="name_product">${product.name}</h4>
                 <div class="size_product">
                   <h2 class="size_title">Size :</h2>
-                  <span class="size size_37"
-                    ><h4 class="sizeh4 size37">37</h4>
-                  </span>
-                  <span class="size size_38"
-                    ><h4 class="sizeh4 size38">38</h4>
-                  </span>
-                  <span class="size size_39"
-                    ><h4 class="sizeh4 size39">39</h4>
-                  </span>
-                  <span class="size size_40"
-                    ><h4 class="sizeh4 size40">40</h4>
-                  </span>
+                  <c:forEach items="${details}" var="item">
+                    <span class="size size_37"><h4 class="sizeh4 size37">${item.size}</h4></span>
+                  </c:forEach>
+<%--                  <span class="size size_38"><h4 class="sizeh4 size38">38</h4></span>--%>
+<%--                  <span class="size size_39"><h4 class="sizeh4 size39">39</h4></span>--%>
+<%--                  <span class="size size_40"><h4 class="sizeh4 size40">40</h4></span>--%>
                 </div>
                 <div
                   class="product_amount"
-                  style="display: flex; justify-content: space-between"
-                >
+                  style="display: flex; justify-content: space-between">
                   <div><strong style="font-weight: 500">Số Lượng</strong></div>
                   <div>
                     <button class="down">-</button>
@@ -250,7 +244,7 @@
                 <div class="total">
                   <div class="total_title" style="margin: 1rem 0">
                     <strong>Giá :</strong>
-                    <span> 5000000</span>
+                    <span> ${product.price}</span>
                     <span>đ</span>
                   </div>
                 </div>
@@ -258,8 +252,7 @@
                   <strong>Tổng cộng :</strong>
                   <span
                     class="total-value"
-                    style="color: green; margin-left: 10px"
-                  >
+                    style="color: green; margin-left: 10px">
                     5.000.000
                   </span>
                   <span style="color: green"> đ</span>
@@ -281,9 +274,7 @@
                   </div>
                   <div class="contendes">
                     <p class="contendofdes">
-                      Đây là một sản phẩm của hãng Blance. Phù hợp với các bạn
-                      trẻ từ độ tuổi 17 - 25. có màu vàng ánh kim độc đáo. Chất
-                      liệu vải mềm mại. Bảo hành 30 ngày sau khi mua
+                      ${product.description}
                     </p>
                   </div>
                 </div>

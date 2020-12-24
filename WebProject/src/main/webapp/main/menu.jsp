@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="main-banner" id="home" style="background: none !important; height: 18vh">
     <header class="header" style="background-color: #229434 !important;">
@@ -5,7 +6,7 @@
             <!-- nav -->
             <nav class="py-4">
                 <div id="logo">
-                    <h1><a href="../index.jsp">SKED</a></h1>
+                    <h1><a href="/">SKED</a></h1>
                 </div>
 
                 <label for="drop" class="toggle">Menu</label>
@@ -16,17 +17,14 @@
                     <li><a href="contact.jsp">LIÊN HỆ</a></li>
                     <li>
                         <label for="drop-2" class="toggle">DANH MỤC</label>
-                        <a href="#"
-                        >DANH MỤC<span
-                                class="fa fa-angle-down"
-                                aria-hidden="true"
-                        ></span
-                        ></a>
+                        <a href="#">DANH MỤC<span class="fa fa-angle-down" aria-hidden="true"></span></a>
                         <input type="checkbox" id="drop-2"/>
                         <ul>
-                            <li><a href="nike.jsp">NIKE</a></li>
-                            <li><a href="../adidas.jsp">ADIDAS</a></li>
-                            <li><a href="vans.jsp">VANS</a></li>
+                            <c:forEach items="${categories}" var="item">
+                                <c:if test="${item.status == 1}">
+                                    <li><a href="main/nike.jsp">${item.name}</a></li>
+                                </c:if>
+                            </c:forEach>
                         </ul>
                     </li>
                     <li>

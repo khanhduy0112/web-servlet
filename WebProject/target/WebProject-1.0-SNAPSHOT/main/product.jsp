@@ -165,8 +165,7 @@
                                 </div>
                                 <div class="item-info-product">
                                     <h4>
-                                        <a href="product-single.jsp"
-                                        >${item.name}
+                                        <a href="/products/product-single?id=${item.id}">${item.name}
                                         </a>
                                     </h4>
 
