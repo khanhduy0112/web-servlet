@@ -1,4 +1,4 @@
-package com.nlu.db;
+package com.nlu.config;
 
 public class DBConfiguration {
 
@@ -7,11 +7,5 @@ public class DBConfiguration {
     public static final String DB_URL = "jdbc:mysql://localhost/sneaker_db";
     public static final String DB_DRIVER = "com.mysql.cj.jdbc.Driver";
     public static final int DB_MAX_CONNECTION = 10;
-    public static DBConfiguration dbConfiguration = new DBConfiguration();
-
-    public static DBConfiguration getInstance() {
-        return dbConfiguration;
-    }
-
 
 }

@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.nlu.db.DBConfiguration.*;
+import static com.nlu.config.DBConfiguration.*;
 
 public class ConnectionPool {
 
