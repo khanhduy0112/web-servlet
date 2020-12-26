@@ -88,12 +88,12 @@ public class MailService {
             "            <td align=\"center\" style=\"background-color: #eeeeee;\" bgcolor=\"#eeeeee\">\n" +
             "                <table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"max-width:600px;\">\n" +
             "                    <tr>\n" +
-            "                        <td align=\"center\" valign=\"top\" style=\"font-size:0; padding: 35px;\" bgcolor=\"#F44336\">\n" +
+            "                        <td align=\"center\" valign=\"top\" style=\"font-size:0; padding: 35px;\" bgcolor=\"green\">\n" +
             "                            <div style=\"display:inline-block; max-width:50%; min-width:100px; vertical-align:top; width:100%;\">\n" +
             "                                <table align=\"left\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"max-width:300px;\">\n" +
             "                                    <tr>\n" +
             "                                        <td align=\"left\" valign=\"top\" style=\"font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 36px; font-weight: 800; line-height: 48px;\" class=\"mobile-center\">\n" +
-            "                                            <h1 style=\"font-size: 36px; font-weight: 800; margin: 0; color: #ffffff;\">BBBootstrap</h1>\n" +
+            "                                            <h1 style=\"font-size: 36px; font-weight: 800; margin: 0; color: #ffffff;\">SKED</h1>\n" +
             "                                        </td>\n" +
             "                                    </tr>\n" +
             "                                </table>\n" +
@@ -120,34 +120,38 @@ public class MailService {
             "                        <td align=\"center\" style=\"padding: 35px 35px 20px 35px; background-color: #ffffff;\" bgcolor=\"#ffffff\">\n" +
             "                            <table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"max-width:600px;\">\n" +
             "                                <tr>\n" +
-            "                                    <td align=\"center\" style=\"font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding-top: 25px;\"> <img src=\"https://img.icons8.com/carbon-copy/100/000000/checked-checkbox.png\" width=\"125\" height=\"120\" style=\"display: block; border: 0px;\" /><br>\n" +
-            "                                        <h2 style=\"font-size: 30px; font-weight: 800; line-height: 36px; color: #333333; margin: 0;\"> Thank You For Your Order! </h2>\n" +
+            "                                    <td align=\"center\" style=\"font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding-top: 25px;\">\n" +
+            "                                        <h2 style=\"font-size: 30px; font-weight: 800; line-height: 36px; color: #333333; margin: 0;\">Cảm ơn bạn đã đặt hàng</h2>\n" +
             "                                    </td>\n" +
             "                                </tr>\n" +
             "                                <tr>\n" +
             "                                    <td align=\"left\" style=\"font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding-top: 10px;\">\n" +
-            "                                        <p style=\"font-size: 16px; font-weight: 400; line-height: 24px; color: #777777;\"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium iste ipsa numquam odio dolores, nam. </p>\n" +
-            "                                    </td>\n" +
-            "                                </tr>\n" +
+            "                                        <p style=\"font-size: 16px; font-weight: 400; line-height: 24px; color: #777777;\">Thông tin chi tiết đơn hàng                                </tr>\n" +
             "                                <tr>\n" +
             "                                    <td align=\"left\" style=\"padding-top: 20px;\">\n" +
             "                                        <table cellspacing=\"0\" cellpadding=\"0\" border=\"0\" width=\"100%\">\n" +
             "                                            <tr>\n" +
-            "                                                <td width=\"75%\" align=\"left\" bgcolor=\"#eeeeee\" style=\"font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px;\"> Order Confirmation # </td>\n" +
+            "                                                <td width=\"75%\" align=\"left\" bgcolor=\"#eeeeee\" style=\"font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px;\"> Customername</td>\n" +
             "                                                <td width=\"25%\" align=\"left\" bgcolor=\"#eeeeee\" style=\"font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px;\"> 2345678 </td>\n" +
             "                                            </tr>\n" +
             "                                            <tr>\n" +
-            "                                                <td width=\"75%\" align=\"left\" style=\"font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;\"> Purchased Item (1) </td>\n" +
-            "                                                <td width=\"25%\" align=\"left\" style=\"font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;\"> $100.00 </td>\n" +
+            "                                                <td width=\"75%\" align=\"left\" style=\"font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;\"> Jordan1 Mid Chicago</td>\n" +
+            "                                                <td width=\"25%\" align=\"left\" style=\"font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;\"> 5.000.000 đ</td>\n" +
             "                                            </tr>\n" +
             "                                            <tr>\n" +
-            "                                                <td width=\"75%\" align=\"left\" style=\"font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;\"> Shipping + Handling </td>\n" +
-            "                                                <td width=\"25%\" align=\"left\" style=\"font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;\"> $10.00 </td>\n" +
+            "                                                <td width=\"75%\" align=\"left\" style=\"font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;\"> Jordan1 Mid Chicago</td>\n" +
+            "                                                <td width=\"25%\" align=\"left\" style=\"font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;\"> 5.000.000 đ</td>\n" +
             "                                            </tr>\n" +
             "                                            <tr>\n" +
-            "                                                <td width=\"75%\" align=\"left\" style=\"font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;\"> Sales Tax </td>\n" +
-            "                                                <td width=\"25%\" align=\"left\" style=\"font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;\"> $5.00 </td>\n" +
+            "                                                <td width=\"75%\" align=\"left\" style=\"font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;\"> Jordan1 Mid Chicago</td>\n" +
+            "                                                <td width=\"25%\" align=\"left\" style=\"font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;\"> 5.000.000 đ</td>\n" +
             "                                            </tr>\n" +
+            "                                            <tr>\n" +
+            "                                                <td width=\"75%\" align=\"left\" style=\"font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;\"> Phí vận chuyển</td>\n" +
+            "                                                <td width=\"25%\" align=\"left\" style=\"font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;\"> 100.000 đ </td>\n" +
+            "                                            </tr>\n" +
+            "                                \n" +
+            "                                           \n" +
             "                                        </table>\n" +
             "                                    </td>\n" +
             "                                </tr>\n" +
@@ -155,8 +159,8 @@ public class MailService {
             "                                    <td align=\"left\" style=\"padding-top: 20px;\">\n" +
             "                                        <table cellspacing=\"0\" cellpadding=\"0\" border=\"0\" width=\"100%\">\n" +
             "                                            <tr>\n" +
-            "                                                <td width=\"75%\" align=\"left\" style=\"font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid #eeeeee; border-bottom: 3px solid #eeeeee;\"> TOTAL </td>\n" +
-            "                                                <td width=\"25%\" align=\"left\" style=\"font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid #eeeeee; border-bottom: 3px solid #eeeeee;\"> $115.00 </td>\n" +
+            "                                                <td width=\"75%\" align=\"left\" style=\"font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid #eeeeee; border-bottom: 3px solid #eeeeee;\"> Tổng cộng </td>\n" +
+            "                                                <td width=\"25%\" align=\"left\" style=\"font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid #eeeeee; border-bottom: 3px solid #eeeeee;\"> 1.000.000 đ </td>\n" +
             "                                            </tr>\n" +
             "                                        </table>\n" +
             "                                    </td>\n" +
@@ -173,7 +177,7 @@ public class MailService {
             "                                            <table align=\"left\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"max-width:300px;\">\n" +
             "                                                <tr>\n" +
             "                                                    <td align=\"left\" valign=\"top\" style=\"font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px;\">\n" +
-            "                                                        <p style=\"font-weight: 800;\">Delivery Address</p>\n" +
+            "                                                        <p style=\"font-weight: 800;\">Địa chỉ giao hàng</p>\n" +
             "                                                        <p>675 Massachusetts Avenue<br>11th Floor<br>Cambridge, MA 02139</p>\n" +
             "                                                    </td>\n" +
             "                                                </tr>\n" +
@@ -183,8 +187,8 @@ public class MailService {
             "                                            <table align=\"left\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"max-width:300px;\">\n" +
             "                                                <tr>\n" +
             "                                                    <td align=\"left\" valign=\"top\" style=\"font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px;\">\n" +
-            "                                                        <p style=\"font-weight: 800;\">Estimated Delivery Date</p>\n" +
-            "                                                        <p>January 1st, 2016</p>\n" +
+            "                                                        <p style=\"font-weight: 800;\">Thời gian giao hàng dự kiến</p>\n" +
+            "                                                        <p>11/11/2020</p>\n" +
             "                                                    </td>\n" +
             "                                                </tr>\n" +
             "                                            </table>\n" +
@@ -195,18 +199,18 @@ public class MailService {
             "                        </td>\n" +
             "                    </tr>\n" +
             "                    <tr>\n" +
-            "                        <td align=\"center\" style=\" padding: 35px; background-color: #ff7361;\" bgcolor=\"#1b9ba3\">\n" +
+            "                        <td align=\"center\" style=\" padding: 35px; background-color: green;\" bgcolor=\"#1b9ba3\">\n" +
             "                            <table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"max-width:600px;\">\n" +
             "                                <tr>\n" +
             "                                    <td align=\"center\" style=\"font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding-top: 25px;\">\n" +
-            "                                        <h2 style=\"font-size: 24px; font-weight: 800; line-height: 30px; color: #ffffff; margin: 0;\"> Get 30% off your next order. </h2>\n" +
+            "                                        <h2 style=\"font-size: 24px; font-weight: 800; line-height: 30px; color: #ffffff; margin: 0;\">Tiếp tục mua sắm</h2>\n" +
             "                                    </td>\n" +
             "                                </tr>\n" +
             "                                <tr>\n" +
             "                                    <td align=\"center\" style=\"padding: 25px 0 15px 0;\">\n" +
             "                                        <table border=\"0\" cellspacing=\"0\" cellpadding=\"0\">\n" +
             "                                            <tr>\n" +
-            "                                                <td align=\"center\" style=\"border-radius: 5px;\" bgcolor=\"#66b3b7\"> <a href=\"#\" target=\"_blank\" style=\"font-size: 18px; font-family: Open Sans, Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; border-radius: 5px; background-color: #F44336; padding: 15px 30px; border: 1px solid #F44336; display: block;\">Shop Again</a> </td>\n" +
+            "                                                <td align=\"center\" style=\"border-radius: 5px;\" bgcolor=\"#66b3b7\"> <a href=\"#\" target=\"_blank\" style=\"font-size: 18px; font-family: Open Sans, Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; border-radius: 5px; background-color: #F44336; padding: 15px 30px; border: 1px solid #F44336; display: block;\">Cửa Hàng</a> </td>\n" +
             "                                            </tr>\n" +
             "                                        </table>\n" +
             "                                    </td>\n" +
@@ -217,12 +221,10 @@ public class MailService {
             "                    <tr>\n" +
             "                        <td align=\"center\" style=\"padding: 35px; background-color: #ffffff;\" bgcolor=\"#ffffff\">\n" +
             "                            <table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"max-width:600px;\">\n" +
-            "                                <tr>\n" +
-            "                                    <td align=\"center\"> <img src=\"logo-footer.png\" width=\"37\" height=\"37\" style=\"display: block; border: 0px;\" /> </td>\n" +
-            "                                </tr>\n" +
+            "                            \n" +
             "                                <tr>\n" +
             "                                    <td align=\"center\" style=\"font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 24px; padding: 5px 0 10px 0;\">\n" +
-            "                                        <p style=\"font-size: 14px; font-weight: 800; line-height: 18px; color: #333333;\"> 675 Parko Avenue<br> LA, CA 02232 </p>\n" +
+            "                                        <p style=\"font-size: 14px; font-weight: 800; line-height: 18px; color: #333333;\"> Địa chỉ : Tầng 80 lanmask 81 </p>\n" +
             "                                    </td>\n" +
             "                                </tr>\n" +
             "                                <tr>\n" +
@@ -257,7 +259,7 @@ public class MailService {
         });
 
         try {
-            Message msg = prepareMessage(to, session,message);
+            Message msg = prepareMessage(to, session, message);
             Transport.send(msg);
             System.out.println("Gui mail thanh cong");
         } catch (MessagingException e) {
@@ -266,16 +268,14 @@ public class MailService {
 
     }
 
-    public Message prepareMessage(String to, Session session,String message) {
+    public Message prepareMessage(String to, Session session, String message) {
         Message msg = new MimeMessage(session);
         try {
             msg.setFrom(new InternetAddress(MailConfig.SMTP_USERNAME));
             msg.setRecipient(MimeMessage.RecipientType.CC, new InternetAddress(to));
             msg.setSentDate(new Date());
-            msg.setSubject("Xac nhan don hang");
-            msg.setContent(message, "text/html");
-
-//            message.setText("Test test test test");
+            msg.setSubject("Xác nhận đơn hàng");
+            msg.setContent(message, "text/html; charset=UTF-8");
         } catch (MessagingException e) {
             e.printStackTrace();
         }
@@ -284,6 +284,7 @@ public class MailService {
 
     public static void main(String[] args) {
         MailService mailService = new MailService();
-        mailService.sendMail("18130060@st.hcmuaf.edu.vn", mess);
+        mailService.sendMail("nguyenduykhanh.it.bt@gmail.com", mess);
+//        mailService.sendMail("ngduykhanh.it.bt@gmail.com", mess);
     }
 }

@@ -88,21 +88,17 @@
                         <ul>
                             <c:forEach items="${categories}" var="item">
                                 <c:if test="${item.status == 1}">
-                                    <li><a href="main/nike.jsp">${item.name}</a></li>
+                                    <li><a href="">${item.name}</a></li>
                                 </c:if>
                             </c:forEach>
                         </ul>
                     </li>
                     <li>
-                        <a href="main/cart.jsp"
-                        ><i class="fa fa-shopping-cart" aria-hidden="true"></i>GIỎ
-                            HÀNG</a
-                        >
+                        <a href="main/cart.jsp"><i class="fa fa-shopping-cart" aria-hidden="true"></i>GIỎ HÀNG</a>
                     </li>
                     <li class="a-login">
                         <a href=""
-                        ><i class="fa fa-user-o" aria-hidden="true"></i>ĐĂNG NHÂP</a
-                        >
+                        ><i class="fa fa-user-o" aria-hidden="true"></i>ĐĂNG NHÂP</a>
                     </li>
                 </ul>
             </nav>
@@ -184,12 +180,12 @@
     <div class="container pb-lg-3">
         <h3 class="tittle text-center">SẢN PHẨM MỚI</h3>
         <div class="row">
-            <c:forEach items="${products}" var="item">
+            <c:forEach items="${products}" var="product">
                 <div class="col-md-4 product-men">
                     <div class="product-shoe-info shoe text-center">
                         <div class="men-thumb-item">
                             <img
-                                    src="main/images/Nike%20Air%20Force%201%20Low%20Travis%20Scott.jpg"
+                                    src="${product.img}"
                                     class="img-fluid"
                                     alt=""
                             />
@@ -197,15 +193,14 @@
                         </div>
                         <div class="item-info-product">
                             <h4>
-                                <a href="main/product-single.jsp"
-                                >${item.name}</a
-                                >
+                                <a href="/products/product-single?id=${product.productId}"
+                                >${product.name}</a>
                             </h4>
 
                             <div class="product_price">
                                 <div class="grid-price">
-                                    <span class="regular-price">${item.price}</span>
-                                    <span class="money">${item.salesPercent}</span>
+                                    <span class="regular-price">${product.price}</span>
+                                    <span class="money">${product.salesPercent}</span>
                                 </div>
                             </div>
                         </div>

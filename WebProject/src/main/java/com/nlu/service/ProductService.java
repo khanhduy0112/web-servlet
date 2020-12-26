@@ -80,6 +80,11 @@ public class ProductService implements Repository<Product> {
         return null;
     }
 
+    @Override
+    public void add(Product product) {
+
+    }
+
     public static void main(String[] args) throws SQLException {
         ProductService productService = new ProductService();
 //        List<Product> all = productService.findAll();

@@ -144,7 +144,7 @@
                                 alt="anh san pham"
                         />
                     </div>
-                    <div class="details">
+                    <form class="details">
                         <h4 class="name_product">${product.name}</h4>
                         <div class="size_product">
                             <h2 class="size_title">Size :</h2>
@@ -171,11 +171,7 @@
                         </div>
                         <div class="total" style="font-size: 23px !important">
                             <strong>Tổng cộng :</strong>
-                            <span
-                                    class="total-value"
-                                    style="color: green; margin-left: 10px">
-                    5.000.000
-                  </span>
+                            <span class="total-value" style="color: green; margin-left: 10px">5.000.000</span>
                             <span style="color: green"> đ</span>
                         </div>
                         <!-- <hr /> -->
@@ -199,7 +195,7 @@
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
                 <h3 class="shop-sing">SẢN PHẨM LIÊN QUAN</h3>
                 <div class="row m-0">

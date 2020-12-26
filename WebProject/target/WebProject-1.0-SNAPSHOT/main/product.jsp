@@ -169,14 +169,14 @@
                             <div class="product-shoe-info shoe text-center">
                                 <div class="men-thumb-item">
                                     <img
-                                            src="/main/images/Vans%20Old%20Skool%20Classic%20Black.jpg"
+                                            src="${item.img}"
                                             class="img-fluid"
                                             alt=""
                                     />
                                 </div>
                                 <div class="item-info-product">
                                     <h4>
-                                        <a href="/products/product-single?id=${item.id}">${item.name}
+                                        <a href="/products/product-single?id=${item.productId}">${item.name}
                                         </a>
                                     </h4>
 

@@ -38,16 +38,16 @@ public class ProductDetailsService implements Repository<ProductDetails> {
         }
     }
 
-    public List<ProductDetails> findByProductId(Integer productId) {
+    public ProductDetails findByProductId(Integer productId) {
         String query = "SELECT * FROM product_details WHERE  product_id = ?";
-        List<ProductDetails> productDetailsList = new ArrayList<>();
+        ProductDetails details = null;
         try {
             Connection connection = getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setInt(1, productId);
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
-                ProductDetails details = new ProductDetails(
+                details = new ProductDetails(
                         rs.getInt(1),
                         rs.getInt(2),
                         rs.getString(3),
@@ -55,10 +55,9 @@ public class ProductDetailsService implements Repository<ProductDetails> {
                         rs.getInt(5),
                         rs.getInt(6)
                 );
-                productDetailsList.add(details);
             }
             returnConnection(connection);
-            return productDetailsList;
+            return details;
 
         } catch (SQLException e) {
             System.out.println(e);
@@ -80,6 +79,11 @@ public class ProductDetailsService implements Repository<ProductDetails> {
     @Override
     public ProductDetails deleteById() {
         return null;
+    }
+
+    @Override
+    public void add(ProductDetails productDetails) {
+
     }
 
     public static void main(String[] args) {

@@ -15,5 +15,5 @@ public interface Repository<T> {
 
     T deleteById();
 
-
+    void add(T t);
 }

@@ -1,17 +1,12 @@
 package com.nlu.utils;
 
-import com.mysql.cj.x.protobuf.MysqlxCrud;
-import com.nlu.model.Product;
 
 import java.util.List;
 
 public class MailMessageUtil {
 
-
-    public static String createOrderMessageConfirm(List<Object> objects) {
+    public static String createOrderMessageConfirm(List<Object> objects, String deliverAddress, String shopName, String shopAddress) {
         String result = "";
-
-
         return result;
     }
 

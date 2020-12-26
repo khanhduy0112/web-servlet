@@ -49,4 +49,9 @@ public class TagService implements Repository<Tag> {
     public Tag deleteById() {
         return null;
     }
+
+    @Override
+    public void add(Tag tag) {
+
+    }
 }

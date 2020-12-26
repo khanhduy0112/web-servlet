@@ -57,4 +57,9 @@ public class ShopDetailsService implements Repository<ShopDetailsService> {
     public ShopDetailsService deleteById() {
         return null;
     }
+
+    @Override
+    public void add(ShopDetailsService shopDetailsService) {
+
+    }
 }
