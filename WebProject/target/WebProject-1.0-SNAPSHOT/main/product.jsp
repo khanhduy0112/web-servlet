@@ -69,102 +69,54 @@
                         </button>
                     </form>
                 </div>
-                <!--preference -->
-                <div class="left-side my-4">
-                    <h3 class="sear-head">TÌM THEO NHU CẦU</h3>
-                    <ul class="w3layouts-box-list">
-                        <li>
-                            <input type="checkbox" class="checked"/>
-                            <span class="span">CHẠY BỘ</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked"/>
-                            <span class="span">DÃ NGOẠI</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked"/>
-                            <span class="span">ĐI HỌC</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked"/>
-                            <span class="span">ĐI LÀM</span>
-                        </li>
-                    </ul>
+                <div class="sidebar">
+                    <div class="row" style="width: 250PX;padding: 10px;color: var(--light);border-color: var(--white);">
+                        <div class="col">
+                            <div><a class="btn btn-primary" data-toggle="collapse" aria-expanded="true" aria-controls="collapse-1" href="#collapse-1" role="button" style="color: var(--white);font-weight: 600;font-style: normal;width: 100%;padding: 0;padding-bottom: 5px;padding-top: 10px;border-color: var(--white);border-bottom-color: var(--white);background: #172a74;margin-right: 0px;padding-right: 60px;text-align: center;">GIÁ SẢN PHẨM</a>
+                                <div class="collapse show" id="collapse-1">
+                                    <div class="form-check" style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);"><input class="form-check-input" type="radio" id="formCheck-1"><label class="form-check-label" for="formCheck-1" style="color: var(--gray);">Label</label></div>
+                                    <div class="form-check" style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);"><input class="form-check-input" type="radio" id="formCheck-5"><label class="form-check-label" for="formCheck-1" style="color: var(--gray);">Label</label></div>
+                                    <div class="form-check" style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);"><input class="form-check-input" type="radio" id="formCheck-4"><label class="form-check-label" for="formCheck-1" style="color: var(--gray);">Label</label></div>
+                                    <div class="form-check" style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);"><input class="form-check-input" type="radio" id="formCheck-3"><label class="form-check-label" for="formCheck-1" style="color: var(--gray);">Label</label></div>
+                                    <div class="form-check" style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);"><input class="form-check-input" type="radio" id="formCheck-2"><label class="form-check-label" for="formCheck-1" style="color: var(--gray);">Label</label></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    <div class="sidebar">
+                    <div class="row" style="width: 250PX;padding: 10px;color: var(--light);border-color: var(--white);">
+                        <div class="col">
+                            <div><a class="btn btn-primary" data-toggle="collapse" aria-expanded="true" aria-controls="collapse-1" href="#collapse-1" role="button" style="color: var(--white);font-weight: 600;font-style: normal;width: 100%;padding: 0;padding-bottom: 5px;padding-top: 10px;border-color: var(--white);border-bottom-color: var(--white);background: #172a74;margin-right: 0px;padding-right: 60px;text-align: center;">GIÁ SẢN PHẨM</a>
+                                <div class="collapse show" id="collapse-1">
+                                    <div class="form-check" style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);"><input class="form-check-input" type="radio" id="formCheck-1"><label class="form-check-label" for="formCheck-1" style="color: var(--gray);">Label</label></div>
+                                    <div class="form-check" style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);"><input class="form-check-input" type="radio" id="formCheck-5"><label class="form-check-label" for="formCheck-1" style="color: var(--gray);">Label</label></div>
+                                    <div class="form-check" style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);"><input class="form-check-input" type="radio" id="formCheck-4"><label class="form-check-label" for="formCheck-1" style="color: var(--gray);">Label</label></div>
+                                    <div class="form-check" style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);"><input class="form-check-input" type="radio" id="formCheck-3"><label class="form-check-label" for="formCheck-1" style="color: var(--gray);">Label</label></div>
+                                    <div class="form-check" style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);"><input class="form-check-input" type="radio" id="formCheck-2"><label class="form-check-label" for="formCheck-1" style="color: var(--gray);">Label</label></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    <div class="sidebar">
+                    <div class="row" style="width: 250PX;padding: 10px;color: var(--light);border-color: var(--white);">
+                        <div class="col">
+                            <div><a class="btn btn-primary" data-toggle="collapse" aria-expanded="true" aria-controls="collapse-1" href="#collapse-1" role="button" style="color: var(--white);font-weight: 600;font-style: normal;width: 100%;padding: 0;padding-bottom: 5px;padding-top: 10px;border-color: var(--white);border-bottom-color: var(--white);background: #172a74;margin-right: 0px;padding-right: 60px;text-align: center;">GIÁ SẢN PHẨM</a>
+                                <div class="collapse show" id="collapse-1">
+                                    <div class="form-check" style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);"><input class="form-check-input" type="radio" id="formCheck-1"><label class="form-check-label" for="formCheck-1" style="color: var(--gray);">Label</label></div>
+                                    <div class="form-check" style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);"><input class="form-check-input" type="radio" id="formCheck-5"><label class="form-check-label" for="formCheck-1" style="color: var(--gray);">Label</label></div>
+                                    <div class="form-check" style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);"><input class="form-check-input" type="radio" id="formCheck-4"><label class="form-check-label" for="formCheck-1" style="color: var(--gray);">Label</label></div>
+                                    <div class="form-check" style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);"><input class="form-check-input" type="radio" id="formCheck-3"><label class="form-check-label" for="formCheck-1" style="color: var(--gray);">Label</label></div>
+                                    <div class="form-check" style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);"><input class="form-check-input" type="radio" id="formCheck-2"><label class="form-check-label" for="formCheck-1" style="color: var(--gray);">Label</label></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- // preference -->
-                <!-- discounts -->
-                <div class="left-side">
-                    <h3 class="sear-head">TÌM THEO KHUYẾN MÃI</h3>
-                    <ul class="w3layouts-box-list">
-                        <li>
-                            <input type="checkbox" class="checked"/>
-                            <span class="span"><=5%/Sản Phẩm</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked"/>
-                            <span class="span"><=10%/Sản Phẩm</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked"/>
-                            <span class="span"><=15%/Sản Phẩm</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked"/>
-                            <span class="span"><=20%/Sản Phẩm</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked"/>
-                            <span class="span"><=30%/Sản Phẩm</span>
-                        </li>
-                    </ul>
-                </div>
-                <!-- //discounts -->
-                <%--                <div class="left-side">--%>
-                <%--                    <h3 class="sear-head">TÌM THEO GIÁ</h3>--%>
-                <%--                    <ul class="w3layouts-box-list">--%>
-                <%--                        <li>--%>
-                <%--                            <input type="checkbox" class="checked"/>--%>
-                <%--                            <span class="span"><=$50</span>--%>
-                <%--                        </li>--%>
-                <%--                        <li>--%>
-                <%--                            <input type="checkbox" class="checked"/>--%>
-                <%--                            <span class="span"><=$100</span>--%>
-                <%--                        </li>--%>
-                <%--                        <li>--%>
-                <%--                            <input type="checkbox" class="checked"/>--%>
-                <%--                            <span class="span"><=$150</span>--%>
-                <%--                        </li>--%>
-                <%--                        <li>--%>
-                <%--                            <input type="checkbox" class="checked"/>--%>
-                <%--                            <span class="span"><=$200</span>--%>
-                <%--                        </li>--%>
-                <%--                        <li>--%>
-                <%--                            <input type="checkbox" class="checked"/>--%>
-                <%--                            <span class="span"><=$250</span>--%>
-                <%--                        </li>--%>
-                <%--                        <li>--%>
-                <%--                            <input type="checkbox" class="checked"/>--%>
-                <%--                            <span class="span">>$250></span>--%>
-                <%--                        </li>--%>
-                <%--                    </ul>--%>
-                <%--                </div>--%>
-                <div class="left-side">
-                    <h3 class="sear-head">TÌM THEO SIZE</h3>
-                    <ul class="w3layouts-box-list">
-                        <c:forEach items="${sizes}" var="item">
-                            <li>
-                                <input type="checkbox" class="checked"/>
-                                <span class="span">${item}</span>
-                            </li>
-                        </c:forEach>
-                    </ul>
-                </div>
-                <!-- deals -->
-
-                <!-- //deals -->
             </div>
-            <!-- //product left -->
-            <!-- product right -->
+
+
+
+<%--            product--%>
             <div class="left-ads-display col-lg-8">
                 <div class="row">
                     <c:forEach items="${products}" var="item">
@@ -192,184 +144,7 @@
                             </div>
                         </div>
                     </c:forEach>
-                    <%--                    <div class="col-md-4 product-men">--%>
-                    <%--                        <div class="product-shoe-info shoe text-center">--%>
-                    <%--                            <div class="men-thumb-item">--%>
-                    <%--                                <img--%>
-                    <%--                                        src="/main/images/Adidas%20Alphabounce%20Íntinct.jpg"--%>
-                    <%--                                        class="img-fluid"--%>
-                    <%--                                        alt=""--%>
-                    <%--                                />--%>
-                    <%--                            </div>--%>
-                    <%--                            <div class="item-info-product">--%>
-                    <%--                                <h4>--%>
-                    <%--                                    <a href="product-single.jsp"--%>
-                    <%--                                    >Adidas Alphabounce Instinct</a--%>
-                    <%--                                    >--%>
-                    <%--                                </h4>--%>
 
-                    <%--                                <div class="product_price">--%>
-                    <%--                                    <div class="grid-price">--%>
-                    <%--                                        <span class="money">$475.00</span>--%>
-                    <%--                                    </div>--%>
-                    <%--                                </div>--%>
-                    <%--                            </div>--%>
-                    <%--                        </div>--%>
-                    <%--                    </div>--%>
-                    <%--                    <div class="col-md-4 product-men">--%>
-                    <%--                        <div class="product-shoe-info shoe text-center">--%>
-                    <%--                            <div class="men-thumb-item">--%>
-                    <%--                                <img--%>
-                    <%--                                        src="/main/images/New%20Balance%20CRT%20300%20Beige.webp"--%>
-                    <%--                                        class="img-fluid"--%>
-                    <%--                                        alt=""--%>
-                    <%--                                />--%>
-                    <%--                            </div>--%>
-                    <%--                            <div class="item-info-product">--%>
-                    <%--                                <h4>--%>
-                    <%--                                    <a href="product-single.jsp">New Balance CRT 300 Beige</a>--%>
-                    <%--                                </h4>--%>
-
-                    <%--                                <div class="product_price">--%>
-                    <%--                                    <div class="grid-price">--%>
-                    <%--                                        <span class="money">$575.00</span>--%>
-                    <%--                                    </div>--%>
-                    <%--                                </div>--%>
-                    <%--                            </div>--%>
-                    <%--                        </div>--%>
-                    <%--                    </div>--%>
-                    <%--                    <div class="col-md-4 product-men my-lg-4">--%>
-                    <%--                        <div class="product-shoe-info shoe text-center">--%>
-                    <%--                            <div class="men-thumb-item">--%>
-                    <%--                                <img--%>
-                    <%--                                        src="/main/images/Adidas%20Ultra%20Boost.png"--%>
-                    <%--                                        class="img-fluid"--%>
-                    <%--                                        alt=""--%>
-                    <%--                                />--%>
-                    <%--                            </div>--%>
-                    <%--                            <div class="item-info-product">--%>
-                    <%--                                <h4>--%>
-                    <%--                                    <a href="product-single.jsp">Adidas Ultra Boost</a>--%>
-                    <%--                                </h4>--%>
-
-                    <%--                                <div class="product_price">--%>
-                    <%--                                    <div class="grid-price">--%>
-                    <%--                                        <span class="money">$575.00</span>--%>
-                    <%--                                    </div>--%>
-                    <%--                                </div>--%>
-                    <%--                            </div>--%>
-                    <%--                        </div>--%>
-                    <%--                    </div>--%>
-                    <%--                    <div class="col-md-4 product-men my-lg-4">--%>
-                    <%--                        <div class="product-shoe-info shoe text-center">--%>
-                    <%--                            <div class="men-thumb-item">--%>
-                    <%--                                <img--%>
-                    <%--                                        src="/main/images/Nike-Blazer%20mid77.png"--%>
-                    <%--                                        class="img-fluid"--%>
-                    <%--                                        alt=""--%>
-                    <%--                                />--%>
-                    <%--                            </div>--%>
-                    <%--                            <div class="item-info-product">--%>
-                    <%--                                <h4>--%>
-                    <%--                                    <a href="product-single.jsp">Nike Blazer Mid77</a>--%>
-                    <%--                                </h4>--%>
-
-                    <%--                                <div class="product_price">--%>
-                    <%--                                    <div class="grid-price">--%>
-                    <%--                                        <span class="money">$575.00</span>--%>
-                    <%--                                    </div>--%>
-                    <%--                                </div>--%>
-                    <%--                            </div>--%>
-                    <%--                        </div>--%>
-                    <%--                    </div>--%>
-                    <%--                    <div class="col-md-4 product-men my-lg-4">--%>
-                    <%--                        <div class="product-shoe-info shoe text-center">--%>
-                    <%--                            <div class="men-thumb-item">--%>
-                    <%--                                <img--%>
-                    <%--                                        src="/main/images/Adidas%20Yeezy%20Boost.png"--%>
-                    <%--                                        class="img-fluid"--%>
-                    <%--                                        alt=""--%>
-                    <%--                                />--%>
-                    <%--                            </div>--%>
-                    <%--                            <div class="item-info-product">--%>
-                    <%--                                <h4>--%>
-                    <%--                                    <a href="product-single.jsp">Adidas Yeezy Boost </a>--%>
-                    <%--                                </h4>--%>
-
-                    <%--                                <div class="product_price">--%>
-                    <%--                                    <div class="grid-price">--%>
-                    <%--                                        <span class="money">$575.00</span>--%>
-                    <%--                                    </div>--%>
-                    <%--                                </div>--%>
-                    <%--                            </div>--%>
-                    <%--                        </div>--%>
-                    <%--                    </div>--%>
-                    <%--                    <div class="col-md-4 product-men">--%>
-                    <%--                        <div class="product-shoe-info shoe text-center">--%>
-                    <%--                            <div class="men-thumb-item">--%>
-                    <%--                                <img--%>
-                    <%--                                        src="/main/images/Nike-Dunk%20Low.png"--%>
-                    <%--                                        class="img-fluid"--%>
-                    <%--                                        alt=""--%>
-                    <%--                                />--%>
-                    <%--                            </div>--%>
-                    <%--                            <div class="item-info-product">--%>
-                    <%--                                <h4>--%>
-                    <%--                                    <a href="product-single.jsp">Nike Dunk Low</a>--%>
-                    <%--                                </h4>--%>
-
-                    <%--                                <div class="product_price">--%>
-                    <%--                                    <div class="grid-price">--%>
-                    <%--                                        <span class="money">$675.00</span>--%>
-                    <%--                                    </div>--%>
-                    <%--                                </div>--%>
-                    <%--                            </div>--%>
-                    <%--                        </div>--%>
-                    <%--                    </div>--%>
-                    <%--                    <div class="col-md-4 product-men">--%>
-                    <%--                        <div class="product-shoe-info shoe text-center">--%>
-                    <%--                            <div class="men-thumb-item">--%>
-                    <%--                                <img--%>
-                    <%--                                        src="/main/images/Nike%20Free%20X%20Metcon%202.png"--%>
-                    <%--                                        class="img-fluid"--%>
-                    <%--                                        alt=""--%>
-                    <%--                                />--%>
-                    <%--                            </div>--%>
-                    <%--                            <div class="item-info-product">--%>
-                    <%--                                <h4>--%>
-                    <%--                                    <a href="product-single.jsp">Nike Free X metcon2</a>--%>
-                    <%--                                </h4>--%>
-
-                    <%--                                <div class="product_price">--%>
-                    <%--                                    <div class="grid-price">--%>
-                    <%--                                        <span class="money">$775.00</span>--%>
-                    <%--                                    </div>--%>
-                    <%--                                </div>--%>
-                    <%--                            </div>--%>
-                    <%--                        </div>--%>
-                    <%--                    </div>--%>
-                    <%--                    <div class="col-md-4 product-men">--%>
-                    <%--                        <div class="product-shoe-info shoe text-center">--%>
-                    <%--                            <div class="men-thumb-item">--%>
-                    <%--                                <img--%>
-                    <%--                                        src="/main/images/Nike-Air-Force.png "--%>
-                    <%--                                        class="img-fluid"--%>
-                    <%--                                        alt=""--%>
-                    <%--                                />--%>
-                    <%--                            </div>--%>
-                    <%--                            <div class="item-info-product">--%>
-                    <%--                                <h4>--%>
-                    <%--                                    <a href="product-single.jsp">Nike Air Force</a>--%>
-                    <%--                                </h4>--%>
-
-                    <%--                                <div class="product_price">--%>
-                    <%--                                    <div class="grid-price">--%>
-                    <%--                                        <span class="money">$875.00</span>--%>
-                    <%--                                    </div>--%>
-                    <%--                                </div>--%>
-                    <%--                            </div>--%>
-                    <%--                        </div>--%>
-                    <%--                    </div>--%>
                 </div>
             </div>
         </div>
@@ -381,8 +156,10 @@
 
 <jsp:include page="/main/footer.jsp"/>
 <jsp:include page="/main/login.jsp"/>
+<script src="/main/script/main.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.bundle.min.js"></script>
 <!-- form login -->
 </body>
-<script src="/main/script/main.js"></script>
 </html>
