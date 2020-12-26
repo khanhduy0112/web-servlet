@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -22,4 +24,5 @@ public class ProductDetails implements Comparable<ProductDetails> {
     public int compareTo(ProductDetails o) {
         return this.size - o.size;
     }
+
 }

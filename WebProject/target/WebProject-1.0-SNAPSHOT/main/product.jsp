@@ -21,6 +21,7 @@
             content="Bootie Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"
     />
     <!-- //Meta tag Keywords -->
+    <link rel="stylesheet" href="/main/css/menu.css">
 
     <!-- Custom-Files -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/main/css/bootstrap.css"/>
@@ -31,19 +32,21 @@
     <link href="${pageContext.request.contextPath}/main/css/font-awesome.css" rel="stylesheet"/>
     <!-- //font-awesome-icons -->
     <!-- /Fonts -->
-    <link
-            href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700"
-            rel="stylesheet"
-    />
-    <link
-            href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900"
-            rel="stylesheet"
-    />
-    <!-- //Fonts -->
+    <link rel="stylesheet" href="main/css/design.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-<jsp:include page="/main/menu.jsp"/>
+<div>
+    <!-- Start: Header -->
+    <div class="header-blue" style="height: 15vh;">
+        <jsp:include page="/main/menu.jsp"/>
+    </div>
+    <!-- End: Header -->
+</div>
 <%--products--%>
 <section class="ab-info-main py-md-5 py-4">
     <div class="container py-md-3">
@@ -116,44 +119,44 @@
                     </ul>
                 </div>
                 <!-- //discounts -->
-<%--                <div class="left-side">--%>
-<%--                    <h3 class="sear-head">TÌM THEO GIÁ</h3>--%>
-<%--                    <ul class="w3layouts-box-list">--%>
-<%--                        <li>--%>
-<%--                            <input type="checkbox" class="checked"/>--%>
-<%--                            <span class="span"><=$50</span>--%>
-<%--                        </li>--%>
-<%--                        <li>--%>
-<%--                            <input type="checkbox" class="checked"/>--%>
-<%--                            <span class="span"><=$100</span>--%>
-<%--                        </li>--%>
-<%--                        <li>--%>
-<%--                            <input type="checkbox" class="checked"/>--%>
-<%--                            <span class="span"><=$150</span>--%>
-<%--                        </li>--%>
-<%--                        <li>--%>
-<%--                            <input type="checkbox" class="checked"/>--%>
-<%--                            <span class="span"><=$200</span>--%>
-<%--                        </li>--%>
-<%--                        <li>--%>
-<%--                            <input type="checkbox" class="checked"/>--%>
-<%--                            <span class="span"><=$250</span>--%>
-<%--                        </li>--%>
-<%--                        <li>--%>
-<%--                            <input type="checkbox" class="checked"/>--%>
-<%--                            <span class="span">>$250></span>--%>
-<%--                        </li>--%>
-<%--                    </ul>--%>
-<%--                </div>--%>
+                <%--                <div class="left-side">--%>
+                <%--                    <h3 class="sear-head">TÌM THEO GIÁ</h3>--%>
+                <%--                    <ul class="w3layouts-box-list">--%>
+                <%--                        <li>--%>
+                <%--                            <input type="checkbox" class="checked"/>--%>
+                <%--                            <span class="span"><=$50</span>--%>
+                <%--                        </li>--%>
+                <%--                        <li>--%>
+                <%--                            <input type="checkbox" class="checked"/>--%>
+                <%--                            <span class="span"><=$100</span>--%>
+                <%--                        </li>--%>
+                <%--                        <li>--%>
+                <%--                            <input type="checkbox" class="checked"/>--%>
+                <%--                            <span class="span"><=$150</span>--%>
+                <%--                        </li>--%>
+                <%--                        <li>--%>
+                <%--                            <input type="checkbox" class="checked"/>--%>
+                <%--                            <span class="span"><=$200</span>--%>
+                <%--                        </li>--%>
+                <%--                        <li>--%>
+                <%--                            <input type="checkbox" class="checked"/>--%>
+                <%--                            <span class="span"><=$250</span>--%>
+                <%--                        </li>--%>
+                <%--                        <li>--%>
+                <%--                            <input type="checkbox" class="checked"/>--%>
+                <%--                            <span class="span">>$250></span>--%>
+                <%--                        </li>--%>
+                <%--                    </ul>--%>
+                <%--                </div>--%>
                 <div class="left-side">
                     <h3 class="sear-head">TÌM THEO SIZE</h3>
                     <ul class="w3layouts-box-list">
-                      <c:forEach items="${sizes}" var="item">
-                          <li>
-                              <input type="checkbox" class="checked"/>
-                              <span class="span">${item}</span>
-                          </li>
-                      </c:forEach>
+                        <c:forEach items="${sizes}" var="item">
+                            <li>
+                                <input type="checkbox" class="checked"/>
+                                <span class="span">${item}</span>
+                            </li>
+                        </c:forEach>
                     </ul>
                 </div>
                 <!-- deals -->

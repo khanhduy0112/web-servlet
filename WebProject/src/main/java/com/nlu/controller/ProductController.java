@@ -23,7 +23,6 @@ public class ProductController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<ProductDetails> productDetailsList = productDetailsService.findAll();
         HashMap<Integer, Integer> sizes = new HashMap();
-
         for (ProductDetails details :
                 productDetailsList) {
             sizes.put(details.getSize(), details.getSize());
