@@ -27,8 +27,13 @@
 </head>
 
 <body>
-
-<jsp:include page="/main/menu.jsp"/>
+<div>
+    <!-- Start: Header -->
+    <div class="header-blue" style="height: 15vh;">
+        <jsp:include page="/main/menu.jsp"/>
+    </div>
+    <!-- End: Header -->
+</div>
 <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="../index.jsp">TRANG CHỦ</a></li>
     <li class="breadcrumb-item"><a href="product.jsp">SẢN PHẨM</a></li>
