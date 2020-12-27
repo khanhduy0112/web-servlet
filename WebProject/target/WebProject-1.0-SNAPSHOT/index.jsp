@@ -28,60 +28,7 @@
 </head>
 
 <body>
-<%--<div class="main-banner" id="home">--%>
-<%--    <header class="header">--%>
-<%--        <div class="container-fluid px-lg-5">--%>
-<%--            <nav class="py-4">--%>
-<%--                <div id="logo">--%>
-<%--                    <h1><a href="/">${shopDetails.shopName}</a></h1>--%>
-<%--                </div>--%>
 
-<%--                <label for="drop" class="toggle">Menu</label>--%>
-<%--                <input type="checkbox" id="drop"/>--%>
-<%--                <ul class="menu mt-2">--%>
-<%--                    <li><a href="/">TRANG CHỦ</a></li>--%>
-<%--                    <li><a href="/products">SẢN PHẨM</a></li>--%>
-<%--                    <li><a href="main/contact.jsp">LIÊN HỆ</a></li>--%>
-<%--                    <li>--%>
-<%--                        <label for="drop-2" class="toggle">DANH MỤC</label>--%>
-<%--                        <a href="#">DANH MỤC<span class="fa fa-angle-down" aria-hidden="true"></span></a>--%>
-<%--                        <input type="checkbox" id="drop-2"/>--%>
-<%--                        <ul>--%>
-<%--                            <c:forEach items="${categories}" var="item">--%>
-<%--                                <c:if test="${item.status == 1}">--%>
-<%--                                    <li><a href="">${item.name}</a></li>--%>
-<%--                                </c:if>--%>
-<%--                            </c:forEach>--%>
-<%--                        </ul>--%>
-<%--                    </li>--%>
-<%--                    <li>--%>
-<%--                        <a href="main/cart.jsp"><i class="fa fa-shopping-cart" aria-hidden="true"></i>GIỎ HÀNG</a>--%>
-<%--                    </li>--%>
-<%--                    <li class="a-login">--%>
-<%--                        <a href=""--%>
-<%--                        ><i class="fa fa-user-o" aria-hidden="true"></i>ĐĂNG NHÂP</a>--%>
-<%--                    </li>--%>
-<%--                </ul>--%>
-<%--            </nav>--%>
-<%--        </div>--%>
-<%--    </header>--%>
-<%--    <!-- //header -->--%>
-<%--    <!--/banner-->--%>
-<%--    <div class="banner-info">--%>
-<%--        <h4 class="tagret">MỤC TIÊU HÀNG ĐẦU</h4>--%>
-<%--        <h3 class="mb-4">Sneaker Chính Hãng</h3>--%>
-<%--        <div class="ban-buttons">--%>
-<%--            <a href="main/product.jsp" class="btn">Mua Sắm Ngay</a>--%>
-<%--        </div>--%>
-<%--        <div class="seachForm">--%>
-<%--            <input class="inputSearch" type="text" placeholder="Tìm kiếm"/>--%>
-<%--            <button class="btnSearch">--%>
-<%--                <i class="fa fa-search" aria-hidden="true"></i>--%>
-<%--            </button>--%>
-<%--        </div>--%>
-<%--    </div>--%>
-<%--    <!--// banner-inner -->--%>
-<%--</div>--%>
 <!-- Start: Header Blue -->
 <div>
     <!-- Start: Header -->
@@ -97,10 +44,11 @@
                     <button class="btn btn-light btn-lg action-button" type="button">Mua Ngay</button>
                 </div><!-- End: Text -->
                 <div class="col-md-5 col-lg-5 offset-lg-1 offset-xl-0 d-none d-lg-block phone-holder"><img
-                        src="/main/images/nkd.png" style="width: 570px;height: 100%;"></div>
+                        src="/main/images/nikelazerbanner.jpg" style="width: 570px;height: 100%;"></div>
             </div>
         </div>
-    </div><!-- End: Header -->
+    </div>
+    <!-- End: Header -->
 </div>
 <section class="about py-md-5 py-5">
     <div class="container-fluid">

@@ -52,7 +52,6 @@
     <div class="container py-md-3">
         <!-- top Products -->
         <div class="row">
-            <!-- product left -->
             <div class="side-bar col-lg-4">
                 <div class="search-bar w3layouts-newsletter">
                     <h3 class="sear-head">TÌM KIẾM</h3>
@@ -72,51 +71,89 @@
                 <div class="sidebar">
                     <div class="row" style="width: 250PX;padding: 10px;color: var(--light);border-color: var(--white);">
                         <div class="col">
-                            <div><a class="btn btn-primary" data-toggle="collapse" aria-expanded="true" aria-controls="collapse-1" href="#collapse-1" role="button" style="color: var(--white);font-weight: 600;font-style: normal;width: 100%;padding: 0;padding-bottom: 5px;padding-top: 10px;border-color: var(--white);border-bottom-color: var(--white);background: #172a74;margin-right: 0px;padding-right: 60px;text-align: center;">GIÁ SẢN PHẨM</a>
+                            <div>
+                                <a class="btn btn-primary"
+                                   data-toggle="collapse"
+                                   aria-expanded="true"
+                                   aria-controls="collapse-1"
+                                   href="#collapse-1"
+                                   role="button"
+                                   style="color: var(--white);font-weight: 600;font-style: normal;width: 100%;padding: 0;padding-bottom: 5px;padding-top: 10px;border-color: var(--white);border-bottom-color: var(--white);background: #172a74;margin-right: 0px;padding-right: 60px;text-align: center;">
+                                    GIÁ SẢN PHẨM
+                                </a>
                                 <div class="collapse show" id="collapse-1">
-                                    <div class="form-check" style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);"><input class="form-check-input" type="radio" id="formCheck-1"><label class="form-check-label" for="formCheck-1" style="color: var(--gray);">Label</label></div>
-                                    <div class="form-check" style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);"><input class="form-check-input" type="radio" id="formCheck-5"><label class="form-check-label" for="formCheck-1" style="color: var(--gray);">Label</label></div>
-                                    <div class="form-check" style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);"><input class="form-check-input" type="radio" id="formCheck-4"><label class="form-check-label" for="formCheck-1" style="color: var(--gray);">Label</label></div>
-                                    <div class="form-check" style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);"><input class="form-check-input" type="radio" id="formCheck-3"><label class="form-check-label" for="formCheck-1" style="color: var(--gray);">Label</label></div>
-                                    <div class="form-check" style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);"><input class="form-check-input" type="radio" id="formCheck-2"><label class="form-check-label" for="formCheck-1" style="color: var(--gray);">Label</label></div>
+                                    <c:forEach items="${categories}" var="category">
+                                        <c:if test="${category.status == 1}">
+                                            <div class="form-check"
+                                                 style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);">
+                                                <input class="form-check-input" type="radio" id="formCheck-1">
+                                                <label class="form-check-label" for="formCheck-1"
+                                                       style="color: var(--gray);">${category.name}</label>
+                                            </div>
+                                        </c:if>
+                                    </c:forEach>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>    <div class="sidebar">
+                </div>
+                <div class="sidebar">
                     <div class="row" style="width: 250PX;padding: 10px;color: var(--light);border-color: var(--white);">
                         <div class="col">
-                            <div><a class="btn btn-primary" data-toggle="collapse" aria-expanded="true" aria-controls="collapse-1" href="#collapse-1" role="button" style="color: var(--white);font-weight: 600;font-style: normal;width: 100%;padding: 0;padding-bottom: 5px;padding-top: 10px;border-color: var(--white);border-bottom-color: var(--white);background: #172a74;margin-right: 0px;padding-right: 60px;text-align: center;">GIÁ SẢN PHẨM</a>
+                            <div>
+                                <a class="btn btn-primary"
+                                   data-toggle="collapse"
+                                   aria-expanded="true"
+                                   aria-controls="collapse-1"
+                                   href="#collapse-1"
+                                   role="button"
+                                   style="color: var(--white);font-weight: 600;font-style: normal;width: 100%;padding: 0;padding-bottom: 5px;padding-top: 10px;border-color: var(--white);border-bottom-color: var(--white);background: #172a74;margin-right: 0px;padding-right: 60px;text-align: center;">
+                                    GIÁ SẢN PHẨM
+                                </a>
                                 <div class="collapse show" id="collapse-1">
-                                    <div class="form-check" style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);"><input class="form-check-input" type="radio" id="formCheck-1"><label class="form-check-label" for="formCheck-1" style="color: var(--gray);">Label</label></div>
-                                    <div class="form-check" style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);"><input class="form-check-input" type="radio" id="formCheck-5"><label class="form-check-label" for="formCheck-1" style="color: var(--gray);">Label</label></div>
-                                    <div class="form-check" style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);"><input class="form-check-input" type="radio" id="formCheck-4"><label class="form-check-label" for="formCheck-1" style="color: var(--gray);">Label</label></div>
-                                    <div class="form-check" style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);"><input class="form-check-input" type="radio" id="formCheck-3"><label class="form-check-label" for="formCheck-1" style="color: var(--gray);">Label</label></div>
-                                    <div class="form-check" style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);"><input class="form-check-input" type="radio" id="formCheck-2"><label class="form-check-label" for="formCheck-1" style="color: var(--gray);">Label</label></div>
+                                    <c:forEach items="${tags}" var="tag">
+                                        <c:if test="${tag.status == 1}">
+                                            <div class="form-check"
+                                                 style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);">
+                                                <input class="form-check-input" type="radio" id="formCheck-1">
+                                                <label class="form-check-label" for="formCheck-1"
+                                                       style="color: var(--gray);">${tag.name}</label>
+                                            </div>
+                                        </c:if>
+                                    </c:forEach>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>    <div class="sidebar">
+                </div>
+                <div class="sidebar">
                     <div class="row" style="width: 250PX;padding: 10px;color: var(--light);border-color: var(--white);">
                         <div class="col">
-                            <div><a class="btn btn-primary" data-toggle="collapse" aria-expanded="true" aria-controls="collapse-1" href="#collapse-1" role="button" style="color: var(--white);font-weight: 600;font-style: normal;width: 100%;padding: 0;padding-bottom: 5px;padding-top: 10px;border-color: var(--white);border-bottom-color: var(--white);background: #172a74;margin-right: 0px;padding-right: 60px;text-align: center;">GIÁ SẢN PHẨM</a>
+                            <div>
+                                <a class="btn btn-primary"
+                                   data-toggle="collapse"
+                                   aria-expanded="true"
+                                   aria-controls="collapse-1"
+                                   href="#collapse-1"
+                                   role="button"
+                                   style="color: var(--white);font-weight: 600;font-style: normal;width: 100%;padding: 0;padding-bottom: 5px;padding-top: 10px;border-color: var(--white);border-bottom-color: var(--white);background: #172a74;margin-right: 0px;padding-right: 60px;text-align: center;">
+                                    GIÁ SẢN PHẨM
+                                </a>
                                 <div class="collapse show" id="collapse-1">
-                                    <div class="form-check" style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);"><input class="form-check-input" type="radio" id="formCheck-1"><label class="form-check-label" for="formCheck-1" style="color: var(--gray);">Label</label></div>
-                                    <div class="form-check" style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);"><input class="form-check-input" type="radio" id="formCheck-5"><label class="form-check-label" for="formCheck-1" style="color: var(--gray);">Label</label></div>
-                                    <div class="form-check" style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);"><input class="form-check-input" type="radio" id="formCheck-4"><label class="form-check-label" for="formCheck-1" style="color: var(--gray);">Label</label></div>
-                                    <div class="form-check" style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);"><input class="form-check-input" type="radio" id="formCheck-3"><label class="form-check-label" for="formCheck-1" style="color: var(--gray);">Label</label></div>
-                                    <div class="form-check" style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);"><input class="form-check-input" type="radio" id="formCheck-2"><label class="form-check-label" for="formCheck-1" style="color: var(--gray);">Label</label></div>
+                                    <c:forEach items="${sizes}" var="size">
+                                        <div class="form-check"
+                                             style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);">
+                                            <input class="form-check-input" type="radio" id="formCheck-1">
+                                            <label class="form-check-label" for="formCheck-1"
+                                                   style="color: var(--gray);">${size}</label>
+                                        </div>
+                                    </c:forEach>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-
-<%--            product--%>
             <div class="left-ads-display col-lg-8">
                 <div class="row">
                     <c:forEach items="${products}" var="item">
@@ -147,6 +184,24 @@
 
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <nav align="center" style="text-align: center;height: 100px;margin: 0px;">
+                <ul class="pagination">
+                    <li >
+                        <a style="padding: 10px 15px; background: #2d2f35; border: 1px solid whitesmoke" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a>
+                    </li>
+                    <li><a style="padding: 10px 15px; background: #2d2f35;border: 1px solid whitesmoke" href="#">1</a></li>
+                    <li><a style="padding: 10px 15px; background: #2d2f35;border: 1px solid whitesmoke" href="#">1</a></li>
+                    <li><a style="padding: 10px 15px; background: #2d2f35;border: 1px solid whitesmoke" href="#">1</a></li>
+
+                    <li>
+                        <a style="padding: 10px 15px; background: #2d2f35; border: 1px solid whitesmoke" href="#" aria-label="Next"><span aria-hidden="true">»</span></a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </div>
 </section>

@@ -16,11 +16,20 @@ import java.util.*;
 @WebServlet("/products")
 public class ProductController extends HttpServlet {
 
+
     ProductService productService = new ProductService();
     ProductDetailsService productDetailsService = new ProductDetailsService();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String categoryName = req.getParameter("category");
+        List<Product> products;
+        if (categoryName.equals("all")) {
+            products = productService.findAll();
+        } else {
+            products = productService.findProductsByCategoryName(categoryName);
+        }
+        req.setAttribute("products", products);
         List<ProductDetails> productDetailsList = productDetailsService.findAll();
         HashMap<Integer, Integer> sizes = new HashMap();
         for (ProductDetails details :
@@ -32,6 +41,6 @@ public class ProductController extends HttpServlet {
                 .sorted(Map.Entry.comparingByValue());
         req.setAttribute("sizes", sizes.values());
         req.getRequestDispatcher("/main/product.jsp").forward(req, resp);
-    }
 
+    }
 }
