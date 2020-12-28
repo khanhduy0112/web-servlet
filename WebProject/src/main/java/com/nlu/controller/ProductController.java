@@ -23,21 +23,14 @@ public class ProductController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<Product> products = null;
-        int offset = 0;
+        List<Product> products = productService.findAll();
         int itemPerPage = 10;
-        int pages = Integer.parseInt(req.getParameter("pages"));
         int quality = productService.getQuality();
         int pagesCount = quality / itemPerPage;
         if (quality % itemPerPage > 0) {
             pagesCount++;
         }
-        if (pages == 1) {
-            products = productService.findALl(offset, itemPerPage);
-        }
-        if (pages == 2) {
-            products = productService.findALl(2 * itemPerPage, 3);
-        }
+
         HashMap<Integer, Integer> sizes = productDetailsService.findAllSize();
         req.setAttribute("sizes", sizes.values());
         req.setAttribute("products", products);
