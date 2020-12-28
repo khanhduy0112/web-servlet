@@ -66,6 +66,34 @@ public class ProductDetailsService implements Repository<ProductDetails> {
 
     }
 
+    public HashMap<Integer, Integer> findAllSize() {
+        String query = "SELECT size FROM product_details";
+        List<Integer> sizes = new ArrayList<>();
+        Connection connection = getConnection();
+        try {
+            Statement statement = connection.createStatement();
+            ResultSet rs = statement.executeQuery(query);
+            while (rs.next()) {
+                sizes.add(rs.getInt(1));
+            }
+            HashMap<Integer, Integer> hashMap = new HashMap();
+            for (Integer details :
+                    sizes) {
+                hashMap.put(details, details);
+            }
+            hashMap.entrySet()
+                    .stream()
+                    .sorted(Map.Entry.comparingByValue());
+            returnConnection(connection);
+            return hashMap;
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return null;
+    }
+
+
     @Override
     public ProductDetails findById(Integer id) throws SQLException {
         return null;
@@ -88,7 +116,8 @@ public class ProductDetailsService implements Repository<ProductDetails> {
 
     public static void main(String[] args) {
         ProductDetailsService productDetailsService = new ProductDetailsService();
-        List<ProductDetails> all = productDetailsService.findAll();
+        System.out.println(productDetailsService.findAllSize());
+
 
     }
 }

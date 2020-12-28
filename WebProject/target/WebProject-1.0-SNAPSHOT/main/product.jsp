@@ -1,25 +1,17 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
+
 <head>
-    <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
     <title>Tất Cả Sản Phẩm</title>
-    <link
-            rel="shortcut icon"
-            href="/main/images/Jordan1-Retro.jpg"
-            type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="/main/images/Jordan1-Retro.jpg" type="image/x-icon"/>
     <!-- Meta tag Keywords -->
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta charset="UTF-8"/>
-    <meta
-            name="keywords"
-            content="Bootie Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"
-    />
+    <meta name="keywords"
+          content="Bootie Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"/>
     <!-- //Meta tag Keywords -->
     <link rel="stylesheet" href="/main/css/menu.css">
 
@@ -56,28 +48,20 @@
                 <div class="search-bar w3layouts-newsletter">
                     <h3 class="sear-head">TÌM KIẾM</h3>
                     <form action="#" method="post" class="d-flex">
-                        <input
-                                type="search"
-                                placeholder="TÊN SẢN PHẨM"
-                                name="search"
-                                class="form-control"
-                                required=""
-                        />
+                        <input type="search" placeholder="TÊN SẢN PHẨM" name="search" class="form-control"
+                               required=""/>
                         <button class="btn1">
                             <span class="fa fa-search" aria-hidden="true"></span>
                         </button>
                     </form>
                 </div>
                 <div class="sidebar">
-                    <div class="row" style="width: 250PX;padding: 10px;color: var(--light);border-color: var(--white);">
+                    <div class="row"
+                         style="width: 250PX;padding: 10px;color: var(--light);border-color: var(--white);">
                         <div class="col">
                             <div>
-                                <a class="btn btn-primary"
-                                   data-toggle="collapse"
-                                   aria-expanded="true"
-                                   aria-controls="collapse-1"
-                                   href="#collapse-1"
-                                   role="button"
+                                <a class="btn btn-primary" data-toggle="collapse" aria-expanded="true"
+                                   aria-controls="collapse-1" href="#collapse-1" role="button"
                                    style="color: var(--white);font-weight: 600;font-style: normal;width: 100%;padding: 0;padding-bottom: 5px;padding-top: 10px;border-color: var(--white);border-bottom-color: var(--white);background: #172a74;margin-right: 0px;padding-right: 60px;text-align: center;">
                                     GIÁ SẢN PHẨM
                                 </a>
@@ -98,15 +82,12 @@
                     </div>
                 </div>
                 <div class="sidebar">
-                    <div class="row" style="width: 250PX;padding: 10px;color: var(--light);border-color: var(--white);">
+                    <div class="row"
+                         style="width: 250PX;padding: 10px;color: var(--light);border-color: var(--white);">
                         <div class="col">
                             <div>
-                                <a class="btn btn-primary"
-                                   data-toggle="collapse"
-                                   aria-expanded="true"
-                                   aria-controls="collapse-1"
-                                   href="#collapse-1"
-                                   role="button"
+                                <a class="btn btn-primary" data-toggle="collapse" aria-expanded="true"
+                                   aria-controls="collapse-1" href="#collapse-1" role="button"
                                    style="color: var(--white);font-weight: 600;font-style: normal;width: 100%;padding: 0;padding-bottom: 5px;padding-top: 10px;border-color: var(--white);border-bottom-color: var(--white);background: #172a74;margin-right: 0px;padding-right: 60px;text-align: center;">
                                     GIÁ SẢN PHẨM
                                 </a>
@@ -127,15 +108,12 @@
                     </div>
                 </div>
                 <div class="sidebar">
-                    <div class="row" style="width: 250PX;padding: 10px;color: var(--light);border-color: var(--white);">
+                    <div class="row"
+                         style="width: 250PX;padding: 10px;color: var(--light);border-color: var(--white);">
                         <div class="col">
                             <div>
-                                <a class="btn btn-primary"
-                                   data-toggle="collapse"
-                                   aria-expanded="true"
-                                   aria-controls="collapse-1"
-                                   href="#collapse-1"
-                                   role="button"
+                                <a class="btn btn-primary" data-toggle="collapse" aria-expanded="true"
+                                   aria-controls="collapse-1" href="#collapse-1" role="button"
                                    style="color: var(--white);font-weight: 600;font-style: normal;width: 100%;padding: 0;padding-bottom: 5px;padding-top: 10px;border-color: var(--white);border-bottom-color: var(--white);background: #172a74;margin-right: 0px;padding-right: 60px;text-align: center;">
                                     GIÁ SẢN PHẨM
                                 </a>
@@ -160,11 +138,7 @@
                         <div class="col-md-4 product-men">
                             <div class="product-shoe-info shoe text-center">
                                 <div class="men-thumb-item">
-                                    <img
-                                            src="${item.img}"
-                                            class="img-fluid"
-                                            alt=""
-                                    />
+                                    <img src="${item.img}" class="img-fluid" alt=""/>
                                 </div>
                                 <div class="item-info-product">
                                     <h4>
@@ -190,15 +164,21 @@
         <div class="row justify-content-center">
             <nav align="center" style="text-align: center;height: 100px;margin: 0px;">
                 <ul class="pagination">
-                    <li >
-                        <a style="padding: 10px 15px; background: #2d2f35; border: 1px solid whitesmoke" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a>
-                    </li>
-                    <li><a style="padding: 10px 15px; background: #2d2f35;border: 1px solid whitesmoke" href="#">1</a></li>
-                    <li><a style="padding: 10px 15px; background: #2d2f35;border: 1px solid whitesmoke" href="#">1</a></li>
-                    <li><a style="padding: 10px 15px; background: #2d2f35;border: 1px solid whitesmoke" href="#">1</a></li>
-
+                    <%--prev--%>
                     <li>
-                        <a style="padding: 10px 15px; background: #2d2f35; border: 1px solid whitesmoke" href="#" aria-label="Next"><span aria-hidden="true">»</span></a>
+                        <a style="padding: 10px 15px; background: #2d2f35; border: 1px solid whitesmoke" href="#"
+                           aria-label="Previous"><span aria-hidden="true">«</span></a>
+                    </li>
+                    <%--prev--%>
+
+                    <c:forEach var="i" begin="1" end="${pagesCount+1}">
+                        <li><a style="padding: 10px 15px; background: #2d2f35;border: 1px solid whitesmoke"
+                               href="/products?category=all&pages=${i}">${i}</a></li>
+                    </c:forEach>
+                    <%--next--%>
+                    <li>
+                        <a style="padding: 10px 15px; background: #2d2f35; border: 1px solid whitesmoke" href="#"
+                           aria-label="Next"><span aria-hidden="true">»</span></a>
                     </li>
                 </ul>
             </nav>
@@ -217,4 +197,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.bundle.min.js"></script>
 <!-- form login -->
 </body>
+
 </html>
