@@ -2,10 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+
     <title>Trang Chủ</title>
     <link
             rel="shortcut icon"
@@ -14,119 +11,45 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta charset="UTF-8"/>
-    <meta
-            name="keywords"
-            content="Bootie Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"
-    />
-    <script></script>
 
     <link rel="stylesheet" href="main/css/bootstrap.css"/>
     <link rel="stylesheet" href="main/css/style.css" type="text/css" media="all"/>
     <link href="main/css/font-awesome.css" rel="stylesheet"/>
     <!--  -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css"/>
     <link
             rel="stylesheet"
             href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
-    <style>
-        .swiper-container {
-            width: 90%;
-            margin: 1rem auto;
-            /* background-color: rgb(44, 44, 44); */
-            padding: 1rem;
-        }
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        .swiper-container img {
-            /* width: 50%; */
-            height: 120px !important;
-            /* height: 100%; */
-        }
-
-        .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            background: #fff;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            -webkit-justify-content: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            -webkit-align-items: center;
-            align-items: center;
-        }
-    </style>
 </head>
 
 <body>
-<!-- mian-content -->
-<div class="main-banner" id="home">
-    <!-- header -->
-    <header class="header">
-        <div class="container-fluid px-lg-5">
-            <!-- nav -->
-            <nav class="py-4">
-                <div id="logo">
-                    <h1><a href="/">SKED</a></h1>
-                </div>
 
-                <label for="drop" class="toggle">Menu</label>
-                <input type="checkbox" id="drop"/>
-                <ul class="menu mt-2">
-                    <li><a href="/">TRANG CHỦ</a></li>
-                    <li><a href="/products">SẢN PHẨM</a></li>
-                    <li><a href="main/contact.jsp">LIÊN HỆ</a></li>
-                    <li>
-                        <label for="drop-2" class="toggle">DANH MỤC</label>
-                        <a href="#">DANH MỤC<span class="fa fa-angle-down" aria-hidden="true"></span></a>
-                        <input type="checkbox" id="drop-2"/>
-                        <ul>
-                            <c:forEach items="${categories}" var="item">
-                                <c:if test="${item.status == 1}">
-                                    <li><a href="main/nike.jsp">${item.name}</a></li>
-                                </c:if>
-                            </c:forEach>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="main/cart.jsp"
-                        ><i class="fa fa-shopping-cart" aria-hidden="true"></i>GIỎ
-                            HÀNG</a
-                        >
-                    </li>
-                    <li class="a-login">
-                        <a href=""
-                        ><i class="fa fa-user-o" aria-hidden="true"></i>ĐĂNG NHÂP</a
-                        >
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <!-- //header -->
-    <!--/banner-->
-    <div class="banner-info">
-        <h4 class="tagret">MỤC TIÊU HÀNG ĐẦU</h4>
-        <h3 class="mb-4">Sneaker Chính Hãng</h3>
-        <div class="ban-buttons">
-            <a href="main/product.jsp" class="btn">Mua Sắm Ngay</a>
-        </div>
-        <div class="seachForm">
-            <input class="inputSearch" type="text" placeholder="Tìm kiếm"/>
-            <button class="btnSearch">
-                <i class="fa fa-search" aria-hidden="true"></i>
-            </button>
+<!-- Start: Header Blue -->
+<div>
+    <!-- Start: Header -->
+    <div class="header-blue" style="height: 696px;">
+        <jsp:include page="/main/menu.jsp"/>
+        <div class="container hero">
+            <div class="row">
+                <!-- Start: Text -->
+                <div class="col-12 col-lg-6 col-xl-6 offset-xl-1" style="margin-left: -15px;margin-top: 0px;">
+                    <h1 style="margin-top: 90px;font-size: 35px;">Sneaker chính hãng nhập khẩu Mỹ</h1>
+                    <p>Mauris egestas tellus non ex condimentum, ac ullamcorper sapien dictum. Nam consequat neque quis
+                        sapien viverra convallis. In non tempus lorem. </p>
+                    <button class="btn btn-light btn-lg action-button" type="button">Mua Ngay</button>
+                </div><!-- End: Text -->
+                <div class="col-md-5 col-lg-5 offset-lg-1 offset-xl-0 d-none d-lg-block phone-holder"><img
+                        src="/main/images/nikelazerbanner.jpg" style="width: 570px;height: 100%;"></div>
+            </div>
         </div>
     </div>
-    <!--// banner-inner -->
+    <!-- End: Header -->
 </div>
-<!--//main-content-->
-<!--/ab -->
 <section class="about py-md-5 py-5">
     <div class="container-fluid">
         <div class="feature-grids row px-3">
@@ -184,12 +107,12 @@
     <div class="container pb-lg-3">
         <h3 class="tittle text-center">SẢN PHẨM MỚI</h3>
         <div class="row">
-            <c:forEach items="${products}" var="item">
+            <c:forEach items="${products}" var="product">
                 <div class="col-md-4 product-men">
                     <div class="product-shoe-info shoe text-center">
                         <div class="men-thumb-item">
                             <img
-                                    src="main/images/Nike%20Air%20Force%201%20Low%20Travis%20Scott.jpg"
+                                    src="${product.img}"
                                     class="img-fluid"
                                     alt=""
                             />
@@ -197,15 +120,14 @@
                         </div>
                         <div class="item-info-product">
                             <h4>
-                                <a href="main/product-single.jsp"
-                                >${item.name}</a
-                                >
+                                <a href="/products/product-single?id=${product.productId}"
+                                >${product.name}</a>
                             </h4>
 
                             <div class="product_price">
                                 <div class="grid-price">
-                                    <span class="regular-price">${item.price}</span>
-                                    <span class="money">${item.salesPercent}</span>
+                                    <span class="regular-price">${product.price}</span>
+                                    <span class="money">${product.salesPercent}</span>
                                 </div>
                             </div>
                         </div>
@@ -289,6 +211,8 @@
 <script src="main/script/main.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.bundle.min.js"></script>
 <!-- Initialize Swiper -->
 <script>
     const swiper = new Swiper(".swiper-container", {

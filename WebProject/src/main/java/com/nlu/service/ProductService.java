@@ -39,6 +39,35 @@ public class ProductService implements Repository<Product>, {
 
     }
 
+    public List<Product> findALl(int offset, int limit) {
+        List<Product> products = new ArrayList<>();
+        String query = "SELECT * FROM products LIMIT ? ,?";
+        try {
+            Connection connection = getConnection();
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setInt(1, offset);
+            statement.setInt(2, limit);
+            ResultSet rs = statement.executeQuery();
+            while (rs.next()) {
+                Product product = new Product(
+                        rs.getInt(1),
+                        rs.getString(2),
+                        rs.getInt(3),
+                        rs.getString(4),
+                        rs.getString(5),
+                        rs.getInt(6),
+                        rs.getInt(7),
+                        rs.getDouble(8));
+                products.add(product);
+            }
+            returnConnection(connection);
+            return products;
+        } catch (SQLException e) {
+            System.out.println(e);
+            return products;
+        }
+    }
+
     @Override
     public Product findById(Integer id) {
         String query = "SELECT * FROM product WHERE product_id = ?";
@@ -67,6 +96,80 @@ public class ProductService implements Repository<Product>, {
         }
     }
 
+    public List<Product> findProductsByCategoryName(String categoryName) {
+        List<Product> products = new ArrayList<>();
+        String query = "SELECT products.* FROM products JOIN category ON products.category_id = category.category_id WHERE category.name = ?";
+        try {
+            Connection connection = getConnection();
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setString(1, categoryName);
+            ResultSet rs = statement.executeQuery();
+            while (rs.next()) {
+                Product product = new Product(
+                        rs.getInt(1),
+                        rs.getString(2),
+                        rs.getInt(3),
+                        rs.getString(4),
+                        rs.getString(5),
+                        rs.getInt(6),
+                        rs.getInt(7),
+                        rs.getDouble(8));
+                products.add(product);
+            }
+            returnConnection(connection);
+            return products;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return products;
+    }
+
+    public List<Product> findProductByCategoryId(int categoryId) {
+        List<Product> products = new ArrayList<>();
+        String query = "select products.* from products join category on products.category_id = category.category_id where category.category_id = ?;";
+        try {
+            Connection connection = getConnection();
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setInt(1, categoryId);
+            ResultSet rs = statement.executeQuery();
+            while (rs.next()) {
+                Product product = new Product(
+                        rs.getInt(1),
+                        rs.getString(2),
+                        rs.getInt(3),
+                        rs.getString(4),
+                        rs.getString(5),
+                        rs.getInt(6),
+                        rs.getInt(7),
+                        rs.getDouble(8));
+                products.add(product);
+            }
+            returnConnection(connection);
+            return products;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return products;
+    }
+
+    public int getQuality() {
+        String query = "SELECT COUNT(products.product_id) FROM products";
+        int count = 0;
+        try {
+            Connection connection = getConnection();
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+            while (resultSet.next()) {
+                count = resultSet.getInt(1);
+            }
+            returnConnection(connection);
+            return count;
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return 0;
+    }
+
     @Override
     public List<Product> findByName() {
         return null;
@@ -77,10 +180,14 @@ public class ProductService implements Repository<Product>, {
         return null;
     }
 
+    @Override
+    public void add(Product product) {
+
+    }
+
     public static void main(String[] args) throws SQLException {
         ProductService productService = new ProductService();
-//        List<Product> all = productService.findAll();
-//        System.out.println(all.toString());
-        Product byId = productService.findById(10);
+        System.out.println(productService.findALl(0,1));
+
     }
 }

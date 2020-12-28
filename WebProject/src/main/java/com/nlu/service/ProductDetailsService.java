@@ -5,8 +5,7 @@ import com.nlu.model.ProductDetails;
 import com.nlu.repository.Repository;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 import static com.nlu.db.Datasource.*;
 
@@ -39,16 +38,16 @@ public class ProductDetailsService implements Repository<ProductDetails> {
         }
     }
 
-    public List<ProductDetails> findByProductId(Integer productId) {
+    public ProductDetails findByProductId(Integer productId) {
         String query = "SELECT * FROM product_details WHERE  product_id = ?";
-        List<ProductDetails> productDetailsList = new ArrayList<>();
+        ProductDetails details = null;
         try {
             Connection connection = getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setInt(1, productId);
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
-                ProductDetails details = new ProductDetails(
+                details = new ProductDetails(
                         rs.getInt(1),
                         rs.getInt(2),
                         rs.getString(3),
@@ -56,10 +55,9 @@ public class ProductDetailsService implements Repository<ProductDetails> {
                         rs.getInt(5),
                         rs.getInt(6)
                 );
-                productDetailsList.add(details);
             }
             returnConnection(connection);
-            return productDetailsList;
+            return details;
 
         } catch (SQLException e) {
             System.out.println(e);
@@ -67,6 +65,34 @@ public class ProductDetailsService implements Repository<ProductDetails> {
         }
 
     }
+
+    public HashMap<Integer, Integer> findAllSize() {
+        String query = "SELECT size FROM product_details";
+        List<Integer> sizes = new ArrayList<>();
+        Connection connection = getConnection();
+        try {
+            Statement statement = connection.createStatement();
+            ResultSet rs = statement.executeQuery(query);
+            while (rs.next()) {
+                sizes.add(rs.getInt(1));
+            }
+            HashMap<Integer, Integer> hashMap = new HashMap();
+            for (Integer details :
+                    sizes) {
+                hashMap.put(details, details);
+            }
+            hashMap.entrySet()
+                    .stream()
+                    .sorted(Map.Entry.comparingByValue());
+            returnConnection(connection);
+            return hashMap;
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return null;
+    }
+
 
     @Override
     public ProductDetails findById(Integer id) throws SQLException {
@@ -83,10 +109,15 @@ public class ProductDetailsService implements Repository<ProductDetails> {
         return null;
     }
 
+    @Override
+    public void add(ProductDetails productDetails) {
+
+    }
+
     public static void main(String[] args) {
         ProductDetailsService productDetailsService = new ProductDetailsService();
-        List<ProductDetails> all = productDetailsService.findByProductId(1);
-        String s = all.toString();
-        System.out.println(s);
+        System.out.println(productDetailsService.findAllSize());
+
+
     }
 }

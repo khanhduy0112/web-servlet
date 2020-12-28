@@ -20,11 +20,20 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/main/css/bootstrap.css"/>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/main/css/style.css" type="text/css" media="all"/>
     <link href="${pageContext.request.contextPath}/main/css/font-awesome.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-
-<jsp:include page="/main/menu.jsp"/>
+<div>
+    <!-- Start: Header -->
+    <div class="header-blue" style="height: 15vh;">
+        <jsp:include page="/main/menu.jsp"/>
+    </div>
+    <!-- End: Header -->
+</div>
 <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="../index.jsp">TRANG CHỦ</a></li>
     <li class="breadcrumb-item"><a href="product.jsp">SẢN PHẨM</a></li>
@@ -144,12 +153,15 @@
                                 alt="anh san pham"
                         />
                     </div>
-                    <div class="details">
-                        <h4 class="name_product">${product.name}</h4>
-                        <div class="size_product">
-                            <h2 class="size_title">Size :</h2>
+                    <form class="details">
+                        <h4 class="product_name">${product.name}</h4>
+                        <h2 class="size_title">Size :</h2>
+                        <div class="product_size-container" style="display: flex; background-color:indianred; justify-content: space-around">
                             <c:forEach items="${details}" var="item">
-                                <span class="size size_37"><h4 class="sizeh4 size37">${item.size}</h4></span>
+                                <div class="product_size">
+                                    <label for="${item.size}">${item.size}</label>
+                                    <input id="${item.size}" value="${item.size}" type="checkbox">
+                                </div>
                             </c:forEach>
                         </div>
                         <div
@@ -171,17 +183,13 @@
                         </div>
                         <div class="total" style="font-size: 23px !important">
                             <strong>Tổng cộng :</strong>
-                            <span
-                                    class="total-value"
-                                    style="color: green; margin-left: 10px">
-                    5.000.000
-                  </span>
+                            <span class="total-value" style="color: green; margin-left: 10px">5.000.000</span>
                             <span style="color: green"> đ</span>
                         </div>
                         <!-- <hr /> -->
                         <div class="button-product">
                             <button class="buttons buttons-cart btn-add">
-                                Thêm vào giỏ
+                                <a href="/order">Thêm vào giỏ</a>
                             </button>
                             <a href="cart.jsp">
                                 <button class="buttons buttons-carts" type="button">
@@ -199,7 +207,7 @@
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
                 <h3 class="shop-sing">SẢN PHẨM LIÊN QUAN</h3>
                 <div class="row m-0">
@@ -254,127 +262,7 @@
 </section>
 <!-- //contact -->
 <!-- footer -->
-<div class="footer_container">
-    <footer>
-        <div class="container">
-            <div class="row footer-top">
-                <div class="col-lg-4 footer-grid_section_w3layouts">
-                    <h2 class="logo-2 mb-lg-4 mb-3">
-                        <a href="../index.jsp">SKED</a>
-                    </h2>
-                    <p class="titleShop">Cam kết sneakers chính hãng nhập khẩu Mỹ</p>
-                    <h4 class="sub-con-fo ad-info my-4">Mạng Xã Hội</h4>
-                    <ul class="w3layouts_social_list list-unstyled">
-                        <li>
-                            <a href="#" class="w3pvt_facebook">
-                                <span class="fa fa-facebook-f"></span>
-                            </a>
-                        </li>
-                        <li class="mx-2">
-                            <a href="#" class="w3pvt_twitter">
-                                <span class="fa fa-twitter"></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="w3pvt_dribble">
-                                <span class="fa fa-dribbble"></span>
-                            </a>
-                        </li>
-                        <li class="ml-2">
-                            <a href="#" class="w3pvt_google">
-                                <span class="fa fa-google-plus"></span>
-                            </a>
-                        </li>
-                    </ul>
-                    <div style="margin: 1rem 0">
-                        <a style="color: #D3EFDE ;font-family: Tahoma;font-size: 18px" href="../admin/login.jsp"
-                        >Quản lí cửa hàng
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-8 footer-right">
-                    <div class="row bottom-w3layouts-sec-nav mx-0">
-                        <div class="col-md-4 footer-grid_section_w3layouts">
-                            <h3 class="footer-title text-uppercase text-wh mb-lg-4 mb-3">
-                                TRANG
-                            </h3>
-                            <ul class="list-unstyled w3layouts-icons">
-                                <li>
-                                    <a href="../index.jsp">Home</a>
-                                </li>
-                                <li>
-                                    <a href="nike.jsp">Nike</a>
-                                </li>
-                                <li>
-                                    <a href="adidas.jsp">Adidas</a>
-                                </li>
-                                <li>
-                                    <a href="vans.jsp">VANS</a>
-                                </li>
-                                <li class="mt-3">
-                                    <a href="contact.jsp">Liên Hệ</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4 footer-grid_section_w3layouts">
-                            <h3 class="footer-title text-uppercase text-wh mb-lg-4 mb-3">
-                                Thẻ
-                            </h3>
-                            <ul class="list-unstyled w3layouts-icons">
-                                <li>
-                                    <a href="../index.jsp">Chạy Bộ</a>
-                                </li>
-                                <li>
-                                    <a href="shop.html">DÃ NGOẠI</a>
-                                </li>
-                                <li>
-                                    <a href="shop.html">Đi Học</a>
-                                </li>
-                                <li>
-                                    <a href="shop.html">Đi Làm</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div
-                                class="col-md-4 footer-grid_section_w3layouts my-md-0 my-5"
-                        >
-                            <h3 class="footer-title text-uppercase text-wh mb-lg-4 mb-3">
-                                THÔNG TIN LIÊN HỆ
-                            </h3>
-                            <div class="contact-info">
-                                <div class="footer-address-inf">
-                                    <h4 class="ad-info mb-2">Điện Thoại</h4>
-                                    <p>0869104353</p>
-                                </div>
-                                <div class="footer-address-inf my-4">
-                                    <h4 class="ad-info mb-2">Email</h4>
-                                    <p>
-                                        khanh2104@gmail.com
-                                    </p>
-                                </div>
-                                <div class="footer-address-inf">
-                                    <h4 class="ad-info mb-2">Địa Chỉ</h4>
-                                    <p>Tầng 80 Landmark, Bình Thạnh, HCM</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cpy-right text-left row">
-                        <p class="col-md-10">
-                            <a href="http://w3layouts.com"> </a>
-                        </p>
-                        <!-- move top icon -->
-                        <a href="#home" class="move-top text-right col-md-2"
-                        ><span class="fa fa-long-arrow-up" aria-hidden="true"></span
-                        ></a>
-                        <!-- //move top icon -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-</div>
+<jsp:include page="/main/footer.jsp"/>
 <!-- //footer -->
 <jsp:include page="/main/login.jsp"/>
 <script src="main/script/main.js"></script>

@@ -27,6 +27,7 @@ public class TagService implements Repository<Tag> {
                 Tag tag = new Tag(rs.getInt(1), rs.getString(2), rs.getInt(3));
                 tags.add(tag);
             }
+            returnConnection(connection);
             return tags;
         } catch (SQLException e) {
             e.printStackTrace();
@@ -49,9 +50,8 @@ public class TagService implements Repository<Tag> {
         return null;
     }
 
-    public static void main(String[] args) {
-        TagService tagService = new TagService();
-        List<Tag> all = tagService.findAll();
-        System.out.println(all.toString());
+    @Override
+    public void add(Tag tag) {
+
     }
 }

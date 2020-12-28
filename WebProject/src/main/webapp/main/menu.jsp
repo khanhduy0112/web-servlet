@@ -1,53 +1,38 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<div class="main-banner" id="home" style="background: none !important; height: 18vh">
-    <header class="header" style="background-color: #229434 !important;">
-        <div class="container-fluid px-lg-5">
-            <!-- nav -->
-            <nav class="py-4">
-                <div id="logo">
-                    <h1><a href="/">SKED</a></h1>
-                </div>
+<nav class="navbar navbar-light navbar-expand-md navigation-clean-search">
+    <div class="container-fluid"><a class="navbar-brand" href="/" style="font-size: 40px;">${shopDetails.shopName}</a>
+        <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span
+                class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navcol-1">
+            <ul class="nav navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="/">Trang chủ</a></li>
+                <li class="nav-item"><a class="nav-link" href="/products?pages=1">Sản phẩm</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Liên hệ</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Giỏ hàng<i class="fa fa-shopping-cart"
+                                                                             style="padding-left: 5px;"></i></a>
+                </li>
+                <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown"
+                                                 aria-expanded="false" href="#">Doanh Mục</a>
+                    <div class="dropdown-menu">
+                        <c:forEach items="${categories}" var="category">
+                            <c:if test="${category.status == 1}">
+                                <a class="dropdown-item"
+                                   href="/products?category=${category.name}?category=${category.name}&pages=1">${category.name}</a>
+                            </c:if>
+                        </c:forEach>
+                    </div>
+                </li>
+                <form class="form-inline mr-auto" target="_self">
+                    <div class="form-group"><label for="search-field"><i class="fa fa-search"></i></label><input
+                            class="form-control search-field" type="search" id="search-field" name="search">
+                    </div>
+                </form>
 
-                <label for="drop" class="toggle">Menu</label>
-                <input type="checkbox" id="drop"/>
-                <ul class="menu mt-2">
-                    <li><a href="/">TRANG CHỦ</a></li>
-                    <li><a href="product.jsp">SẢN PHẨM</a></li>
-                    <li><a href="contact.jsp">LIÊN HỆ</a></li>
-                    <li>
-                        <label for="drop-2" class="toggle">DANH MỤC</label>
-                        <a href="#">DANH MỤC<span class="fa fa-angle-down" aria-hidden="true"></span></a>
-                        <input type="checkbox" id="drop-2"/>
-                        <ul>
-                            <c:forEach items="${categories}" var="item">
-                                <c:if test="${item.status == 1}">
-                                    <li><a href="main/nike.jsp">${item.name}</a></li>
-                                </c:if>
-                            </c:forEach>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="cart.jsp"
-                        ><i class="fa fa-shopping-cart" aria-hidden="true"></i>GIỎ
-                            HÀNG</a
-                        >
-                    </li>
-                    <li class="a-login">
-                        <a href=""
-                        ><i class="fa fa-user-o" aria-hidden="true"></i>ĐĂNG NHÂP</a
-                        >
-                    </li>
-                </ul>
-            </nav>
+            </ul>
+            <span class="navbar-text aLogin"> <a class="login" href="#">Đăng Nhập</a></span>
+            <a class="btn btn-light action-button" role="button" href="#">Đăng Kí</a>
         </div>
-    </header>
 
-</div>
-<ol class="breadcrumb">
-    <li class="breadcrumb-item">
-        <a href="../index.jsp">TRANG CHỦ</a>
-    </li>
-    <li class="breadcrumb-item active">SẢN PHẨM</li>
-</ol>
-
+    </div>
+</nav>

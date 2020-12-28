@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.nlu.db.DBConfiguration.*;
+import static com.nlu.config.DBConfiguration.*;
 
 public class ConnectionPool {
 
@@ -20,7 +20,6 @@ public class ConnectionPool {
         try {
             Class.forName(DB_DRIVER);
             Connection connection = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
-            System.out.println("Tao ra connection");
             return connection;
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
@@ -50,7 +49,6 @@ public class ConnectionPool {
             System.out.println(availableConnections.size());
             connection = availableConnections.get(0);
             availableConnections.remove(0);
-            System.out.println("Lay ra 1 ket noi");
             return connection;
         }
         System.out.println("Vui long doi");

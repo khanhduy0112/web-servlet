@@ -1,118 +1,65 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<div class="footer_container">
+<div class="footer-dark">
     <footer>
         <div class="container">
-            <div class="row footer-top">
-                <div class="col-lg-4 footer-grid_section_w3layouts">
-                    <h2 class="logo-2 mb-lg-4 mb-3">
-                        <a href="index.jsp">SKED</a>
-                    </h2>
-                    <p class="titleShop">Cam kết sneakers chính hãng nhập khẩu Mỹ</p>
-                    <h4 class="sub-con-fo ad-info my-4">Mạng Xã Hội</h4>
-                    <ul class="w3layouts_social_list list-unstyled">
-                        <li>
-                            <a href="#" class="w3pvt_facebook">
-                                <span class="fa fa-facebook-f"></span>
-                            </a>
-                        </li>
-                        <li class="mx-2">
-                            <a href="#" class="w3pvt_twitter">
-                                <span class="fa fa-twitter"></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="w3pvt_dribble">
-                                <span class="fa fa-dribbble"></span>
-                            </a>
-                        </li>
-                        <li class="ml-2">
-                            <a href="#" class="w3pvt_google">
-                                <span class="fa fa-google-plus"></span>
-                            </a>
-                        </li>
+            <h1>${shopDetails.shopName}</h1>
+            <p>${shopDetails.bottomDescription}<br></p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-3 col-xl-2 item">
+                    <h3>Thương hiệu</h3>
+                    <ul>
+                        <c:forEach items="${categories}" var="category">
+                            <c:if test="${category.status == 1}">
+                                <li>
+                                    <a href="/products?category=${category.name}">${category.name}</a>
+                                </li>
+                            </c:if>
+                        </c:forEach>
                     </ul>
-                    <div style="margin: 1rem 0">
-                        <a style="color: #D3EFDE ;font-family: Tahoma;font-size: 18px" href="admin/login.jsp">Quản lí
-                            cửa hàng</a>
-                    </div>
                 </div>
-                <div class="col-lg-8 footer-right">
-                    <div class="row bottom-w3layouts-sec-nav mx-0">
-                        <div class="col-md-4 footer-grid_section_w3layouts">
-                            <h3 class="footer-title text-uppercase text-wh mb-lg-4 mb-3">
-                                TRANG
-                            </h3>
-                            <ul class="list-unstyled w3layouts-icons">
-                                <li>
-                                    <a href="index.jsp">Home</a>
-                                </li>
-                                <li>
-                                    <a href="main/nike.jsp">Nike</a>
-                                </li>
-                                <li>
-                                    <a href="main/adidas.jsp">Adidas</a>
-                                </li>
-                                <li>
-                                    <a href="main/vans.jsp">VANS</a>
-                                </li>
-                                <li class="mt-3">
-                                    <a href="main/contact.jsp">Liên Hệ</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4 footer-grid_section_w3layouts">
-                            <h3 class="footer-title text-uppercase text-wh mb-lg-4 mb-3">
-                                Thẻ
-                            </h3>
-                            <ul class="list-unstyled w3layouts-icons">
-                                <c:forEach items="${tags}" var="item">
-<%--                                    <c:if test="${tag.status == 1}">--%>
-                                        <li>
-                                            <a href="index.jsp">${item.name}</a>
-                                        </li>
-<%--                                    </c:if>--%>
-                                </c:forEach>
-
-                            </ul>
-                        </div>
-
-                        <div
-                                class="col-md-4 footer-grid_section_w3layouts my-md-0 my-5"
-                        >
-                            <h3 class="footer-title text-uppercase text-wh mb-lg-4 mb-3">
-                                THÔNG TIN LIÊN HỆ
-                            </h3>
-                            <div class="contact-info">
-                                <div class="footer-address-inf">
-                                    <h4 class="ad-info mb-2">Điện Thoại</h4>
-                                    <p>0869104353</p>
-                                </div>
-                                <div class="footer-address-inf my-4">
-                                    <h4 class="ad-info mb-2">Email</h4>
-                                    <p>
-                                        khanh2104@gmail.com
-                                    </p>
-                                </div>
-                                <div class="footer-address-inf">
-                                    <h4 class="ad-info mb-2">Địa Chỉ</h4>
-                                    <p>Tầng 80 Landmark, Bình Thạnh, HCM</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cpy-right text-left row">
-                        <p class="col-md-10">
-                            <a href="http://w3layouts.com"> </a>
-                        </p>
-                        <!-- move top icon -->
-                        <a href="#home" class="move-top text-right col-md-2"
-                        ><span class="fa fa-long-arrow-up" aria-hidden="true"></span
-                        ></a>
-                        <!-- //move top icon -->
-                    </div>
+                <div class="col-sm-6 col-md-3 col-xl-2 item">
+                    <h3>About</h3>
+                    <ul>
+                        <c:forEach items="${tags}" var="tag">
+                            <c:if test="${tag.status == 1}">
+                                <li><a href="#">${tag.name}</a></li>
+                            </c:if>
+                        </c:forEach>
+                    </ul>
                 </div>
+                <div class="col-sm-6 col-md-3 col-xl-4 item">
+                    <h3>About</h3>
+                    <ul>
+
+                        <li>
+                            <i class="fa fa-phone"></i>
+                            <a href="#" style="padding-left: 10px;">${shopDetails.phone}</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="#" style="padding-left: 10px;">${shopDetails.email}</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-location-arrow"></i>
+                            <a href="#" style="padding-left: 10px;">${shopDetails.address}</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-md-6 col-xl-4 item text">
+                    <h3>${shopDetails.shopName}</h3>
+                    <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula
+                        rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel
+                        in justo.</p>
+                </div>
+                <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i
+                        class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a
+                        href="#"><i class="icon ion-social-instagram"></i></a></div>
             </div>
+            <p class="copyright">${shopDetails.shopName} © 2017</p>
         </div>
     </footer>
 </div>

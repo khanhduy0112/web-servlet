@@ -47,4 +47,9 @@ public class CategoryService implements Repository<Category> {
     public Category deleteById() {
         return null;
     }
+
+    @Override
+    public void add(Category category) {
+
+    }
 }
