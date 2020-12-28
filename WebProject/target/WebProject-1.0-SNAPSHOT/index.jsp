@@ -97,7 +97,7 @@
                     <button class="btn btn-light btn-lg action-button" type="button">Mua Ngay</button>
                 </div><!-- End: Text -->
                 <div class="col-md-5 col-lg-5 offset-lg-1 offset-xl-0 d-none d-lg-block phone-holder"><img
-                        src="/main/images/nkd.png" style="width: 570px;height: 100%;"></div>
+                        src="/main/images/nikelazerbanner.jpg" style="width: 570px;height: 100%;"></div>
             </div>
         </div>
     </div><!-- End: Header -->
