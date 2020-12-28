@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="web-serevlet archive" />
+    </artifacts-to-build>
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d2bab16c-7d14-46e3-a295-edc2e38cd0d9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Air-Jordan-1-Mid-SE-White-Laser-Orange-Lucky-Green-PS.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Air-Jordan-1-Retro-Green-Gucci.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Air-Jordan-1-Retro-High-Zip-Particle-Beige-W-Product.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Air-Jordan-6-Retro-All-Star-2017-Product.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Gucci-Pursuit-Pool-Slides-White-Product (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike Air Max 270 White Pack.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike SB Dunk Low Sean Cliver.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-Air-Force-1-Low-Remix-White-GS.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-Paul-Rodriguez-8-Black-Metallic-Silver-White.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-Roshe-Run-Magista-Pack.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-SF-Af1-Mid-Desert-Moss-Desert-Moss-Product.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-Vaporwaffle-sacai-Sport-Fuchsia-Game-Royal-Product.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-Zoom-Freak-1-Soul-Glo-Product.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/adidas-Y-3-Ayero-White-Black.png" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1m7ARPZ8m9WQm1sR7DismhWfYzQ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/WebProject/src/main/webapp/main/images" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Documents\web-servlet\WebProject\src\main\webapp\main\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Documents\web-servlet\WebProject\src\main\webapp\images" />
+      <recent name="C:\Users\Admin\Documents\web-servlet\WebProject\src\main\webapp\main\images" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 8.5" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.59" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="web-serevlet archive">
+          <settings>
+            <option name="CONTEXT_PATH" value="/web_serevlet" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_web-servlet_2" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="51108" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d2bab16c-7d14-46e3-a295-edc2e38cd0d9" name="Default Changelist" comment="" />
+      <created>1608834246635</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608834246635</updated>
+      <workItem from="1608834247796" duration="1096000" />
+      <workItem from="1608835715339" duration="87000" />
+      <workItem from="1608835888261" duration="4160000" />
+      <workItem from="1608840096262" duration="17000" />
+      <workItem from="1608840268475" duration="344000" />
+      <workItem from="1608840908556" duration="71000" />
+      <workItem from="1608840997651" duration="45000" />
+      <workItem from="1609058218615" duration="164000" />
+      <workItem from="1609099566146" duration="35000" />
+      <workItem from="1609131666862" duration="304000" />
+      <workItem from="1609132340851" duration="3475000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="169" key="#BuildArtifactsBeforeRunChooser" timestamp="1609132388660">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="169" key="#BuildArtifactsBeforeRunChooser/0.0.1366.728@0.0.1366.728" timestamp="1609132388660" />
+    <state x="163" y="0" key="#Project_Structure" timestamp="1608834371051">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="163" y="0" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1608834371051" />
+    <state x="137" y="0" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609132413479">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="0" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1609132413479" />
+    <state x="444" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1608838092742">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="444" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1608838092742" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1608835970752">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1608835970752" />
+    <state width="905" height="117" key="GridCell.Tab.0.bottom" timestamp="1608840040650">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="117" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1608840040650" />
+    <state width="905" height="117" key="GridCell.Tab.0.center" timestamp="1608840040650">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="117" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1608840040650" />
+    <state width="905" height="117" key="GridCell.Tab.0.left" timestamp="1608840040650">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="117" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1608840040650" />
+    <state width="905" height="117" key="GridCell.Tab.0.right" timestamp="1608840040650">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="117" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1608840040650" />
+    <state width="905" height="117" key="GridCell.Tab.1.bottom" timestamp="1608840040651">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="117" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1608840040651" />
+    <state width="905" height="117" key="GridCell.Tab.1.center" timestamp="1608840040650">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="117" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1608840040650" />
+    <state width="905" height="117" key="GridCell.Tab.1.left" timestamp="1608840040650">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="117" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1608840040650" />
+    <state width="905" height="117" key="GridCell.Tab.1.right" timestamp="1608840040651">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="117" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1608840040651" />
+    <state width="905" height="117" key="GridCell.Tab.2.bottom" timestamp="1608840040651">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="117" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1608840040651" />
+    <state width="905" height="117" key="GridCell.Tab.2.center" timestamp="1608840040651">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="117" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1608840040651" />
+    <state width="905" height="117" key="GridCell.Tab.2.left" timestamp="1608840040651">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="117" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1608840040651" />
+    <state width="905" height="117" key="GridCell.Tab.2.right" timestamp="1608840040651">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="117" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1608840040651" />
+    <state x="163" y="0" key="SettingsEditor" timestamp="1608835733416">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1608835733416" />
+  </component>
+</project>
