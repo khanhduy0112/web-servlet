@@ -24,22 +24,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2bab16c-7d14-46e3-a295-edc2e38cd0d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Air-Jordan-1-Mid-SE-White-Laser-Orange-Lucky-Green-PS.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Air-Jordan-1-Retro-Green-Gucci.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Air-Jordan-1-Retro-High-Zip-Particle-Beige-W-Product.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Air-Jordan-6-Retro-All-Star-2017-Product.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Gucci-Pursuit-Pool-Slides-White-Product (1).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike Air Max 270 White Pack.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike SB Dunk Low Sean Cliver.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-Air-Force-1-Low-Remix-White-GS.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-Paul-Rodriguez-8-Black-Metallic-Silver-White.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-Roshe-Run-Magista-Pack.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-SF-Af1-Mid-Desert-Moss-Desert-Moss-Product.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-Vaporwaffle-sacai-Sport-Fuchsia-Game-Royal-Product.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-Zoom-Freak-1-Soul-Glo-Product.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/adidas-Y-3-Ayero-White-Black.png" afterDir="false" />
-    </list>
+    <list default="true" id="d2bab16c-7d14-46e3-a295-edc2e38cd0d9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -192,7 +177,7 @@
       <workItem from="1609058218615" duration="164000" />
       <workItem from="1609099566146" duration="35000" />
       <workItem from="1609131666862" duration="304000" />
-      <workItem from="1609132340851" duration="3475000" />
+      <workItem from="1609132340851" duration="4059000" />
     </task>
     <servers />
   </component>
