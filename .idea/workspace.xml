@@ -24,21 +24,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2bab16c-7d14-46e3-a295-edc2e38cd0d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Air-Jordan-1-Low-Gym-Red-White-GS-Product.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Air-Jordan-11-Retro-Low-Concord-Bred-Product.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Air-Jordan-11-Retro-Low-Golf-Cool-Grey-Product.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Air-Jordan-14-Retro-Toro-GS-Product.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-Air-Tailwind-79-Antarctica.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Classic-Slip-On-MoMA-Faith-Ringgold.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Half-Cab-Dime.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Old-Skool-KENZO-Floral-Yellow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Old-Skool-Los.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Sk8-Hi-Cap-Violet-Indigo-Reflective.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Sk8-Hi-MTE-The-Simpsons-Mr-Plow-Product.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Sk8-Hi-Nightmare-Before-Christmas-Christmastown.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="d2bab16c-7d14-46e3-a295-edc2e38cd0d9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,24 +68,22 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Documents\web-servlet\WebProject\src\main\webapp\main\images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Admin\Documents\web-servlet\WebProject\src\main\webapp\images" />
       <recent name="C:\Users\Admin\Documents\web-servlet\WebProject\src\main\webapp\main\images" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Admin\Documents\web-servlet\WebProject\src\main\webapp\main\images" />
-    </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -193,8 +177,7 @@
       <workItem from="1609058218615" duration="164000" />
       <workItem from="1609099566146" duration="35000" />
       <workItem from="1609131666862" duration="304000" />
-      <workItem from="1609132340851" duration="4716000" />
-      <workItem from="1609144440538" duration="1392000" />
+      <workItem from="1609132340851" duration="4059000" />
     </task>
     <servers />
   </component>
