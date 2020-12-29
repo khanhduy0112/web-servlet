@@ -26,21 +26,27 @@ public class ProductController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Product> products;
         int itemPerPage = 12;
-        int quality = productService.getQuality();
-        int pagesCount = quality / 12;
-        if (quality % itemPerPage > 0) {
-            pagesCount++;
-        }
+//        int quality = productService.getQuality();
+//        int pagesCount = quality / 12;
+//        if (quality % itemPerPage > 0) {
+//            pagesCount++;
+//        }
         String category = req.getParameter("category");
         int currentPage = Integer.parseInt(req.getParameter("pages"));
         products = productService.findAll(currentPage, itemPerPage, category);
 
+        int productQuality = productService.countProductInCategory(category);
+        int pagesCount = productQuality / itemPerPage;
+        if (productQuality % itemPerPage > 0) {
+            pagesCount++;
+        }
 
         HashMap<Integer, Integer> sizes = productDetailsService.findAllSize();
         req.setAttribute("currentCategory", req.getParameter("category"));
         req.setAttribute("sizes", sizes.values());
         req.setAttribute("products", products);
         req.setAttribute("pagesCount", pagesCount);
+        req.setAttribute("currentPage",req.getParameter("pages"));
         req.getRequestDispatcher("/main/product.jsp").forward(req, resp);
 
     }

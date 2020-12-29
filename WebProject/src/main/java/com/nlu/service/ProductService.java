@@ -108,6 +108,29 @@ public class ProductService implements Repository<Product> {
         return products;
     }
 
+    public int countProductInCategory(String category) {
+        int count = 0;
+        String query = "SELECT COUNT(p.product_id) FROM products p JOIN category c ON p.category_id = c.category_id WHERE c.name = ?";
+        if (category.equals("all")) {
+            query = "SELECT COUNT(p.product_id) FROM products p JOIN category c ON p.category_id = c.category_id ";
+        }
+        try {
+            Connection connection = getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            if (!category.equals("all")) {
+                preparedStatement.setString(1, category);
+            }
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()) {
+                count = rs.getInt(1);
+            }
+            returnConnection(connection);
+            return count;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return count;
+    }
 
     @Override
     public Product findById(Integer id) {
@@ -228,6 +251,7 @@ public class ProductService implements Repository<Product> {
 
     public static void main(String[] args) throws SQLException {
         ProductService productService = new ProductService();
-        System.out.println(productService.findAll(1, 10, "all"));
+//        System.out.println(productService.findAll(1, 10, "all"));
+        System.out.println(productService.countProductInCategory("Adidas"));
     }
 }
