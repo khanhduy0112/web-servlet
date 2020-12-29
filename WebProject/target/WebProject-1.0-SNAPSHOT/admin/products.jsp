@@ -259,10 +259,13 @@
                             </select>
                         </div>
                         <div class="select-search__field">
-                            <select name="action">
-                                <option value="day">Nike</option>
-                                <option value="month">Adidas</option>
-                                <option value="year">Vans</option>
+                            <select class="select_location">
+                                <c:forEach items="${categories}" var="category">
+                                    <option value="">Doanh Mục</option>
+                                    <option value="/admin/products?category=${category.name}&pages=1">
+                                            ${category.name}
+                                    </option>
+                                </c:forEach>
                             </select>
                         </div>
                     </div>
@@ -405,5 +408,20 @@
 <script src="/admin/js/main.js"></script>
 <script src="/admin/js/zoom/dist/zoom.min.js"></script>
 <script src="/admin/js/products.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#find_item").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#table tr").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+            });
+        });
+    });
+</script>
+<script>
+    $(".select_location").on("change", function () {
+        window.location = $(this).val();
+    });
+</script>
 </body>
 </html>

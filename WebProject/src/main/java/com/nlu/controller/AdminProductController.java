@@ -1,6 +1,7 @@
 package com.nlu.controller;
 
 import com.nlu.model.Product;
+import com.nlu.service.CategoryService;
 import com.nlu.service.ProductService;
 
 import javax.servlet.ServletException;
@@ -15,6 +16,7 @@ import java.util.List;
 public class AdminProductController extends HttpServlet {
 
     ProductService productService = new ProductService();
+    CategoryService categoryService = new CategoryService();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -31,6 +33,7 @@ public class AdminProductController extends HttpServlet {
         req.setAttribute("products", products);
         req.setAttribute("pagesCount", pagesCount);
         req.setAttribute("currentCategory", category);
+        req.setAttribute("categories", categoryService.findAll());
         req.getRequestDispatcher("/admin/products.jsp").forward(req, resp);
     }
 }
