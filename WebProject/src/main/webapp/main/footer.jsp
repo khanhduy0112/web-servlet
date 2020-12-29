@@ -49,7 +49,7 @@
 
                     </ul>
                     <li>
-                        <a href="/admin/dashboard.jsp">Quan Li</a>
+                        <a href="/admin/products?category=all&pages=1">Quan Li</a>
                     </li>
                 </div>
                 <div class="col-md-6 col-xl-4 item text">
