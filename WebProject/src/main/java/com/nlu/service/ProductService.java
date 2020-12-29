@@ -40,15 +40,55 @@ public class ProductService implements Repository<Product> {
 
     }
 
-    public List<Product> findALl(int offset, int limit) {
+//    public List<Product> findALl(int offset, int limit) {
+//        List<Product> products = new ArrayList<>();
+//        String query = "SELECT * FROM products LIMIT ? ,?";
+//        try {
+//            Connection connection = getConnection();
+//            PreparedStatement statement = connection.prepareStatement(query);
+//            statement.setInt(1, offset);
+//            statement.setInt(2, limit);
+//            ResultSet rs = statement.executeQuery();
+//            while (rs.next()) {
+//                Product product = new Product(
+//                        rs.getInt(1),
+//                        rs.getString(2),
+//                        rs.getInt(3),
+//                        rs.getString(4),
+//                        rs.getString(5),
+//                        rs.getInt(6),
+//                        rs.getInt(7),
+//                        rs.getDouble(8));
+//                products.add(product);
+//            }
+//            returnConnection(connection);
+//            return products;
+//        } catch (SQLException e) {
+//            System.out.println(e);
+//            return products;
+//        }
+//    }
+
+    public List<Product> findAll(int currentPage, int recordsPerPage, String category) {
         List<Product> products = new ArrayList<>();
-        String query = "SELECT * FROM products LIMIT ? ,?";
+        int offset = currentPage * recordsPerPage - recordsPerPage;
+        String sql = "SELECT products.* FROM products  LIMIT ?,?";
+        if (!category.equals("all")) {
+            sql = "select * from products p join category c on p.category_id = c.category_id where c.name =? LIMIT ?,?";
+        }
         try {
             Connection connection = getConnection();
-            PreparedStatement statement = connection.prepareStatement(query);
-            statement.setInt(1, offset);
-            statement.setInt(2, limit);
-            ResultSet rs = statement.executeQuery();
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            if (!category.equals("all")) {
+                preparedStatement.setString(1, category);
+                preparedStatement.setInt(2, offset);
+                preparedStatement.setInt(3, recordsPerPage);
+            } else {
+                preparedStatement.setInt(1, offset);
+                preparedStatement.setInt(2, recordsPerPage);
+            }
+            ResultSet rs = preparedStatement.executeQuery();
+
             while (rs.next()) {
                 Product product = new Product(
                         rs.getInt(1),
@@ -62,11 +102,34 @@ public class ProductService implements Repository<Product> {
                 products.add(product);
             }
             returnConnection(connection);
-            return products;
-        } catch (SQLException e) {
-            System.out.println(e);
-            return products;
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
         }
+        return products;
+    }
+
+    public int countProductInCategory(String category) {
+        int count = 0;
+        String query = "SELECT COUNT(p.product_id) FROM products p JOIN category c ON p.category_id = c.category_id WHERE c.name = ?";
+        if (category.equals("all")) {
+            query = "SELECT COUNT(p.product_id) FROM products p JOIN category c ON p.category_id = c.category_id ";
+        }
+        try {
+            Connection connection = getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            if (!category.equals("all")) {
+                preparedStatement.setString(1, category);
+            }
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()) {
+                count = rs.getInt(1);
+            }
+            returnConnection(connection);
+            return count;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return count;
     }
 
     @Override
@@ -188,7 +251,7 @@ public class ProductService implements Repository<Product> {
 
     public static void main(String[] args) throws SQLException {
         ProductService productService = new ProductService();
-        System.out.println(productService.findALl(0,1));
-
+//        System.out.println(productService.findAll(1, 10, "all"));
+        System.out.println(productService.countProductInCategory("Adidas"));
     }
 }

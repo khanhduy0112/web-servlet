@@ -142,7 +142,8 @@
                                 </div>
                                 <div class="item-info-product">
                                     <h4>
-                                        <a href="/products/product-single?id=${item.productId}">${item.name}
+                                            <%--                                        <a href="/products/product-single?id=${item.productId}">${item.name}--%>
+                                        <a href="/products/product-single?id=${item.productId}">${item.productId}
                                         </a>
                                     </h4>
 
@@ -165,21 +166,32 @@
             <nav align="center" style="text-align: center;height: 100px;margin: 0px;">
                 <ul class="pagination">
                     <%--prev--%>
-                    <li>
-                        <a style="padding: 10px 15px; background: #2d2f35; border: 1px solid whitesmoke" href="#"
-                           aria-label="Previous"><span aria-hidden="true">«</span></a>
-                    </li>
-                    <%--prev--%>
+                    <c:if test="${pagesCount >  1}">
+                        <li>
 
-                    <c:forEach var="i" begin="1" end="${pagesCount+1}">
+                            <a style="padding: 10px 15px; background: #2d2f35; border: 1px solid whitesmoke"
+                                    <c:if test="${currentPage >1}">
+                                        href="/products?category=${currentCategory}&pages=${currentPage +1}"
+                                    </c:if>
+                               aria-label="Previous"><span aria-hidden="true">«</span></a>
+                        </li>
+                    </c:if>
+                    <%--prev--%>
+                    <c:forEach var="i" begin="1" end="${pagesCount}">
                         <li><a style="padding: 10px 15px; background: #2d2f35;border: 1px solid whitesmoke"
-                               href="/products?category=all&pages=${i}">${i}</a></li>
+                               href="/products?category=${currentCategory}&pages=${i}">${i}</a></li>
                     </c:forEach>
                     <%--next--%>
-                    <li>
-                        <a style="padding: 10px 15px; background: #2d2f35; border: 1px solid whitesmoke" href="#"
-                           aria-label="Next"><span aria-hidden="true">»</span></a>
-                    </li>
+                    <c:if test="${pagesCount > 1}">
+                        <li>
+                            <a style="padding: 10px 15px; background: #2d2f35; border: 1px solid whitesmoke"
+                                    <c:if test="${currentPage < pagesCount}">
+                                        href="/products?category=${currentCategory}&pages=${currentPage +1}"
+                                    </c:if>
+                               aria-label="Next"><span aria-hidden="true">»</span></a>
+                        </li>
+                    </c:if>
+
                 </ul>
             </nav>
         </div>
