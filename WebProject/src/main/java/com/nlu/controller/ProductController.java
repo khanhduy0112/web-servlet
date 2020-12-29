@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.*;
 
 @WebServlet("/products")
@@ -23,19 +24,25 @@ public class ProductController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<Product> products = productService.findAll();
-        int itemPerPage = 10;
+        List<Product> products;
+        int itemPerPage = 12;
         int quality = productService.getQuality();
-        int pagesCount = quality / itemPerPage;
+        int pagesCount = quality / 12;
         if (quality % itemPerPage > 0) {
             pagesCount++;
         }
+        String category = req.getParameter("category");
+        int currentPage = Integer.parseInt(req.getParameter("pages"));
+        products = productService.findAll(currentPage, itemPerPage, category);
+
 
         HashMap<Integer, Integer> sizes = productDetailsService.findAllSize();
+        req.setAttribute("currentCategory", req.getParameter("category"));
         req.setAttribute("sizes", sizes.values());
         req.setAttribute("products", products);
         req.setAttribute("pagesCount", pagesCount);
         req.getRequestDispatcher("/main/product.jsp").forward(req, resp);
+
     }
 
 

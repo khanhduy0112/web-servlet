@@ -7,7 +7,7 @@
         <div class="collapse navbar-collapse" id="navcol-1">
             <ul class="nav navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="/">Trang chủ</a></li>
-                <li class="nav-item"><a class="nav-link" href="/products?pages=1">Sản phẩm</a></li>
+                <li class="nav-item"><a class="nav-link" href="/products?category=all&pages=1">Sản phẩm</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Liên hệ</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Giỏ hàng<i class="fa fa-shopping-cart"
                                                                              style="padding-left: 5px;"></i></a>
@@ -18,7 +18,7 @@
                         <c:forEach items="${categories}" var="category">
                             <c:if test="${category.status == 1}">
                                 <a class="dropdown-item"
-                                   href="/products?category=${category.name}?category=${category.name}&pages=1">${category.name}</a>
+                                   href="/products?category=${category.name}&pages=1">${category.name}</a>
                             </c:if>
                         </c:forEach>
                     </div>

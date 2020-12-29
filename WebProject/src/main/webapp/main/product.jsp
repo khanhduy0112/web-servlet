@@ -142,7 +142,8 @@
                                 </div>
                                 <div class="item-info-product">
                                     <h4>
-                                        <a href="/products/product-single?id=${item.productId}">${item.name}
+                                            <%--                                        <a href="/products/product-single?id=${item.productId}">${item.name}--%>
+                                        <a href="/products/product-single?id=${item.productId}">${item.productId}
                                         </a>
                                     </h4>
 
@@ -171,9 +172,9 @@
                     </li>
                     <%--prev--%>
 
-                    <c:forEach var="i" begin="1" end="${pagesCount+1}">
+                    <c:forEach var="i" begin="1" end="${pagesCount}">
                         <li><a style="padding: 10px 15px; background: #2d2f35;border: 1px solid whitesmoke"
-                               href="/products?category=all&pages=${i}">${i}</a></li>
+                               href="/products?category=${currentCategory}&pages=${i}">${i}</a></li>
                     </c:forEach>
                     <%--next--%>
                     <li>

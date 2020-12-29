@@ -48,6 +48,9 @@
                         </li>
 
                     </ul>
+                    <li>
+                        <a href="/admin/dashboard.jsp">Quan Li</a>
+                    </li>
                 </div>
                 <div class="col-md-6 col-xl-4 item text">
                     <h3>${shopDetails.shopName}</h3>

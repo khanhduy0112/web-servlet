@@ -18,4 +18,12 @@ public class Product {
     private Integer price;
     private Double salesPercent;
 
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "productId=" + productId +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }
