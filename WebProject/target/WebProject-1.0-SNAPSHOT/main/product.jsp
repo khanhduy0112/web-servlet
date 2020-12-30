@@ -198,7 +198,7 @@
 
 
 <jsp:include page="/main/footer.jsp"/>
-<jsp:include page="/main/login.jsp"/>
+<%--<jsp:include page="/main/login.jsp"/>--%>
 <script src="/main/script/main.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

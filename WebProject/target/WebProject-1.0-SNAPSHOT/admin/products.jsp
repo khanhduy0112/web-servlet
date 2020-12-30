@@ -1,3 +1,4 @@
+<%@ page import="com.nlu.model.User" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page
         contentType="text/html;charset=UTF-8" %>
@@ -17,6 +18,19 @@
 </head>
 
 <body>
+<%!
+    User user;
+%>
+<%
+    if (session.getAttribute("auth") != null) {
+        user = (User) session.getAttribute("auth");
+        if (!user.getRole().equals("admin")) {
+            response.sendRedirect("/main/login.jsp");
+        }
+    } else {
+        response.sendRedirect("/main/login.jsp");
+    }
+%>
 <div class="body_container">
     <!-- ===***LEFT***=== -->
     <div class="left_wrapper">
@@ -260,8 +274,9 @@
                         </div>
                         <div class="select-search__field">
                             <select class="select_location">
+                                <option value="">Doanh Mục</option>
+
                                 <c:forEach items="${categories}" var="category">
-                                    <option value="">Doanh Mục</option>
                                     <option value="/admin/products?category=${category.name}&pages=1">
                                             ${category.name}
                                     </option>

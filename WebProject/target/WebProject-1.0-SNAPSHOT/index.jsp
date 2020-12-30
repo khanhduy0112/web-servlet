@@ -1,3 +1,4 @@
+<%@ page import="com.nlu.model.User" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -32,6 +33,7 @@
 <!-- Start: Header Blue -->
 <div>
     <!-- Start: Header -->
+
     <div class="header-blue" style="height: 696px;">
         <jsp:include page="/main/menu.jsp"/>
         <div class="container hero">
@@ -205,7 +207,7 @@
 <!-- //footer -->
 
 <!-- form login -->
-<jsp:include page="/main/login.jsp"/>
+<%--<jsp:include page="/main/login.jsp"/>--%>
 <!-- form login -->
 </body>
 <script src="main/script/main.js"></script>

@@ -1,3 +1,5 @@
+<%@ page import="com.nlu.model.User" %>
+<%@ page import="com.nlu.model.ERole" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
@@ -11,6 +13,19 @@
     <script src="https://cdn.ckeditor.com/ckeditor5/23.1.0/classic/ckeditor.js"></script>
 </head>
 <body>
+<%!
+    User user;
+%>
+<%
+    if (session.getAttribute("auth") != null) {
+        user = (User) session.getAttribute("auth");
+        if (!user.getRole().equals("admin")) {
+            response.sendRedirect("/main/login.jsp");
+        }
+    } else {
+        response.sendRedirect("/main/login.jsp");
+    }
+%>
 <div class="body_container">
     <!-- ===***LEFT***=== -->
     <div class="left_wrapper">
@@ -98,8 +113,7 @@
             </div>
             <!-- end of right topbar -->
             <div class="right_content">
-                <form method="post" class="new_product" action="/new-product">
-
+                <form method="post" class="new_product" action="/admin/new-product">
                     <div class="form">
                         <div class="form_group">
                             <label for="product_name">Tên Sản Phẩm</label><br/>
@@ -123,7 +137,7 @@
                         </div>
                         <div class="form_group">
                             <label for="editor">Miêu Tả Sản Phẩm</label><br/>
-                            <input name="product_decription" type="text" id="editor"/>
+                            <input name="product_description" type="text" id="editor"/>
                         </div>
                         <div class="form_group">
                             <table style="margin-top: 1rem">
@@ -166,25 +180,26 @@
                         <div class="category">
                             <span>Doanh Mục</span>
                             <div class="category_control">
-                                <input type="checkbox" name=""/>
+                                <input type="checkbox" name="cb_category" value="Nike"/>
                                 <label for="jordan">Jordan</label>
                             </div>
                             <div class="category_control">
-                                <input type="checkbox" name=""/>
+                                <input type="checkbox" name="cb_category" value="Adidas"/>
                                 <label for="adidas">Adidas</label>
                             </div>
                             <div class="category_control">
-                                <input type="checkbox" name=""/>
+                                <input type="checkbox" name="cb_category" value="Converse"/>
                                 <label for="converse">Converse</label>
                             </div>
                             <div class="category_control">
-                                <input type="checkbox" name="nike"/>
+                                <input type="checkbox" name="cb_category" value="Vans"/>
                                 <label for="nike">Nike</label>
                             </div>
                             <div class="category_control">
-                                <input type="checkbox" name=""/>
+                                <input type="checkbox" name="cb_category"/>
                                 <label for="uncategory">UnCategory</label>
                             </div>
+
                             <button class="add_new-category">
                                 <a href="category.jsp">Thêm Mới</a>
                             </button>
@@ -257,6 +272,7 @@
                         </div>
                     </div>
                 </form>
+
                 <div class="add_size hidden">
                     <form action="">
                         <div>

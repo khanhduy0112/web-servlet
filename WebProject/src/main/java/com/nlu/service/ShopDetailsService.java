@@ -1,6 +1,5 @@
 package com.nlu.service;
 
-import com.nlu.model.Product;
 import com.nlu.model.ShopDetails;
 import com.nlu.repository.Repository;
 
@@ -10,8 +9,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
 
-import static com.nlu.db.Datasource.getConnection;
-import static com.nlu.db.Datasource.returnConnection;
+import static com.nlu.db.Datasource.*;
+//import static com.nlu.db.Datasource.returnConnection;
 
 public class ShopDetailsService implements Repository<ShopDetailsService> {
 

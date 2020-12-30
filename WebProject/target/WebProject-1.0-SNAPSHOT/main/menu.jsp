@@ -29,7 +29,7 @@
                     </div>
                 </form>
             </ul>
-            <span class="navbar-text a-login"> <a class="login">Đăng Nhập</a></span>
+            <span class="navbar-text"> <a href="/main/login.jsp" class="login">Đăng Nhập</a></span>
             <a class="btn btn-light action-button" role="button" href="/main/user-setting.jsp">Đăng Kí</a>
         </div>
 
