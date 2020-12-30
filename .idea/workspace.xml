@@ -24,7 +24,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2bab16c-7d14-46e3-a295-edc2e38cd0d9" name="Default Changelist" comment="" />
+    <list default="true" id="d2bab16c-7d14-46e3-a295-edc2e38cd0d9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,26 +70,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Documents\web-servlet\WebProject\src\main\webapp\main\images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Admin\Documents\web-servlet\WebProject\src\main\webapp\images" />
       <recent name="C:\Users\Admin\Documents\web-servlet\WebProject\src\main\webapp\main\images" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Admin\Documents\web-servlet\WebProject\src\main\webapp\main\images" />
-    </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Tomcat 8.5" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.59" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -178,7 +169,12 @@
       <workItem from="1609099566146" duration="35000" />
       <workItem from="1609131666862" duration="304000" />
       <workItem from="1609132340851" duration="4059000" />
-      <workItem from="1609265368170" duration="423000" />
+      <workItem from="1609265368170" duration="2290000" />
+      <workItem from="1609268913233" duration="51000" />
+      <workItem from="1609268994545" duration="10000" />
+      <workItem from="1609269061175" duration="20000" />
+      <workItem from="1609269104991" duration="93000" />
+      <workItem from="1609269292990" duration="39000" />
     </task>
     <servers />
   </component>
@@ -210,14 +206,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="0" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1609132413479" />
-    <state x="444" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1608838092742">
+    <state x="444" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1609265876331">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="444" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1608838092742" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1608835970752">
+    <state x="444" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1609265876331" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1609267630559">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1608835970752" />
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1609267630559" />
     <state width="905" height="117" key="GridCell.Tab.0.bottom" timestamp="1608840040650">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -270,5 +266,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1608835733416" />
+    <state x="274" y="15" key="new project wizard" timestamp="1609267658408">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="274" y="15" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1609267658408" />
+    <state x="694" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1609266780452">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="694" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1609266780452" />
   </component>
 </project>
