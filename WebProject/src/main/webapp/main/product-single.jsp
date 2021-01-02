@@ -260,7 +260,11 @@
         </div>
     </div>
 </section>
+<!-- //contact -->
+<!-- footer -->
 <jsp:include page="/main/footer.jsp"/>
+<!-- //footer -->
+<jsp:include page="/main/login.jsp"/>
 <script src="main/script/main.js"></script>
 <script>
     const size = Array.from(document.getElementsByClassName("size"));

@@ -361,7 +361,6 @@
             </div>
             <div class="email-login" style="background-color: #ffffff">
                 <input
-                        value="<%=request.getAttribute("err") == null ? "" : request.getParameter("username")%>"
                         style="height: 50px"
                         type="username"
                         name="username"

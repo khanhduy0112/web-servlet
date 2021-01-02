@@ -17,14 +17,14 @@
     User user;
 %>
 <%
-//    if (session.getAttribute("auth") != null) {
-//        user = (User) session.getAttribute("auth");
-//        if (!user.getRole().equals("admin")) {
-//            response.sendRedirect("/main/login.jsp");
-//        }
-//    } else {
-//        response.sendRedirect("/main/login.jsp");
-//    }
+    if (session.getAttribute("auth") != null) {
+        user = (User) session.getAttribute("auth");
+        if (!user.getRole().equals("admin")) {
+            response.sendRedirect("/main/login.jsp");
+        }
+    } else {
+        response.sendRedirect("/main/login.jsp");
+    }
 %>
 <div class="body_container">
     <!-- ===***LEFT***=== -->
