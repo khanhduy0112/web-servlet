@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./style/main.css"/>
     <link rel="stylesheet" href="./style/product-new.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.ckeditor.com/ckeditor5/23.1.0/classic/ckeditor.js"></script>
+    <script src="${pageContext.request.contextPath}/admin/ckeditor/ckeditor.js"></script>
 </head>
 <body>
 <div class="body_container">
@@ -100,7 +100,7 @@
             <div class="right_content">
                 <form method="post" class="new_product" action="/new-product">
 
-                    <div class="form">
+                    <form action="" method="post" class="form">
                         <div class="form_group">
                             <label for="product_name">Tên Sản Phẩm</label><br/>
                             <input
@@ -122,8 +122,8 @@
                             />
                         </div>
                         <div class="form_group">
-                            <label for="editor">Miêu Tả Sản Phẩm</label><br/>
-                            <input name="product_decription" type="text" id="editor"/>
+                            <label for="">Miêu Tả Sản Phẩm</label><br/>
+                            <textarea name="editor1" id="editor1" rows="10" cols="80"></textarea>
                         </div>
                         <div class="form_group">
                             <table style="margin-top: 1rem">
@@ -159,7 +159,7 @@
                                 </tfoot>
                             </table>
                         </div>
-                    </div>
+                    </form>
 
 
                     <div class="select_group">
@@ -278,8 +278,14 @@
     </div>
     <!-- ===***END OF RIGHT***=== -->
 </div>
+<script>
+    // Replace the <textarea id="editor1"> with a CKEditor 4
+    // instance, using default configuration.
+    CKEDITOR.replace('editor1');
+</script>
 </body>
 <script>
+    CKEDITOR.replace('editor1');
     const btnEdit = document.getElementsByClassName("btn_edit");
     const productEditWrapper = document.querySelector(".edit_wrapper");
     const handleEdit = () => {
@@ -301,15 +307,7 @@
         document.querySelector(".add_size").classList.remove("hidden");
     });
 
-    // TEXT EDITOR JS LIBARY
-    ClassicEditor.create(document.querySelector("#editor"))
-        .then((editor) => {
-            console.log(editor);
-        })
-        .catch((error) => {
-            console.error(error);
-        });
-    //
+
     const productImg = document.getElementById("product_img");
     const previewProductImg = document.getElementById("review_product-img");
     productImg.addEventListener("change", (e) => {
