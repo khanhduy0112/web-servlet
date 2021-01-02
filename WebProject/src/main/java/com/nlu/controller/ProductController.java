@@ -28,7 +28,7 @@ public class ProductController extends HttpServlet {
         int itemPerPage = 12;
 //        int quality = productService.getQuality();
 //        int pagesCount = quality / 12;
-//        if (quality % itemPerPage > 0) {
+//        if (quality % itemPerPage >h 0) {
 //            pagesCount++;
 //        }
         String category = req.getParameter("category");
@@ -40,7 +40,7 @@ public class ProductController extends HttpServlet {
         if (productQuality % itemPerPage > 0) {
             pagesCount++;
         }
-
+        
         HashMap<Integer, Integer> sizes = productDetailsService.findAllSize();
         req.setAttribute("currentCategory", req.getParameter("category"));
         req.setAttribute("sizes", sizes.values());

@@ -15,21 +15,7 @@ import java.util.Enumeration;
 public class NewProductController extends HttpServlet {
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String productName = req.getParameter("product_name");
-        String price = req.getParameter("product_price");
-        String description = req.getParameter("product_description");
-        String[] cb_categories = req.getParameterValues("cb_category");
-        PrintWriter writer = resp.getWriter();
-        for (String item :
-                cb_categories) {
-            writer.println(item);
-        }
-        String path = req.getRealPath("product_img");
-        
-        writer.println(path);
-        writer.close();
-        ServletInputStream is = req.getInputStream();
-        File file = new File("");
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.getRequestDispatcher("/admin/product-new.jsp").forward(req, resp);
     }
 }
