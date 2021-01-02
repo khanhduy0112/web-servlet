@@ -20,16 +20,6 @@ public class NewProductController extends HttpServlet {
         String price = req.getParameter("product_price");
         String description = req.getParameter("product_description");
         String[] cb_categories = req.getParameterValues("cb_category");
-        PrintWriter writer = resp.getWriter();
-        for (String item :
-                cb_categories) {
-            writer.println(item);
-        }
-        String path = req.getRealPath("product_img");
-        
-        writer.println(path);
-        writer.close();
-        ServletInputStream is = req.getInputStream();
-        File file = new File("");
+
     }
 }
