@@ -13,19 +13,6 @@
     <script src="https://cdn.ckeditor.com/ckeditor5/23.1.0/classic/ckeditor.js"></script>
 </head>
 <body>
-<%!
-    User user;
-%>
-<%
-    if (session.getAttribute("auth") != null) {
-        user = (User) session.getAttribute("auth");
-        if (!user.getRole().equals("admin")) {
-            response.sendRedirect("/main/login.jsp");
-        }
-    } else {
-        response.sendRedirect("/main/login.jsp");
-    }
-%>
 <div class="body_container">
     <!-- ===***LEFT***=== -->
     <div class="left_wrapper">
