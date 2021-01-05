@@ -11,8 +11,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 @WebServlet(urlPatterns = "/products/product-single")
@@ -25,7 +23,7 @@ public class ProductSingleController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String id = req.getParameter("id");
         Product product = productService.findById(Integer.valueOf(id));
-        List<ProductDetails> detailsList = productDetailsService.findAll();
+        List<ProductDetails> detailsList = productDetailsService.findAllByProductId(Integer.parseInt(id));
         req.setAttribute("product", product);
         req.setAttribute("details", detailsList);
         req.getRequestDispatcher("/main/product-single.jsp").forward(req, resp);

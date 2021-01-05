@@ -11,6 +11,8 @@
     <packaging>war</packaging>
 
     <properties>
+
+
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
         <junit.version>5.6.2</junit.version>
@@ -55,7 +57,16 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
+
+<!--    <repositories>-->
+<!--        <repository>-->
+<!--            <id>cksource-mvn-repo</id>-->
+<!--            <name>CKSource Maven Repository</name>-->
+<!--            <url>https://maven.cksource.com/</url>-->
+<!--        </repository>-->
+<!--    </repositories>-->
 
     <build>
         <plugins>
@@ -66,4 +77,6 @@
             </plugin>
         </plugins>
     </build>
+
+
 </project>

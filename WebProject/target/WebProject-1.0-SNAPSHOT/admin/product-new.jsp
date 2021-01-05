@@ -4,11 +4,12 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Sản phẩm - Thêm mới</title>
-    <link rel="shortcut icon" href="./images/webpage.svg" type="image/x-icon"/>
-    <link rel="stylesheet" href="./style/main.css"/>
-    <link rel="stylesheet" href="./style/product-new.css"/>
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/admin/images/webpage.svg" type="image/x-icon"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/admin/style/main.css"/>
+    <link href="${pageContext.request.contextPath}/admin/style/product-new.css" rel="stylesheet"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.ckeditor.com/ckeditor5/23.1.0/classic/ckeditor.js"></script>
+    <script src="${pageContext.request.contextPath}/admin/js/ckeditor/ckeditor.js"></script>
+
 </head>
 <body>
 <div class="body_container">
@@ -122,8 +123,12 @@
                             />
                         </div>
                         <div class="form_group">
-                            <label for="editor">Miêu Tả Sản Phẩm</label><br/>
-                            <input name="product_decription" type="text" id="editor"/>
+                            <label >Miêu Tả Sản Phẩm</label><br/>
+                            <textarea name="editor1" id="editor1" rows="10" cols="80">
+                This is my textarea to be replaced with CKEditor 4.
+            </textarea>
+                            <%--                            <input name="product_decription" type="text" id="editor"/>--%>
+
                         </div>
                         <div class="form_group">
                             <table style="margin-top: 1rem">
@@ -278,6 +283,10 @@
     </div>
     <!-- ===***END OF RIGHT***=== -->
 </div>
+<script>
+    CKEDITOR.replace( 'editor1' );
+
+</script>
 </body>
 <script>
     const btnEdit = document.getElementsByClassName("btn_edit");
