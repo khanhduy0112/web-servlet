@@ -38,6 +38,5 @@ public class HomeController extends HttpServlet {
         session.setAttribute("tags", tags);
         session.setAttribute("shopDetails", shopDetails);
         req.getRequestDispatcher("index.jsp").forward(req, resp);
-
     }
 }

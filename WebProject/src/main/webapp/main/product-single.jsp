@@ -200,17 +200,18 @@
                                 </button>
                             </a>
                         </div>
-                        <div class="describle">
-                            <div class="describle_title">
-                                <h5 class="titleofdes">MÔ TẢ</h5>
-                            </div>
-                            <div class="contendes">
-                                <p class="contendofdes">
-                                    ${product.description}
-                                </p>
-                            </div>
-                        </div>
+
                     </form>
+                    <div class="describle">
+                        <div class="describle_title">
+                            <h5 class="titleofdes">MÔ TẢ</h5>
+                        </div>
+                        <div class="contendes">
+                            <p class="contendofdes">
+                                ${product.description}
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <h3 class="shop-sing">SẢN PHẨM LIÊN QUAN</h3>
                 <div class="row m-0">
