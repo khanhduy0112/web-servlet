@@ -142,8 +142,8 @@
                                 </div>
                                 <div class="item-info-product">
                                     <h4>
-                                            <%--                                        <a href="/products/product-single?id=${item.productId}">${item.name}--%>
-                                        <a href="/products/product-single?id=${item.productId}">${item.productId}
+<%--                                                                                    <a href="/products/product-single?id=${item.productId}">${item.name}--%>
+                                        <a href="/products/product-single?id=${item.productId}">${item.name}
                                         </a>
                                     </h4>
 
@@ -202,9 +202,7 @@
 
 
 <jsp:include page="/main/footer.jsp"/>
-<jsp:include page="/main/login.jsp"/>
 <script src="/main/script/main.js"></script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.bundle.min.js"></script>
 </body>

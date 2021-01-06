@@ -26,11 +26,7 @@ public class ProductController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Product> products;
         int itemPerPage = 12;
-//        int quality = productService.getQuality();
-//        int pagesCount = quality / 12;
-//        if (quality % itemPerPage > 0) {
-//            pagesCount++;
-//        }
+
         String category = req.getParameter("category");
         int currentPage = Integer.parseInt(req.getParameter("pages"));
         products = productService.findAll(currentPage, itemPerPage, category);

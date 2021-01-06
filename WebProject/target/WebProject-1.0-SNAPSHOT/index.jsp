@@ -183,30 +183,12 @@
 </section>
 <!-- //ab -->
 
-<%--    <div class="swiper-container">--%>
-<%--      <div class="swiper-wrapper">--%>
-<%--        <div class="swiper-slide">--%>
-<%--          <img src="main/images/logoAdidas.png" alt="" />--%>
-<%--        </div>--%>
-<%--        <div class="swiper-slide">--%>
-<%--          <img src="main/images/logoConverse.png" alt="" />--%>
-<%--        </div>--%>
-<%--        <div class="swiper-slide">--%>
-<%--          <img src="main/images/logoVans.png" alt="" />--%>
-<%--        </div>--%>
-<%--        <div class="swiper-slide">--%>
-<%--          <img src="main/images/logoNewBalance.png" alt="" />--%>
-<%--        </div>--%>
-<%--      </div>--%>
-<%--    </div>--%>
 
 <!-- footer -->
 <jsp:include page="/main/footer.jsp"/>
 <!-- //footer -->
 
-<!-- form login -->
-<jsp:include page="/main/login.jsp"/>
-<!-- form login -->
+
 </body>
 <script src="main/script/main.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>

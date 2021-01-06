@@ -4,11 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tất cả đơn hàng</title>
-    <link rel="shortcut icon" href="./images/webpage.svg" type="image/x-icon" />
-    <link rel="shortcut icon" href="./images/webpage.svg" type="image/x-icon" />
-    <link rel="stylesheet" href="./style/main.css" />
-    <link rel="stylesheet" href="./style/order.css" />
-    <link rel="stylesheet" href="./js/zoom/css/zoom.css" />
+    <link rel="shortcut icon" href="/admin/images/webpage.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/admin/style/main.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/admin/style/order.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}./js/zoom/css/zoom.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
       td a {

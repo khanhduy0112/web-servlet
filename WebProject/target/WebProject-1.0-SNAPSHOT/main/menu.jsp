@@ -30,7 +30,7 @@
                 </form>
 
             </ul>
-            <span class="navbar-text aLogin"> <a class="login" href="#">Đăng Nhập</a></span>
+            <span class="navbar-text "> <a class="login" href="/main/login.jsp">Đăng Nhập</a></span>
             <a class="btn btn-light action-button" role="button" href="#">Đăng Kí</a>
         </div>
 

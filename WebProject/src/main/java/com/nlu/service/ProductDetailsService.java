@@ -38,6 +38,36 @@ public class ProductDetailsService implements Repository<ProductDetails> {
         }
     }
 
+    public List<ProductDetails> findByProductId(int productId) {
+        String query = "SELECT * FROM product_details WHERE  product_id = ?";
+        List<ProductDetails> productDetailsList = new ArrayList<>();
+        ProductDetails details = null;
+        try {
+            Connection connection = getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, productId);
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()) {
+                details = new ProductDetails(
+                        rs.getInt(1),
+                        rs.getInt(2),
+                        rs.getString(3),
+                        rs.getInt(4),
+                        rs.getInt(5),
+                        rs.getInt(6)
+                );
+                productDetailsList.add(details);
+            }
+            returnConnection(connection);
+            return productDetailsList;
+
+        } catch (SQLException e) {
+            System.out.println(e);
+            return null;
+        }
+
+    }
+
     public ProductDetails findByProductId(Integer productId) {
         String query = "SELECT * FROM product_details WHERE  product_id = ?";
         ProductDetails details = null;
