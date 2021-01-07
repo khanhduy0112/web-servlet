@@ -172,7 +172,7 @@
                                 style="display: flex; justify-content: space-between">
                             <div><strong style="font-weight: 500">Số Lượng</strong></div>
                             <div>
-                                <input name="quality" type="number" class="quality">
+                                <input name="quality" type="number" value="1" class="quality">
                             </div>
                         </div>
                         <div class="total">

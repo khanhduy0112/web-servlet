@@ -77,7 +77,7 @@
                         </div>
                     </td>
                     <td>${item.name}</td>
-                    <td>200000đ</td>
+                    <td>${item.price}</td>
                     <td>
                         <button class="custom_btn">-</button>
                         <span>${item.quality}</span>
@@ -87,7 +87,9 @@
                         <%--                    tong tien--%>
                     <td>${item.price * item.quality}</td>
                     <td class="delete">
-                        <i class="fa fa-trash" aria-hidden="true"></i>
+                        <a href="/cart/remove?id=${item.productId}">
+                            <i style="transform: scale(2)" class="fa fa-trash" aria-hidden="true"></i>
+                        </a>
                     </td>
                 </tr>
             </c:forEach>
