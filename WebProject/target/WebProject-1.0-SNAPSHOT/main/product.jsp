@@ -39,6 +39,17 @@
     </div>
     <!-- End: Header -->
 </div>
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="../index.jsp">TRANG CHỦ</a>
+    </li>
+    <li class="breadcrumb-item"><a href="product.jsp">SẢN PHẨM</a></li>
+    <li class="breadcrumb-item">
+        <a href="product-single.jsp">CHI TIẾT</a>
+    </li>
+    <li class="breadcrumb-item active">GIỎ HÀNG</li>
+</ol>
+
 <%--products--%>
 <section class="ab-info-main py-md-5 py-4">
     <div class="container py-md-3">

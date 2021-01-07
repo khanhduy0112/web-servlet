@@ -153,14 +153,17 @@
                                 alt="anh san pham"
                         />
                     </div>
-                    <form class="details">
+<%--                    class="details"--%>
+                    <form  action="/cart/add" method="post">
                         <h4 class="product_name">${product.name}</h4>
                         <h2 class="size_title">Size :</h2>
-                        <div class="product_size-container" style="display: flex; background-color:indianred; justify-content: space-around">
+                        <div class="product_size-container"
+                             style="display: flex; background-color:indianred; justify-content: space-around">
                             <c:forEach items="${details}" var="item">
                                 <div class="product_size">
-                                    <label for="${item.size}">${item.size}</label>
-                                    <input id="${item.size}" value="${item.size}" type="checkbox">
+                                    <label>${item.size}</label>
+                                    <input name="details_id" class="details_id" value="${item.productDetailsId}"
+                                           type="checkbox">
                                 </div>
                             </c:forEach>
                         </div>
@@ -169,9 +172,7 @@
                                 style="display: flex; justify-content: space-between">
                             <div><strong style="font-weight: 500">Số Lượng</strong></div>
                             <div>
-                                <button class="down">-</button>
-                                <span class="product_amount-value">1</span>
-                                <button class="up">+</button>
+                                <input name="quality" type="number" class="quality">
                             </div>
                         </div>
                         <div class="total">
@@ -188,8 +189,9 @@
                         </div>
                         <!-- <hr /> -->
                         <div class="button-product">
-                            <button class="buttons buttons-cart btn-add">
-                                <a href="/order">Thêm vào giỏ</a>
+                            <button type="submit" class="buttons buttons-cart btn-add">
+                                Thêm vào giỏ
+<%--                                <a href="/cart/add">Thêm vào giỏ</a>--%>
                             </button>
                             <a href="cart.jsp">
                                 <button class="buttons buttons-carts" type="button">
@@ -264,7 +266,6 @@
 <!-- footer -->
 <jsp:include page="/main/footer.jsp"/>
 <!-- //footer -->
-<jsp:include page="/main/login.jsp"/>
 <script src="main/script/main.js"></script>
 <script>
     const size = Array.from(document.getElementsByClassName("size"));

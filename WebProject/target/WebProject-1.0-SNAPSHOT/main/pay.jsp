@@ -94,25 +94,9 @@
         </nav>
       </div>
     </header>
-      <!-- //header -->
-      <!--/banner-->
-<!--      <div class="banner-info">-->
-<!--        <h4 class="tagret">MỤC TIÊU HÀNG ĐẦU</h4>-->
-<!--        <h3 class="mb-4">Sneaker Chính Hãng</h3>-->
-<!--        <div class="ban-buttons">-->
-<!--          <a href="product.jsp" class="btn">Mua Sắm Ngay</a>-->
-<!--        </div>-->
-<!--        <div class="seachForm">-->
-<!--          <input class="inputSearch" type="text" placeholder="Tìm kiếm" />-->
-<!--          <button class="btnSearch">-->
-<!--            <i class="fa fa-search" aria-hidden="true"></i>-->
-<!--          </button>-->
-<!--        </div>-->
-<!--      </div>-->
-      <!--// banner-inner -->
+
     </div>
-    <!--//main-content-->
-    <!---->
+
     <ol class="breadcrumb">
       <li class="breadcrumb-item">
         <a href="../index.jsp">THANH TOÁN</a>

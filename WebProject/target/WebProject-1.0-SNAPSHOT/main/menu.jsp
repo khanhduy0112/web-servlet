@@ -9,7 +9,7 @@
                 <li class="nav-item"><a class="nav-link" href="/">Trang chủ</a></li>
                 <li class="nav-item"><a class="nav-link" href="/products?category=all&pages=1">Sản phẩm</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Liên hệ</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Giỏ hàng<i class="fa fa-shopping-cart"
+                <li class="nav-item"><a class="nav-link" href="/main/cart.jsp">Giỏ hàng<i class="fa fa-shopping-cart"
                                                                              style="padding-left: 5px;"></i></a>
                 </li>
                 <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown"

@@ -40,34 +40,6 @@ public class ProductService implements Repository<Product> {
 
     }
 
-//    public List<Product> findALl(int offset, int limit) {
-//        List<Product> products = new ArrayList<>();
-//        String query = "SELECT * FROM products LIMIT ? ,?";
-//        try {
-//            Connection connection = getConnection();
-//            PreparedStatement statement = connection.prepareStatement(query);
-//            statement.setInt(1, offset);
-//            statement.setInt(2, limit);
-//            ResultSet rs = statement.executeQuery();
-//            while (rs.next()) {
-//                Product product = new Product(
-//                        rs.getInt(1),
-//                        rs.getString(2),
-//                        rs.getInt(3),
-//                        rs.getString(4),
-//                        rs.getString(5),
-//                        rs.getInt(6),
-//                        rs.getInt(7),
-//                        rs.getDouble(8));
-//                products.add(product);
-//            }
-//            returnConnection(connection);
-//            return products;
-//        } catch (SQLException e) {
-//            System.out.println(e);
-//            return products;
-//        }
-//    }
 
     public List<Product> findAll(int currentPage, int recordsPerPage, String category) {
         List<Product> products = new ArrayList<>();
@@ -216,23 +188,6 @@ public class ProductService implements Repository<Product> {
         return products;
     }
 
-    public int getQuality() {
-        String query = "SELECT COUNT(products.product_id) FROM products";
-        int count = 0;
-        try {
-            Connection connection = getConnection();
-            Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery(query);
-            while (resultSet.next()) {
-                count = resultSet.getInt(1);
-            }
-            returnConnection(connection);
-            return count;
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
-        return 0;
-    }
 
     @Override
     public List<Product> findByName() {
@@ -251,7 +206,6 @@ public class ProductService implements Repository<Product> {
 
     public static void main(String[] args) throws SQLException {
         ProductService productService = new ProductService();
-//        System.out.println(productService.findAll(1, 10, "all"));
         System.out.println(productService.countProductInCategory("Adidas"));
     }
 }
