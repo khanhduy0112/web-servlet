@@ -5,9 +5,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import javax.servlet.http.HttpServlet;
 =======
 >>>>>>> a40267516ba76cd54836d34217c27f4fdd2da7ed
+=======
+>>>>>>> parent of 2d17c0a... no message
 import javax.servlet.http.HttpSession;
 import java.util.Collection;
 import java.util.HashMap;
@@ -17,27 +20,6 @@ import java.util.HashMap;
 <<<<<<< HEAD
 public class Cart {
 
-    private String cart_id;
-    private String username;
-    private String shippingAddress;
-    private String phone;
-    private String email;
-    private int user_id;
-    private int status;
-    private double total;
-    private String orderDate;
-
-    public Cart(String cart_id, String username, String shippingAddress, String phone, String email, int user_id, int status, double total, String orderDate) {
-        this.cart_id = cart_id;
-        this.username = username;
-        this.shippingAddress = shippingAddress;
-        this.phone = phone;
-        this.email = email;
-        this.user_id = user_id;
-        this.status = status;
-        this.total = total;
-        this.orderDate = orderDate;
-    }
 
     public static HashMap<Integer, CartItem> cart = new HashMap<>();
 
@@ -52,7 +34,7 @@ public class Cart {
         if (quality > 1) {
             item.setQuality(quality);
         }
-        cart.put(item.getProductDetailsId(), item);
+        cart.put(item.getProductId(), item);
     }
 
     public void remove(int id) {
@@ -88,10 +70,10 @@ public class Cart {
 
 <<<<<<< HEAD
     public Collection<CartItem> getData() {
-
         return cart.values();
     }
 
+<<<<<<< HEAD
     public double total() {
         double result = 0;
         Collection<CartItem> values = cart.values();
@@ -110,5 +92,7 @@ public class Cart {
         return items.values();
 >>>>>>> a40267516ba76cd54836d34217c27f4fdd2da7ed
     }
+=======
+>>>>>>> parent of 2d17c0a... no message
 
 }

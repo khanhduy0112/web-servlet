@@ -22,6 +22,6 @@ public class CartRemoveController extends HttpServlet {
         HttpSession session = req.getSession();
         Cart cart = Cart.getCart(session);
         cart.remove(Integer.parseInt(id));
-        req.getRequestDispatcher("/main/cart.jsp").forward(req, resp);
+        req.getRequestDispatcher("/main/cart.js").forward(req, resp);
     }
 }

@@ -53,6 +53,7 @@
 <%--products--%>
 <section class="ab-info-main py-md-5 py-4">
     <div class="container py-md-3">
+        <!-- top Products -->
         <div class="row">
             <div class="side-bar col-lg-4">
                 <div class="search-bar w3layouts-newsletter">
