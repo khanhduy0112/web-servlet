@@ -36,5 +36,7 @@ public class CartController extends HttpServlet {
         cart.put(item, Integer.parseInt(quality));
         cart.commit(session);
 
+        req.getRequestDispatcher("/main/cart.jsp").forward(req, resp);
+
     }
 }

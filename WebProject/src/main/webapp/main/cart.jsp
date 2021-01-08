@@ -104,7 +104,7 @@
                     <a href="#">
                         <button class="btnhuy">Hủy</button>
                     </a>
-                    <a href="pay.jsp"
+                    <a href="/main/checkout.jsp"
                     >
                         <button class="btnbuy">Thanh Toán</button>
                     </a
