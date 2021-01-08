@@ -1,6 +1,5 @@
 package com.nlu.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -39,6 +38,11 @@ public class Cart {
 
     public Collection<CartItem> getData() {
         return cart.values();
+    }
+
+    public void clear(HttpSession session) {
+        cart = new HashMap<>();
+        session.setAttribute("cart", cart);
     }
 
 

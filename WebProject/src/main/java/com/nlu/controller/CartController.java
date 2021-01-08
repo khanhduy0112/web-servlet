@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 @WebServlet("/cart/add")
 public class CartController extends HttpServlet {
@@ -25,10 +24,10 @@ public class CartController extends HttpServlet {
         String id = req.getParameter("details_id");
         String quality = req.getParameter("quality");
 
-        if (id == null || Integer.parseInt(quality) <1 || quality == null) {
-            resp.sendRedirect("/");
-            return;
-        }
+//        if (id == null || Integer.parseInt(quality) <1 || quality == null) {
+//            resp.sendRedirect("/");
+//            return;
+//        }
 
 
         CartItem item = cartService.findProductById(Integer.parseInt(id));
