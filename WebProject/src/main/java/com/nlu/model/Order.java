@@ -17,10 +17,6 @@ public class Order {
     private Integer status;
     private String note;
     private String shippingPrice;
-    private double total;
     private Integer userId;
-
-
-
 
 }

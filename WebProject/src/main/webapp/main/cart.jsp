@@ -49,72 +49,73 @@
 
 <section class="ab-info-main py-5">
     <div class="container py-3">
-        <table class="table_cart">
-            <thead>
-            <th>Hình Ảnh</th>
-            <th>Tên Sản Phẩm</th>
-            <th>Đơn Giá</th>
-            <th>Số Lượng</th>
-            <th>Size</th>
-            <th>Tổng Tiền</th>
-            <th>Thao Tác</th>
-            </thead>
-            <%
-                Cart cart = Cart.getCart(session);
-                Collection<CartItem> data = cart.getData();
-                request.setAttribute("data", data);
-            %>
-            <tbody>
-            <c:forEach items="${data}" var="item">
+            <table class="table_cart">
+                <thead>
+                <th>Hình Ảnh</th>
+                <th>Tên Sản Phẩm</th>
+                <th>Đơn Giá</th>
+                <th>Số Lượng</th>
+                <th>Size</th>
+                <th>Tổng Tiền</th>
+                <th>Thao Tác</th>
+                </thead>
+                <%
+                    Cart cart = Cart.getCart(session);
+                    Collection<CartItem> data = cart.getData();
+                    request.setAttribute("data", data);
+                %>
+                <tbody>
+                <c:forEach items="${data}" var="item">
+                    <tr>
+                        <td class="table-image">
+                            <div class="table-imagediv">
+                                <img
+                                        src="${item.img}"
+                                        class="img-jordan"
+                                        alt="anh"
+                                />
+                            </div>
+                        </td>
+                        <td>${item.name}</td>
+                        <td>${item.price}</td>
+                        <td>
+                            <button class="custom_btn">-</button>
+                            <span>${item.quality}</span>
+                            <button class="custom_btn">+</button>
+                        </td>
+                        <td>${item.size}</td>
+                            <%--                    tong tien--%>
+                        <td>${item.price * item.quality}</td>
+                        <td class="delete">
+                            <a href="/cart/remove?id=${item.productId}">
+                                <i style="transform: scale(2)" class="fa fa-trash" aria-hidden="true"></i>
+                            </a>
+                        </td>
+                    </tr>
+                </c:forEach>
+                </tbody>
+                <tfoot>
                 <tr>
-                    <td class="table-image">
-                        <div class="table-imagediv">
-                            <img
-                                    src="${item.img}"
-                                    class="img-jordan"
-                                    alt="anh"
-                            />
-                        </div>
-                    </td>
-                    <td>${item.name}</td>
-                    <td>${item.price}</td>
-                    <td>
-                        <button class="custom_btn">-</button>
-                        <span>${item.quality}</span>
-                        <button class="custom_btn">+</button>
-                    </td>
-                    <td>${item.size}</td>
-                        <%--                    tong tien--%>
-                    <td>${item.price * item.quality}</td>
-                    <td class="delete">
-                        <a href="/cart/remove?id=${item.productId}">
-                            <i style="transform: scale(2)" class="fa fa-trash" aria-hidden="true"></i>
+                    <td class="title-total">Tổng Cộng</td>
+                    <td></td>
+                    <td>800000</td>
+                    <td>4</td>
+                    <td></td>
+                    <td>800000</td>
+                    <td class="buy">
+                        <a href="/products?category=all&pages=1">
+                            <button class="btnhuy">Tiếp Tục Mua</button>
                         </a>
+                        <a href="/main/checkout.jsp"
+                        >
+                            <button class="btnbuy">Thanh Toán</button>
+                        </a
+                        >
                     </td>
                 </tr>
-            </c:forEach>
-            </tbody>
-            <tfoot>
-            <tr>
-                <td class="title-total">Tổng Cộng</td>
-                <td></td>
-                <td>800000</td>
-                <td>4</td>
-                <td></td>
-                <td>800000</td>
-                <td class="buy">
-                    <a href="#">
-                        <button class="btnhuy">Hủy</button>
-                    </a>
-                    <a href="pay.jsp"
-                    >
-                        <button class="btnbuy">Thanh Toán</button>
-                    </a
-                    >
-                </td>
-            </tr>
-            </tfoot>
-        </table>
+                </tfoot>
+            </table>
+
     </div>
 </section>
 <jsp:include page="/main/footer.jsp"/>

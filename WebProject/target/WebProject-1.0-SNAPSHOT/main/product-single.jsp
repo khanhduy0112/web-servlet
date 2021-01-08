@@ -49,98 +49,89 @@
                 <div class="search-bar w3layouts-newsletter">
                     <h3 class="sear-head">TÌM KIẾM</h3>
                     <form action="#" method="post" class="d-flex">
-                        <input
-                                type="search"
-                                placeholder="TÊN SẢN PHẨM"
-                                name="search"
-                                class="form-control"
-                                required=""
-                        />
+                        <input type="search" placeholder="TÊN SẢN PHẨM" name="search" class="form-control"
+                               required=""/>
                         <button class="btn1">
                             <span class="fa fa-search" aria-hidden="true"></span>
                         </button>
                     </form>
                 </div>
-                <!--preference -->
-                <div class="left-side my-4">
-                    <h3 class="sear-head">NHU CẦU</h3>
-                    <ul class="w3layouts-box-list">
-                        <li>
-                            <input type="checkbox" class="checked"/>
-                            <span class="span">CHẠY BỘ</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked"/>
-                            <span class="span">DÃ NGOẠI</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked"/>
-                            <span class="span">ĐI HỌC</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked"/>
-                            <span class="span">ĐI LÀM</span>
-                        </li>
-                    </ul>
+                <div class="sidebar">
+                    <div class="row"
+                         style="width: 250PX;padding: 10px;color: var(--light);border-color: var(--white);">
+                        <div class="col">
+                            <div>
+                                <a class="btn btn-primary" data-toggle="collapse" aria-expanded="true"
+                                   aria-controls="collapse-1" href="#collapse-1" role="button"
+                                   style="color: var(--white);font-weight: 600;font-style: normal;width: 100%;padding: 0;padding-bottom: 5px;padding-top: 10px;border-color: var(--white);border-bottom-color: var(--white);background: #172a74;margin-right: 0px;padding-right: 60px;text-align: center;">
+                                    GIÁ SẢN PHẨM
+                                </a>
+                                <div class="collapse show" id="collapse-1">
+                                    <c:forEach items="${categories}" var="category">
+                                        <c:if test="${category.status == 1}">
+                                            <div class="form-check"
+                                                 style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);">
+                                                <input class="form-check-input" type="radio" id="formCheck-1">
+                                                <label class="form-check-label" for="formCheck-1"
+                                                       style="color: var(--gray);">${category.name}</label>
+                                            </div>
+                                        </c:if>
+                                    </c:forEach>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- // preference -->
-                <!-- discounts -->
-                <div class="left-side">
-                    <h3 class="sear-head">KHUYỄN MÃI</h3>
-                    <ul class="w3layouts-box-list">
-                        <li>
-                            <input type="checkbox" class="checked"/>
-                            <span class="span"><=5%/Sản Phẩm</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked"/>
-                            <span class="span"><=10%/Sản Phẩm</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked"/>
-                            <span class="span"><=15%/Sản Phẩm</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked"/>
-                            <span class="span"><=20%/Sản Phẩm</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked"/>
-                            <span class="span"><=30%/Sản Phẩm</span>
-                        </li>
-                    </ul>
+                <div class="sidebar">
+                    <div class="row"
+                         style="width: 250PX;padding: 10px;color: var(--light);border-color: var(--white);">
+                        <div class="col">
+                            <div>
+                                <a class="btn btn-primary" data-toggle="collapse" aria-expanded="true"
+                                   aria-controls="collapse-1" href="#collapse-1" role="button"
+                                   style="color: var(--white);font-weight: 600;font-style: normal;width: 100%;padding: 0;padding-bottom: 5px;padding-top: 10px;border-color: var(--white);border-bottom-color: var(--white);background: #172a74;margin-right: 0px;padding-right: 60px;text-align: center;">
+                                    GIÁ SẢN PHẨM
+                                </a>
+                                <div class="collapse show" id="collapse-1">
+                                    <c:forEach items="${tags}" var="tag">
+                                        <c:if test="${tag.status == 1}">
+                                            <div class="form-check"
+                                                 style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);">
+                                                <input class="form-check-input" type="radio" id="formCheck-1">
+                                                <label class="form-check-label" for="formCheck-1"
+                                                       style="color: var(--gray);">${tag.name}</label>
+                                            </div>
+                                        </c:if>
+                                    </c:forEach>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- //discounts -->
-                <div class="left-side">
-                    <h3 class="sear-head">TÌM THEO GIÁ</h3>
-                    <ul class="w3layouts-box-list">
-                        <li>
-                            <input type="checkbox" class="checked"/>
-                            <span class="span"><=$50</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked"/>
-                            <span class="span"><=$100</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked"/>
-                            <span class="span"><=$150</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked"/>
-                            <span class="span"><=$200</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked"/>
-                            <span class="span"><=$250</span>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="checked"/>
-                            <span class="span">>$250></span>
-                        </li>
-                    </ul>
+                <div class="sidebar">
+                    <div class="row"
+                         style="width: 250PX;padding: 10px;color: var(--light);border-color: var(--white);">
+                        <div class="col">
+                            <div>
+                                <a class="btn btn-primary" data-toggle="collapse" aria-expanded="true"
+                                   aria-controls="collapse-1" href="#collapse-1" role="button"
+                                   style="color: var(--white);font-weight: 600;font-style: normal;width: 100%;padding: 0;padding-bottom: 5px;padding-top: 10px;border-color: var(--white);border-bottom-color: var(--white);background: #172a74;margin-right: 0px;padding-right: 60px;text-align: center;">
+                                    GIÁ SẢN PHẨM
+                                </a>
+                                <div class="collapse show" id="collapse-1">
+                                    <c:forEach items="${sizes}" var="size">
+                                        <div class="form-check"
+                                             style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);">
+                                            <input class="form-check-input" type="radio" id="formCheck-1">
+                                            <label class="form-check-label" for="formCheck-1"
+                                                   style="color: var(--gray);">${size}</label>
+                                        </div>
+                                    </c:forEach>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- //deals -->
             </div>
             <!-- //product left -->
             <!-- product right -->

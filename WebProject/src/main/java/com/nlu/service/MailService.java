@@ -1,15 +1,18 @@
 package com.nlu.service;
 
 import com.nlu.config.MailConfig;
+import com.nlu.model.Cart;
 
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import java.util.Collection;
 import java.util.Date;
 import java.util.Properties;
 
 public class MailService {
-    static String mess = "<!DOCTYPE html>\n" +
+
+    public static String mess = "<!DOCTYPE html>\n" +
             "<html>\n" +
             "\n" +
             "<head>\n" +
@@ -268,6 +271,7 @@ public class MailService {
 
     }
 
+
     public Message prepareMessage(String to, Session session, String message) {
         Message msg = new MimeMessage(session);
         try {
@@ -280,6 +284,10 @@ public class MailService {
             e.printStackTrace();
         }
         return msg;
+    }
+
+    public void confirmCheckout(String to, Cart cart) {
+
     }
 
     public static void main(String[] args) {
