@@ -1,3 +1,4 @@
+<%@ page import="com.nlu.model.User" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -32,6 +33,7 @@
 <!-- Start: Header Blue -->
 <div>
     <!-- Start: Header -->
+
     <div class="header-blue" style="height: 696px;">
         <jsp:include page="/main/menu.jsp"/>
         <div class="container hero">
@@ -188,7 +190,13 @@
 <jsp:include page="/main/footer.jsp"/>
 <!-- //footer -->
 
+<<<<<<< HEAD
 
+=======
+<!-- form login -->
+<%--<jsp:include page="/main/login.jsp"/>--%>
+<!-- form login -->
+>>>>>>> a40267516ba76cd54836d34217c27f4fdd2da7ed
 </body>
 <script src="main/script/main.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>

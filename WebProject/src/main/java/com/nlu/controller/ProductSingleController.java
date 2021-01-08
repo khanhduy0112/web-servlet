@@ -23,7 +23,11 @@ public class ProductSingleController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String id = req.getParameter("id");
         Product product = productService.findById(Integer.valueOf(id));
+<<<<<<< HEAD
         List<ProductDetails> detailsList = productDetailsService.findByProductId(Integer.parseInt(id));
+=======
+        List<ProductDetails> detailsList = productDetailsService.findAllByProductId(Integer.parseInt(id));
+>>>>>>> a40267516ba76cd54836d34217c27f4fdd2da7ed
         req.setAttribute("product", product);
         req.setAttribute("details", detailsList);
         req.getRequestDispatcher("/main/product-single.jsp").forward(req, resp);

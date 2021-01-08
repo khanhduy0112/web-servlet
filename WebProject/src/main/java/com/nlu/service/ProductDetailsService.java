@@ -38,6 +38,7 @@ public class ProductDetailsService implements Repository<ProductDetails> {
         }
     }
 
+<<<<<<< HEAD
     public List<ProductDetails> findByProductId(int productId) {
         String query = "SELECT * FROM product_details WHERE  product_id = ?";
         List<ProductDetails> productDetailsList = new ArrayList<>();
@@ -69,6 +70,9 @@ public class ProductDetailsService implements Repository<ProductDetails> {
     }
 
     public ProductDetails findByProductId(Integer productId) {
+=======
+    public ProductDetails findByProductId(int productId) {
+>>>>>>> a40267516ba76cd54836d34217c27f4fdd2da7ed
         String query = "SELECT * FROM product_details WHERE  product_id = ?";
         ProductDetails details = null;
         try {
@@ -94,6 +98,34 @@ public class ProductDetailsService implements Repository<ProductDetails> {
             return null;
         }
 
+    }
+
+    public List<ProductDetails> findAllByProductId(int id) {
+        String query = "SELECT * FROM product_details WHERE product_id = ?";
+        List<ProductDetails> productDetailsList = new ArrayList<>();
+        try {
+            Connection connection = getConnection();
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setInt(1, id);
+            ResultSet rs = statement.executeQuery();
+            while (rs.next()) {
+                ProductDetails details = new ProductDetails(
+                        rs.getInt(1),
+                        rs.getInt(2),
+                        rs.getString(3),
+                        rs.getInt(4),
+                        rs.getInt(5),
+                        rs.getInt(6)
+                );
+                productDetailsList.add(details);
+            }
+            returnConnection(connection);
+            return productDetailsList;
+
+        } catch (SQLException e) {
+            System.out.println(e);
+            return null;
+        }
     }
 
     public HashMap<Integer, Integer> findAllSize() {
@@ -146,7 +178,7 @@ public class ProductDetailsService implements Repository<ProductDetails> {
 
     public static void main(String[] args) {
         ProductDetailsService productDetailsService = new ProductDetailsService();
-        System.out.println(productDetailsService.findAllSize());
+        System.out.println(productDetailsService.findAllByProductId(1));
 
 
     }

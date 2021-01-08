@@ -144,17 +144,27 @@
                                 alt="anh san pham"
                         />
                     </div>
+<<<<<<< HEAD
 <%--                    class="details"--%>
                     <form  action="/cart/add" method="post">
+=======
+                    <form class="details" action="/add-to-cart" method="post">
+                        <input type="hidden" name="productId" value="${product.productId}">
+>>>>>>> a40267516ba76cd54836d34217c27f4fdd2da7ed
                         <h4 class="product_name">${product.name}</h4>
                         <h2 class="size_title">Size :</h2>
                         <div class="product_size-container"
                              style="display: flex; background-color:indianred; justify-content: space-around">
                             <c:forEach items="${details}" var="item">
                                 <div class="product_size">
+<<<<<<< HEAD
                                     <label>${item.size}</label>
                                     <input name="details_id" class="details_id" value="${item.productDetailsId}"
                                            type="checkbox">
+=======
+                                    <label for="${item.size}">${item.size}</label>
+                                    <input name="size" id="${item.size}" value="${item.size}" type="checkbox">
+>>>>>>> a40267516ba76cd54836d34217c27f4fdd2da7ed
                                 </div>
                             </c:forEach>
                         </div>
@@ -163,7 +173,14 @@
                                 style="display: flex; justify-content: space-between">
                             <div><strong style="font-weight: 500">Số Lượng</strong></div>
                             <div>
+<<<<<<< HEAD
                                 <input name="quality" type="number" value="1" class="quality">
+=======
+                                <%--                                <button class="down">-</button>--%>
+                                <%--                                <span class="product_amount-value">1</span>--%>
+                                <%--                                <button class="up">+</button>--%>
+                                <input type="number" name="quality">
+>>>>>>> a40267516ba76cd54836d34217c27f4fdd2da7ed
                             </div>
                         </div>
                         <div class="total">
@@ -180,10 +197,16 @@
                         </div>
                         <!-- <hr /> -->
                         <div class="button-product">
+<<<<<<< HEAD
                             <button type="submit" class="buttons buttons-cart btn-add">
                                 Thêm vào giỏ
 <%--                                <a href="/cart/add">Thêm vào giỏ</a>--%>
                             </button>
+=======
+                            <input type="submit" class="buttons buttons-cart btn-add">
+                            Thêm vào giỏ
+                            </input>
+>>>>>>> a40267516ba76cd54836d34217c27f4fdd2da7ed
                             <a href="cart.jsp">
                                 <button class="buttons buttons-carts" type="button">
                                     Xem giỏ hàng

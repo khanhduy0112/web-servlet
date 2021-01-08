@@ -5,9 +5,9 @@ const toggle = document.getElementById("left_menu-toggle");
 const left = document.querySelector(".left_wrapper");
 const closeBtn = document.getElementById("close-btn");
 
-toggle.addEventListener("click", () => {
-    left.classList.add("tranform0");
-});
+// toggle.addEventListener("click", () => {
+//     left.classList.add("tranform0");
+// });
 closeBtn.addEventListener("click", () => {
     left.classList.remove("tranform0");
 });

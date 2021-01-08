@@ -1,14 +1,17 @@
+<%@ page import="com.nlu.model.User" %>
+<%@ page import="com.nlu.model.ERole" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Sản phẩm - Thêm mới</title>
-    <link rel="shortcut icon" href="./images/webpage.svg" type="image/x-icon"/>
-    <link rel="stylesheet" href="./style/main.css"/>
-    <link rel="stylesheet" href="./style/product-new.css"/>
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/admin/images/webpage.svg" type="image/x-icon"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/admin/style/main.css"/>
+    <link href="${pageContext.request.contextPath}/admin/style/product-new.css" rel="stylesheet"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.ckeditor.com/ckeditor5/23.1.0/classic/ckeditor.js"></script>
+    <script src="${pageContext.request.contextPath}/admin/js/ckeditor/ckeditor.js"></script>
+
 </head>
 <body>
 <div class="body_container">
@@ -98,8 +101,7 @@
             </div>
             <!-- end of right topbar -->
             <div class="right_content">
-                <form method="post" class="new_product" action="/new-product">
-
+                <form method="post" class="new_product" action="/admin/new-product">
                     <div class="form">
                         <div class="form_group">
                             <label for="product_name">Tên Sản Phẩm</label><br/>
@@ -122,8 +124,17 @@
                             />
                         </div>
                         <div class="form_group">
+<<<<<<< HEAD
+                            <label >Miêu Tả Sản Phẩm</label><br/>
+                            <textarea name="editor1" id="editor1" rows="10" cols="80">
+                This is my textarea to be replaced with CKEditor 4.
+            </textarea>
+                            <%--                            <input name="product_decription" type="text" id="editor"/>--%>
+
+=======
                             <label for="editor">Miêu Tả Sản Phẩm</label><br/>
-                            <input name="product_decription" type="text" id="editor"/>
+                            <input name="product_description" type="text" id="editor"/>
+>>>>>>> 19a416d33778168b8220be3196c96807a13c163b
                         </div>
                         <div class="form_group">
                             <table style="margin-top: 1rem">
@@ -166,25 +177,26 @@
                         <div class="category">
                             <span>Doanh Mục</span>
                             <div class="category_control">
-                                <input type="checkbox" name=""/>
+                                <input type="checkbox" name="cb_category" value="Nike"/>
                                 <label for="jordan">Jordan</label>
                             </div>
                             <div class="category_control">
-                                <input type="checkbox" name=""/>
+                                <input type="checkbox" name="cb_category" value="Adidas"/>
                                 <label for="adidas">Adidas</label>
                             </div>
                             <div class="category_control">
-                                <input type="checkbox" name=""/>
+                                <input type="checkbox" name="cb_category" value="Converse"/>
                                 <label for="converse">Converse</label>
                             </div>
                             <div class="category_control">
-                                <input type="checkbox" name="nike"/>
+                                <input type="checkbox" name="cb_category" value="Vans"/>
                                 <label for="nike">Nike</label>
                             </div>
                             <div class="category_control">
-                                <input type="checkbox" name=""/>
+                                <input type="checkbox" name="cb_category"/>
                                 <label for="uncategory">UnCategory</label>
                             </div>
+
                             <button class="add_new-category">
                                 <a href="category.jsp">Thêm Mới</a>
                             </button>
@@ -257,6 +269,7 @@
                         </div>
                     </div>
                 </form>
+
                 <div class="add_size hidden">
                     <form action="">
                         <div>
@@ -278,6 +291,10 @@
     </div>
     <!-- ===***END OF RIGHT***=== -->
 </div>
+<script>
+    CKEDITOR.replace( 'editor1' );
+
+</script>
 </body>
 <script>
     const btnEdit = document.getElementsByClassName("btn_edit");

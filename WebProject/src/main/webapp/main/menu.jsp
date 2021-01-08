@@ -28,10 +28,14 @@
                             class="form-control search-field" type="search" id="search-field" name="search">
                     </div>
                 </form>
-
             </ul>
+<<<<<<< HEAD
             <span class="navbar-text "> <a class="login" href="/main/login.jsp">Đăng Nhập</a></span>
             <a class="btn btn-light action-button" role="button" href="#">Đăng Kí</a>
+=======
+            <span class="navbar-text"> <a href="/main/login.jsp" class="login">Đăng Nhập</a></span>
+            <a class="btn btn-light action-button" role="button" href="/main/user-setting.jsp">Đăng Kí</a>
+>>>>>>> a40267516ba76cd54836d34217c27f4fdd2da7ed
         </div>
 
     </div>
