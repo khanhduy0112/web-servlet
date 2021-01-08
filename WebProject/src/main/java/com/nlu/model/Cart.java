@@ -78,8 +78,8 @@ public class Cart {
     }
 
     public void clear(HttpSession session) {
-//        cart = new HashMap<>();
-//        session.setAttribute("cart", cart);
+        cart = new HashMap<>();
+        session.setAttribute("cart", this);
     }
 
     public double total() {
@@ -89,6 +89,9 @@ public class Cart {
             result += cartItem.getPrice()*cartItem.getQuality();
         }
         return result;
+    }
+    public int count(){
+        return cart.size();
     }
 
 }

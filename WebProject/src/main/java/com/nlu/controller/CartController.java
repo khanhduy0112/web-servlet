@@ -3,6 +3,7 @@ package com.nlu.controller;
 import com.nlu.model.Cart;
 import com.nlu.model.CartItem;
 import com.nlu.service.CartService;
+import com.nlu.service.MailService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,6 +18,7 @@ public class CartController extends HttpServlet {
 
 
     CartService cartService = new CartService();
+    MailService mailService = new MailService();
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -28,7 +30,7 @@ public class CartController extends HttpServlet {
             resp.sendRedirect("/");
             return;
         }
-        if (Integer.parseInt(quality) <1){
+        if (Integer.parseInt(quality) < 1) {
             resp.sendRedirect("/");
             return;
         }
@@ -41,7 +43,6 @@ public class CartController extends HttpServlet {
         cart.commit(session);
 
 
-        cart.clear(session);
         req.getRequestDispatcher("/main/cart.jsp").forward(req, resp);
 
     }
