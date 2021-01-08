@@ -60,9 +60,11 @@
             <th>Thao Tác</th>
             </thead>
             <%
-                Cart cart = Cart.getCart(session);
+                Cart cart = (Cart) Cart.getCart(session);
+//                Collection<CartItem> data = cart.getData();
+//                request.setAttribute("data", data);
                 Collection<CartItem> data = cart.getData();
-                request.setAttribute("data", data);
+                request.setAttribute("data",data);
             %>
             <tbody>
             <c:forEach items="${data}" var="item">

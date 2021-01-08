@@ -11,7 +11,7 @@ import java.util.HashMap;
 @NoArgsConstructor
 public class Cart {
 
-    private int cartId;
+    private String cartId;
     private int cart_number;
     private String username;
     private String shippingAddress;
@@ -22,20 +22,7 @@ public class Cart {
     private double total;
     private String orderDate;
 
-    public Cart(int cartId, int cart_number, String username, String shippingAddress, String phone, String email, int userId, int status, double total, String orderDate) {
-        this.cartId = cartId;
-        this.cart_number = cart_number;
-        this.username = username;
-        this.shippingAddress = shippingAddress;
-        this.phone = phone;
-        this.email = email;
-        this.userId = userId;
-        this.status = status;
-        this.total = total;
-        this.orderDate = orderDate;
-    }
-
-    public Cart(int cartId, int cart_number, String username, String shippingAddress, String phone, String email, int userId, int status, double total, String orderDate, HashMap<Integer, CartItem> cart) {
+    public Cart(String cartId, int cart_number, String username, String shippingAddress, String phone, String email, int userId, int status, double total, String orderDate, HashMap<Integer, CartItem> cart) {
         this.cartId = cartId;
         this.cart_number = cart_number;
         this.username = username;
@@ -47,6 +34,19 @@ public class Cart {
         this.total = total;
         this.orderDate = orderDate;
         this.cart = cart;
+    }
+
+    public Cart(String cartId, int cart_number, String username, String shippingAddress, String phone, String email, int userId, int status, double total, String orderDate) {
+        this.cartId = cartId;
+        this.cart_number = cart_number;
+        this.username = username;
+        this.shippingAddress = shippingAddress;
+        this.phone = phone;
+        this.email = email;
+        this.userId = userId;
+        this.status = status;
+        this.total = total;
+        this.orderDate = orderDate;
     }
 
     public HashMap<Integer, CartItem> cart = new HashMap<>();
@@ -78,15 +78,15 @@ public class Cart {
     }
 
     public void clear(HttpSession session) {
-        cart = new HashMap<>();
-        session.setAttribute("cart", cart);
+//        cart = new HashMap<>();
+//        session.setAttribute("cart", cart);
     }
 
     public double total() {
         double result = 0;
         for (CartItem cartItem :
                 this.getData()) {
-            result += cartItem.getPrice();
+            result += cartItem.getPrice()*cartItem.getQuality();
         }
         return result;
     }

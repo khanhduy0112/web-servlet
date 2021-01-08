@@ -4,11 +4,10 @@ import com.nlu.db.Datasource;
 import com.nlu.model.Cart;
 import com.nlu.model.CartItem;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import static com.nlu.db.Datasource.*;
 
@@ -62,20 +61,45 @@ public class CartService {
                 ps2.setInt(5, item.getQuality());
                 ps2.executeUpdate();
             }
+            returnConnection(conn);
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
 
     }
 
+    public List<Cart> findAll() {
+        try {
+            List<Cart> carts = new ArrayList<>();
+            String query = "SELECT * FROM cart";
+            Connection connection = getConnection();
+            Statement st = connection.createStatement();
+            ResultSet rs = st.executeQuery(query);
+
+            while (rs.next()) {
+                Cart cart = new Cart();
+                cart.setCartId(rs.getString(1));
+                cart.setUsername(rs.getString(2));
+                cart.setShippingAddress(rs.getString(3));
+                cart.setPhone(rs.getString(4));
+                cart.setEmail(rs.getString(5));
+                cart.setUserId(rs.getInt(6));
+                cart.setStatus(rs.getInt(7));
+                cart.setTotal(rs.getDouble(8));
+                cart.setOrderDate(rs.getString(9));
+                carts.add(cart);
+            }
+            returnConnection(connection);
+            return carts;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
     public static void main(String[] args) {
         CartService cartService = new CartService();
-        CartItem productById = cartService.findProductById(90);
-        if (productById == null) {
-            System.out.println("nullll");
-        } else {
-            System.out.println(productById.toString());
-
-        }
+        List<Cart> carts = cartService.findAll();
+        System.out.println(carts);
     }
 }
