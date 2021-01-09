@@ -24,7 +24,23 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2bab16c-7d14-46e3-a295-edc2e38cd0d9" name="Default Changelist" comment="" />
+    <list default="true" id="d2bab16c-7d14-46e3-a295-edc2e38cd0d9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/WEB-INF/config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/WEB-INF/lib/CKFinder-2.4.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/WEB-INF/lib/CKFinderPlugin-FileEditor-2.4.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/WEB-INF/lib/CKFinderPlugin-ImageResize-2.4.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/WEB-INF/lib/CKFinderPlugin-Watermark-2.4.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/WEB-INF/lib/activation-1.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/WEB-INF/lib/commons-fileupload-1.2.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/WEB-INF/lib/commons-io-2.0.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/WEB-INF/lib/jboss-logging-3.0.0.CR1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/WEB-INF/lib/jboss-vfs-3.1.0.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/WEB-INF/lib/mail-1.4.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/WEB-INF/lib/thumbnailator-0.4.5.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebProject/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebProject/src/main/webapp/admin/product-new.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/admin/product-new.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,7 +49,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
+        <entry key="$PROJECT_DIR$" value="khanh" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -45,13 +61,6 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\plugins\maven\lib\maven3" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="1m7ARPZ8m9WQm1sR7DismhWfYzQ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -61,22 +70,36 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/WebProject/src/main/webapp/main/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/WebProject/src/main/webapp/WEB-INF/lib" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\IdeaProjects\web-servlet\WebProject\src\main\webapp\WEB-INF\lib" />
+      <recent name="C:\Users\Admin\IdeaProjects\web-servlet\WebProject\src\main\webapp\WEB-INF" />
+      <recent name="C:\Users\Admin\IdeaProjects\web-servlet\WebProject\src\main\webapp\libraries" />
+      <recent name="C:\Users\Admin\Documents\web-servlet\WebProject\src\main\webapp\main\images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Admin\Documents\web-servlet\WebProject\src\main\webapp\images" />
       <recent name="C:\Users\Admin\Documents\web-servlet\WebProject\src\main\webapp\main\images" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Admin\Documents\web-servlet\WebProject\src\main\webapp\main\images" />
-    </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 8.5" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.59" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -167,6 +190,8 @@
       <workItem from="1609099566146" duration="35000" />
       <workItem from="1609131666862" duration="304000" />
       <workItem from="1609132340851" duration="4059000" />
+      <workItem from="1610112475823" duration="2962000" />
+      <workItem from="1610177310915" duration="2855000" />
     </task>
     <servers />
   </component>
@@ -184,79 +209,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="463" y="169" key="#BuildArtifactsBeforeRunChooser" timestamp="1609132388660">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="463" y="169" key="#BuildArtifactsBeforeRunChooser/0.0.1366.728@0.0.1366.728" timestamp="1609132388660" />
-    <state x="163" y="0" key="#Project_Structure" timestamp="1608834371051">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="163" y="0" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1608834371051" />
-    <state x="137" y="0" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609132413479">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="137" y="0" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1609132413479" />
-    <state x="444" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1608838092742">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="444" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1608838092742" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1608835970752">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1608835970752" />
-    <state width="905" height="117" key="GridCell.Tab.0.bottom" timestamp="1608840040650">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="905" height="117" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1608840040650" />
-    <state width="905" height="117" key="GridCell.Tab.0.center" timestamp="1608840040650">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="905" height="117" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1608840040650" />
-    <state width="905" height="117" key="GridCell.Tab.0.left" timestamp="1608840040650">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="905" height="117" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1608840040650" />
-    <state width="905" height="117" key="GridCell.Tab.0.right" timestamp="1608840040650">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="905" height="117" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1608840040650" />
-    <state width="905" height="117" key="GridCell.Tab.1.bottom" timestamp="1608840040651">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="905" height="117" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1608840040651" />
-    <state width="905" height="117" key="GridCell.Tab.1.center" timestamp="1608840040650">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="905" height="117" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1608840040650" />
-    <state width="905" height="117" key="GridCell.Tab.1.left" timestamp="1608840040650">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="905" height="117" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1608840040650" />
-    <state width="905" height="117" key="GridCell.Tab.1.right" timestamp="1608840040651">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="905" height="117" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1608840040651" />
-    <state width="905" height="117" key="GridCell.Tab.2.bottom" timestamp="1608840040651">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="905" height="117" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1608840040651" />
-    <state width="905" height="117" key="GridCell.Tab.2.center" timestamp="1608840040651">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="905" height="117" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1608840040651" />
-    <state width="905" height="117" key="GridCell.Tab.2.left" timestamp="1608840040651">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="905" height="117" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1608840040651" />
-    <state width="905" height="117" key="GridCell.Tab.2.right" timestamp="1608840040651">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="905" height="117" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1608840040651" />
-    <state x="163" y="0" key="SettingsEditor" timestamp="1608835733416">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1608835733416" />
   </component>
 </project>

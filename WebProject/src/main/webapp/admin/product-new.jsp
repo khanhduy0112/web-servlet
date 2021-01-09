@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="./style/main.css"/>
     <link rel="stylesheet" href="./style/product-new.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.ckeditor.com/ckeditor5/23.1.0/classic/ckeditor.js"></script>
+    <%--    <script src="https://cdn.ckeditor.com/ckeditor5/23.1.0/classic/ckeditor.js"></script>--%>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/libraries/ckeditor/ckeditor.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/libraries/ckfinder/ckfinder.js"></script>
 </head>
 <body>
 <div class="body_container">
@@ -122,8 +124,16 @@
                             />
                         </div>
                         <div class="form_group">
-                            <label for="editor">Miêu Tả Sản Phẩm</label><br/>
-                            <input name="product_decription" type="text" id="editor"/>
+                            <label>Miêu Tả Sản Phẩm</label>
+                            <br/>
+                            <form action="" method="post">
+              <textarea rows="20" cols="20" id="ckeditor">
+
+              </textarea>
+                                <br/>
+                                <input type="submit" name="submit" value="Submit"/>
+                            </form>
+
                         </div>
                         <div class="form_group">
                             <table style="margin-top: 1rem">
@@ -278,6 +288,10 @@
     </div>
     <!-- ===***END OF RIGHT***=== -->
 </div>
+<script>
+    var  editor = CKEDITOR.replace('ckeditor');
+CKFinder.setupCKEditor(editor,'/libraries/ckfinder/');
+</script>
 </body>
 <script>
     const btnEdit = document.getElementsByClassName("btn_edit");
