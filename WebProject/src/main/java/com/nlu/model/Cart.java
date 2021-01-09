@@ -21,6 +21,7 @@ public class Cart {
     private int status;
     private double total;
     private String orderDate;
+    private int cartNo;
 
     public Cart(String cartId, int cart_number, String username, String shippingAddress, String phone, String email, int userId, int status, double total, String orderDate, HashMap<Integer, CartItem> cart) {
         this.cartId = cartId;
@@ -78,8 +79,8 @@ public class Cart {
     }
 
     public void clear(HttpSession session) {
-//        cart = new HashMap<>();
-//        session.setAttribute("cart", cart);
+        cart = new HashMap<>();
+        session.setAttribute("cart", this);
     }
 
     public double total() {
@@ -89,6 +90,17 @@ public class Cart {
             result += cartItem.getPrice()*cartItem.getQuality();
         }
         return result;
+    }
+    public int count(){
+        return cart.size();
+    }
+
+    public static void main(String[] args) {
+        Cart cart = new Cart();
+        cart.getData();
+        for (CartItem cartItem:
+                cart.getData()) {
+        }
     }
 
 }

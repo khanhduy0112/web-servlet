@@ -3,11 +3,11 @@ package com.nlu.service;
 import com.nlu.db.Datasource;
 import com.nlu.model.Cart;
 import com.nlu.model.CartItem;
+import com.nlu.model.Product;
 
 import java.sql.*;
-import java.util.ArrayList;
+import java.util.*;
 import java.util.Date;
-import java.util.List;
 
 import static com.nlu.db.Datasource.*;
 
@@ -37,7 +37,7 @@ public class CartService {
         try {
             Date date = new Date();
             Connection conn = getConnection();
-            String query = "INSERT INTO cart VALUES (?,?,?,?,?,?,?,?,?)";
+            String query = "INSERT INTO cart VALUES (?,?,?,?,?,?,?,?,?,?)";
             PreparedStatement ps = conn.prepareStatement(query);
             ps.setString(1, String.valueOf(date.getTime()));
             ps.setString(2, fullName);
@@ -48,11 +48,12 @@ public class CartService {
             ps.setInt(7, 1);
             ps.setDouble(8, cart.total());
             ps.setString(9, date.toString());
+            ps.setString(10, null);
             ps.executeUpdate();
             String query2 = "INSERT INTO cart_item VALUES (?,?,?,?,?,?)";
             PreparedStatement ps2 = conn.prepareStatement(query2);
             ps2.setString(1, null);
-            ps2.setString(6, date.toString());
+            ps2.setString(6, String.valueOf(date.getTime()));
             for (CartItem item :
                     cart.getData()) {
                 ps2.setInt(2, item.getProductId());
@@ -62,8 +63,8 @@ public class CartService {
                 ps2.executeUpdate();
             }
             returnConnection(conn);
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
 
     }
@@ -97,9 +98,53 @@ public class CartService {
         return null;
     }
 
+    public Cart findById(String cartId) {
+        try {
+            String sql = "SELECT * FROM CART WHERE cart_id = ?";
+            Connection conn = getConnection();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setString(1, cartId);
+            ResultSet rs = ps.executeQuery();
+            Cart cart = null;
+            while (rs.next()) {
+                cart = new Cart();
+                cart.setCartId(rs.getString(1));
+                cart.setUsername(rs.getString(2));
+                cart.setShippingAddress(rs.getString(3));
+                cart.setPhone(rs.getString(4));
+                cart.setEmail(rs.getString(5));
+                cart.setUserId(rs.getInt(6));
+                cart.setStatus(rs.getInt(7));
+                cart.setTotal(rs.getDouble(8));
+                cart.setOrderDate(rs.getString(9));
+                cart.setCartNo(rs.getInt(10));
+            }
+            String sql2 = "SELECT  product_id,size,quality,id FROM `cart_item` WHERE order_id = ?";
+            PreparedStatement ps3 = conn.prepareStatement(sql2);
+            ps3.setString(1, cartId);
+            ResultSet rs4 = ps3.executeQuery();
+            CartItem cartItem;
+            HashMap<Integer, CartItem> hashMap = new HashMap<>();
+            ProductService productService = new ProductService();
+
+            while (rs4.next()) {
+                Product byId = productService.findById(rs4.getInt(1));
+                cartItem = new CartItem();
+                cartItem.setQuality(rs4.getInt(3));
+                cartItem.setSize(rs4.getInt(2));
+                cartItem.setId(rs4.getInt(4));
+                cartItem.setProduct(byId);
+                hashMap.put(cartItem.getId(), cartItem);
+            }
+            cart.cart = hashMap;
+            return cart;
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return null;
+    }
+
     public static void main(String[] args) {
-        CartService cartService = new CartService();
-        List<Cart> carts = cartService.findAll();
-        System.out.println(carts);
+
     }
 }

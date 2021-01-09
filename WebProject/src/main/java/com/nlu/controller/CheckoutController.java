@@ -19,12 +19,14 @@ public class CheckoutController extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String fullName = req.getParameter("fullName");
         String email = req.getParameter("email");
+        String city = req.getParameter("city");
         String phone = req.getParameter("phone");
         String address = req.getParameter("address");
         String note = req.getParameter("note");
 
         Cart cart = Cart.getCart(req.getSession());
         cartService.save(fullName, null, email, phone, null, address, note, cart);
+        cart.clear(req.getSession());
 
         resp.sendRedirect("/");
 

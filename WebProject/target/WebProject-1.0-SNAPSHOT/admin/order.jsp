@@ -199,7 +199,7 @@
                             <tr class="item">
                                 <td><input type="checkbox" class="cb_item"/></td>
                                 <td class="td_order">
-                                    <a href="order-details.jsp">#${cart.cartId} ${cart.username}</a>
+                                    <a href="/order?id=${cart.cartId}">#${cart.cartId} ${cart.username}</a>
                                 </td>
                                 <td class="td_date">${cart.orderDate}</td>
                                 <c:choose>

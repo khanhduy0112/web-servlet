@@ -61,10 +61,8 @@
             </thead>
             <%
                 Cart cart = (Cart) Cart.getCart(session);
-//                Collection<CartItem> data = cart.getData();
-//                request.setAttribute("data", data);
                 Collection<CartItem> data = cart.getData();
-                request.setAttribute("data",data);
+                request.setAttribute("data", data);
             %>
             <tbody>
             <c:forEach items="${data}" var="item">
@@ -89,7 +87,9 @@
                         <%--                    tong tien--%>
                     <td>${item.price * item.quality}</td>
                     <td class="delete">
-                        <i class="fa fa-trash" aria-hidden="true"></i>
+                        <a href="/cart/remove?id=${item.productDetailsId}">
+                            <i style="transform: scale(2)" class="fa fa-trash" aria-hidden="true"></i>
+                        </a>
                     </td>
                 </tr>
             </c:forEach>
@@ -98,10 +98,10 @@
             <tr>
                 <td class="title-total">Tổng Cộng</td>
                 <td></td>
-                <td>800000</td>
-                <td>4</td>
                 <td></td>
-                <td>800000</td>
+                <td>${cart.count()}</td>
+                <td></td>
+                <td>${cart.total()}</td>
                 <td class="buy">
                     <a href="#">
                         <button class="btnhuy">Hủy</button>
