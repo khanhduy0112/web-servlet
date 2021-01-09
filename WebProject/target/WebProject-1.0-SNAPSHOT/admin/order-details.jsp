@@ -157,6 +157,7 @@
                         <tr>
                             <th>Sản phẩm</th>
                             <th>Chi phí</th>
+                            <th>Size</th>
                             <th>SL</th>
                             <th>Tổng</th>
                         </tr>
@@ -174,6 +175,7 @@
                                         <a href="">${cart.username} ${cartItem.product.name}</a>
                                     </div>
                                 </td>
+                                <td>${cartItem.product.price}</td>
                                 <td>${cartItem.size}</td>
                                 <td>${cartItem.quality}</td>
                                 <td>${cartItem.product.price * cartItem.quality}</td>
