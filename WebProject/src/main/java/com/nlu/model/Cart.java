@@ -94,4 +94,12 @@ public class Cart {
         return cart.size();
     }
 
+    public static void main(String[] args) {
+        Cart cart = new Cart();
+        cart.getData();
+        for (CartItem cartItem:
+                cart.getData()) {
+        }
+    }
+
 }
