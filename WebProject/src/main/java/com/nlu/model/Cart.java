@@ -21,6 +21,7 @@ public class Cart {
     private int status;
     private double total;
     private String orderDate;
+    private int cartNo;
 
     public Cart(String cartId, int cart_number, String username, String shippingAddress, String phone, String email, int userId, int status, double total, String orderDate, HashMap<Integer, CartItem> cart) {
         this.cartId = cartId;

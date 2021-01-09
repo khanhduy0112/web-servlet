@@ -117,6 +117,7 @@ public class CartService {
                 cart.setStatus(rs.getInt(7));
                 cart.setTotal(rs.getDouble(8));
                 cart.setOrderDate(rs.getString(9));
+                cart.setCartNo(rs.getInt(10));
             }
             String sql2 = "SELECT  product_id,size,quality,id FROM `cart_item` WHERE order_id = ?";
             PreparedStatement ps3 = conn.prepareStatement(sql2);
