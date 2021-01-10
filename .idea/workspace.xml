@@ -24,8 +24,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2bab16c-7d14-46e3-a295-edc2e38cd0d9" name="Default Changelist" comment="add ckeditor and ckfinder">
-      <change beforePath="$PROJECT_DIR$/WebProject/src/main/webapp/admin/product-new.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/admin/product-new.jsp" afterDir="false" />
+    <list default="true" id="d2bab16c-7d14-46e3-a295-edc2e38cd0d9" name="Default Changelist" comment="fix ck">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +187,7 @@
       <workItem from="1610112475823" duration="2962000" />
       <workItem from="1610177310915" duration="3171000" />
       <workItem from="1610246054276" duration="5074000" />
-      <workItem from="1610264551311" duration="321000" />
+      <workItem from="1610264551311" duration="1401000" />
     </task>
     <task id="LOCAL-00001" summary="add ckeditor and ckfinder">
       <created>1610180352274</created>
@@ -196,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610180352274</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fix ck">
+      <created>1610264907358</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1610264907358</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,6 +223,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add ckeditor and ckfinder" />
-    <option name="LAST_COMMIT_MESSAGE" value="add ckeditor and ckfinder" />
+    <MESSAGE value="fix ck" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix ck" />
   </component>
 </project>
