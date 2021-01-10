@@ -277,7 +277,7 @@
     </div>
 </section>
 
-<jsp:include page="footer.jsp"/>
+<jsp:include page="/main/footer.jsp"/>
 <script src="${pageContext.request.contextPath}/src/main/webapp/main/script/main.js"></script>
 </body>
 </html>

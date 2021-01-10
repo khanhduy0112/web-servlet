@@ -260,7 +260,8 @@
                 </tbody>
                 <tfoot>
                 <td>Tổng Cộng</td>
-                <td>${cart.total()}</td>
+                <td></td>
+                <td colspan="2">${cart.total()}</td>
                 </tfoot>
             </table>
             <div class="payments">
@@ -276,7 +277,7 @@
     </div>
 </section>
 
-<jsp:include page="footer.jsp"/>
+<jsp:include page="/main/footer.jsp"/>
 <script src="${pageContext.request.contextPath}/src/main/webapp/main/script/main.js"></script>
 </body>
 </html>

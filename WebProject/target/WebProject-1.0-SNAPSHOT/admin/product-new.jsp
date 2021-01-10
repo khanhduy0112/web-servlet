@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="./style/main.css"/>
     <link rel="stylesheet" href="./style/product-new.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/libraries/ckeditor/ckeditor.js"></script>
     <%--    <script src="https://cdn.ckeditor.com/ckeditor5/23.1.0/classic/ckeditor.js"></script>--%>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/libraries/ckeditor/ckeditor.js"></script>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/libraries/ckfinder/ckfinder.js"></script>
+<%--    <script type="text/javascript" src="<%=request.getContextPath()%>/libraries/ckeditor/ckeditor.js"></script>--%>
+<%--    <script type="text/javascript" src="<%=request.getContextPath()%>/libraries/ckfinder/ckfinder.js"></script>--%>
 </head>
 <body>
 <div class="body_container">
@@ -289,8 +290,8 @@
     <!-- ===***END OF RIGHT***=== -->
 </div>
 <script>
-    const editor = CKEDITOR.replace('ckeditor');
-    CKFinder.setupCKEditor(editor,'/libraries/ckfinder/');
+    var  editor = CKEDITOR.replace('ckeditor');
+CKFinder.setupCKEditor(editor,'/libraries/ckfinder/');
 </script>
 </body>
 <script>
