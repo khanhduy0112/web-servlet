@@ -1,3 +1,7 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="com.nlu.model.Cart" %>
+<%@ page import="com.nlu.model.CartItem" %>
+<%@ page import="java.util.Collection" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <html lang="zxx">
@@ -229,30 +233,34 @@
             </div>
         </section>
         <!-- End: Modern Contact Form -->
+        <%
+            Cart cart = Cart.getCart(session);
+            Collection<CartItem> data = cart.getData();
+            request.setAttribute("data", data);
+        %>
         <div style="flex: 4" class="">
             <h3 class="titleOrder">ĐƠN HÀNG CỦA BẠN</h3>
             <table class="tableOrder">
                 <tr>
                     <th>Sản Phẩm</th>
+                    <th>Size</th>
+                    <th>Số lượng</th>
                     <th>Tạm Tính</th>
                 </tr>
                 <tbody>
-                <tr>
-                    <td>Air Jordan1</td>
-                    <td>200000đ</td>
-                </tr>
-                <tr>
-                    <td>Ultraboost</td>
-                    <td>280000đ</td>
-                </tr>
-                <tr>
-                    <td>Phí Giao Hàng</td>
-                    <td>40000đ</td>
-                </tr>
+
+                <c:forEach items="${data}" var="item">
+                    <tr>
+                        <td>${item.name}</td>
+                        <td>${item.size}đ</td>
+                        <td>${item.quality}</td>
+                        <td>${item.price * item.quality}</td>
+                    </tr>
+                </c:forEach>
                 </tbody>
                 <tfoot>
                 <td>Tổng Cộng</td>
-                <td>240000đ</td>
+                <td>${cart.total()}</td>
                 </tfoot>
             </table>
             <div class="payments">
