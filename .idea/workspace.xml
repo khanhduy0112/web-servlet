@@ -25,10 +25,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2bab16c-7d14-46e3-a295-edc2e38cd0d9" name="Default Changelist" comment="add ckeditor and ckfinder">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/web_servlet.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/web-servlet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/web-servlet.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebProject/src/main/webapp/admin/product-new.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/admin/product-new.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -191,6 +187,7 @@
       <workItem from="1610112475823" duration="2962000" />
       <workItem from="1610177310915" duration="3171000" />
       <workItem from="1610246054276" duration="5074000" />
+      <workItem from="1610264551311" duration="321000" />
     </task>
     <task id="LOCAL-00001" summary="add ckeditor and ckfinder">
       <created>1610180352274</created>
