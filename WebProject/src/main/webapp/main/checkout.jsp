@@ -3,8 +3,7 @@
 <%@ page import="com.nlu.model.CartItem" %>
 <%@ page import="java.util.Collection" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
-<html lang="zxx">
+<html>
 <head>
     <link
             rel="stylesheet"
@@ -17,9 +16,7 @@
             type="image/x-icon"
     />
     <!-- Meta tag Keywords -->
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta charset="UTF-8"/>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Custom-Files -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/main/css/bootstrap.css"/>
     <!-- Bootstrap-Core-CSS -->
@@ -28,6 +25,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
     <style>
         .submit-now {
             margin-top: 20px;
@@ -47,7 +45,6 @@
 
         .getintouch {
             height: auto;
-            background-image: url(../../assets/img/Get%20In%20touch/GetInTouch.png);
             background-size: cover;
             background-repeat: no-repeat
         }
@@ -135,7 +132,7 @@
                         class="modern-form__form-container"
                         style="width: 100%; height: 603px"
                 >
-                    <form method="post" action="/checkout">
+                    <form method="post" action="/checkout" accept-charset="UTF-8">
                         <div class="form-row">
                             <div class="col col-contact">
                                 <div class="form-group modern-form__form-group--padding-r">
@@ -214,7 +211,9 @@
                           class="form-control input modern-form__form-control--textarea"
                           name="note"
                           placeholder="Ghi Chú"
-                  ></textarea>
+                  >
+
+                  </textarea>
                                     <div class="line-box">
                                         <div class="line"></div>
                                     </div>

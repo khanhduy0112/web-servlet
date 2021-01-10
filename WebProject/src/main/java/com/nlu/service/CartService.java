@@ -37,7 +37,7 @@ public class CartService {
         try {
             Date date = new Date();
             Connection conn = getConnection();
-            String query = "INSERT INTO cart VALUES (?,?,?,?,?,?,?,?,?,?)";
+            String query = "INSERT INTO cart VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
             PreparedStatement ps = conn.prepareStatement(query);
             ps.setString(1, String.valueOf(date.getTime()));
             ps.setString(2, fullName);
@@ -49,6 +49,8 @@ public class CartService {
             ps.setDouble(8, cart.total());
             ps.setString(9, date.toString());
             ps.setString(10, null);
+            ps.setString(11, city);
+            ps.setString(12, note);
             ps.executeUpdate();
             String query2 = "INSERT INTO cart_item VALUES (?,?,?,?,?,?)";
             PreparedStatement ps2 = conn.prepareStatement(query2);
@@ -88,6 +90,9 @@ public class CartService {
                 cart.setStatus(rs.getInt(7));
                 cart.setTotal(rs.getDouble(8));
                 cart.setOrderDate(rs.getString(9));
+                cart.setCartNo(rs.getInt(10));
+                cart.setCity(rs.getString(11));
+                cart.setNote(rs.getString(12));
                 carts.add(cart);
             }
             returnConnection(connection);
@@ -118,6 +123,8 @@ public class CartService {
                 cart.setTotal(rs.getDouble(8));
                 cart.setOrderDate(rs.getString(9));
                 cart.setCartNo(rs.getInt(10));
+                cart.setCity(rs.getString(11));
+                cart.setNote(rs.getString(12));
             }
             String sql2 = "SELECT  product_id,size,quality,id FROM `cart_item` WHERE order_id = ?";
             PreparedStatement ps3 = conn.prepareStatement(sql2);

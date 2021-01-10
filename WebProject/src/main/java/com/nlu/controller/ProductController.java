@@ -1,10 +1,8 @@
 package com.nlu.controller;
 
 import com.nlu.model.Product;
-import com.nlu.model.ProductDetails;
 import com.nlu.service.ProductDetailsService;
 import com.nlu.service.ProductService;
-import com.nlu.utils.ProductUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,7 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.*;
 
 @WebServlet("/products")

@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="./style/main.css"/>
     <link rel="stylesheet" href="./style/product-new.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="/libraries/ckeditor/ckeditor.js"></script>
+    <script src="${pageContext.request.contextPath}/libraries/ckeditor/ckeditor.js"></script>
     <%--    <script src="https://cdn.ckeditor.com/ckeditor5/23.1.0/classic/ckeditor.js"></script>--%>
-<%--    <script type="text/javascript" src="<%=request.getContextPath()%>/libraries/ckeditor/ckeditor.js"></script>--%>
-<%--    <script type="text/javascript" src="<%=request.getContextPath()%>/libraries/ckfinder/ckfinder.js"></script>--%>
+    <%--    <script type="text/javascript" src="<%=request.getContextPath()%>/libraries/ckeditor/ckeditor.js"></script>--%>
+    <%--    <script type="text/javascript" src="<%=request.getContextPath()%>/libraries/ckfinder/ckfinder.js"></script>--%>
 </head>
 <body>
 <div class="body_container">
@@ -127,13 +127,9 @@
                         <div class="form_group">
                             <label>Miêu Tả Sản Phẩm</label>
                             <br/>
-                            <form action="" method="post">
               <textarea rows="20" cols="20" id="ckeditor">
 
               </textarea>
-                                <br/>
-                                <input type="submit" name="submit" value="Submit"/>
-                            </form>
 
                         </div>
                         <div class="form_group">
@@ -290,8 +286,8 @@
     <!-- ===***END OF RIGHT***=== -->
 </div>
 <script>
-    var  editor = CKEDITOR.replace('ckeditor');
-CKFinder.setupCKEditor(editor,'/libraries/ckfinder/');
+    const editor = CKEDITOR.replace('ckeditor');
+    CKFinder.setupCKEditor(editor, '/libraries/ckfinder/');
 </script>
 </body>
 <script>
@@ -316,15 +312,7 @@ CKFinder.setupCKEditor(editor,'/libraries/ckfinder/');
         document.querySelector(".add_size").classList.remove("hidden");
     });
 
-    // TEXT EDITOR JS LIBARY
-    ClassicEditor.create(document.querySelector("#editor"))
-        .then((editor) => {
-            console.log(editor);
-        })
-        .catch((error) => {
-            console.error(error);
-        });
-    //
+
     const productImg = document.getElementById("product_img");
     const previewProductImg = document.getElementById("review_product-img");
     productImg.addEventListener("change", (e) => {

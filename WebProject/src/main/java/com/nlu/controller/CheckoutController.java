@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 @WebServlet("/checkout")
 public class CheckoutController extends HttpServlet {
@@ -24,11 +25,18 @@ public class CheckoutController extends HttpServlet {
         String address = req.getParameter("address");
         String note = req.getParameter("note");
 
-        Cart cart = Cart.getCart(req.getSession());
-        cartService.save(fullName, null, email, phone, null, address, note, cart);
-        cart.clear(req.getSession());
+//        Cart cart = Cart.getCart(req.getSession());
+//        if (cart.getData().size() > 0) {
+//            cartService.save(fullName, null, email, phone, city, address, note, cart);
+//            cart.clear(req.getSession());
 
-        resp.sendRedirect("/");
+//            resp.sendRedirect("/");
 
+
+//        }
+
+        PrintWriter writer = resp.getWriter();
+        writer.println(city);
+        writer.flush();
     }
 }

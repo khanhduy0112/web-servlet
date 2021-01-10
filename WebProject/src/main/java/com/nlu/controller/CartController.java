@@ -3,7 +3,7 @@ package com.nlu.controller;
 import com.nlu.model.Cart;
 import com.nlu.model.CartItem;
 import com.nlu.service.CartService;
-import com.nlu.service.MailService;
+import com.nlu.mail.MailService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

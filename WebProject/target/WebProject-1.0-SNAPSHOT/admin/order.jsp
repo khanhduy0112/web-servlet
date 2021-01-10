@@ -2,13 +2,13 @@
 <%@ page import="com.nlu.service.CartService" %>
 <%@ page import="com.nlu.model.Cart" %>
 <%@ page import="java.util.List" %>
-<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Tất cả đơn hàng</title>
-    <link rel="shortcut icon" href="/admin/images/webpage.svg" type="image/x-icon"/>
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/admin/images/webpage.svg" type="image/x-icon"/>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/admin/style/main.css"/>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/admin/style/order.css"/>
     <link rel="stylesheet" href="${pageContext.request.contextPath}./js/zoom/css/zoom.css"/>

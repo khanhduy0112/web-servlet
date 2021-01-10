@@ -17,11 +17,13 @@ public class Cart {
     private String shippingAddress;
     private String phone;
     private String email;
+    private String city;
     private int userId;
     private int status;
     private double total;
     private String orderDate;
     private int cartNo;
+    private String note;
 
     public Cart(String cartId, int cart_number, String username, String shippingAddress, String phone, String email, int userId, int status, double total, String orderDate, HashMap<Integer, CartItem> cart) {
         this.cartId = cartId;
@@ -48,6 +50,7 @@ public class Cart {
         this.status = status;
         this.total = total;
         this.orderDate = orderDate;
+
     }
 
     public HashMap<Integer, CartItem> cart = new HashMap<>();
