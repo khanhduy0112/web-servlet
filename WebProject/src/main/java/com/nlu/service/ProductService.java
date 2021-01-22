@@ -201,7 +201,22 @@ public class ProductService implements Repository<Product> {
 
     @Override
     public void add(Product product) {
-
+        String query = "INSERT INTO `products`( `name`, `status`, `description`, `img`, `category_id`, `price`, `sales_percent`) VALUES (?,?,?,?,?,?,?)";
+        try{
+            Connection conn = getConnection();
+            PreparedStatement ps = conn.prepareStatement(query);
+            ps.setString(1,product.getName());
+            ps.setInt(2,1);
+            ps.setString(3,product.getDescription());
+            ps.setString(4,product.getImg());
+            ps.setInt(5,product.getCategoryId());
+            ps.setInt(6,product.getPrice());
+            ps.setDouble(7,product.getSalesPercent());
+            ps.execute();
+            System.out.println("Da them moi 1 san pham");
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 
     public static void main(String[] args) throws SQLException {
