@@ -19,6 +19,7 @@
             font-weight: 600;
         }
     </style>
+    <meta charset="UTF-8">
 </head>
 <body>
 <div class="body_container">

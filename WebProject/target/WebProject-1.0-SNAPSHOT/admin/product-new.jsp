@@ -1,4 +1,12 @@
-<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="com.nlu.service.CategoryService" %>
+<%@ page import="com.nlu.model.Category" %>
+<%@ page import="java.util.List" %>
+<%@ page import="com.nlu.service.TagService" %>
+<%@ page import="com.nlu.model.Tag" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8"  %>
+
+
 <html>
 <head>
     <meta charset="UTF-8"/>
@@ -99,12 +107,13 @@
             </div>
             <!-- end of right topbar -->
             <div class="right_content">
-                <form method="post" class="new_product" action="/new-product">
+                <form method="post" class="new_product" action="/new-product" enctype="multipart/form-data" accept-charset="UTF-8">
 
                     <div class="form">
                         <div class="form_group">
                             <label for="product_name">Tên Sản Phẩm</label><br/>
                             <input
+
                                     name="product_name"
                                     required
                                     type="text"
@@ -125,7 +134,7 @@
                         <div class="form_group">
                             <label>Miêu Tả Sản Phẩm</label>
                             <br/>
-              <textarea rows="20" cols="20" id="ckeditor">
+                            <textarea rows="20" cols="20" id="ckeditor" name="product_description">
 
               </textarea>
 
@@ -168,32 +177,32 @@
 
 
                     <div class="select_group">
+                        <%
+                            List<Category> categories = new CategoryService().findAll();
+                            request.setAttribute("categories", categories);
+                            List<Tag> tags = new TagService().findAll();
+                            request.setAttribute("tags", tags);
+
+                        %>
+
                         <div class="category">
+
                             <span>Doanh Mục</span>
-                            <div class="category_control">
-                                <input type="checkbox" name=""/>
-                                <label for="jordan">Jordan</label>
-                            </div>
-                            <div class="category_control">
-                                <input type="checkbox" name=""/>
-                                <label for="adidas">Adidas</label>
-                            </div>
-                            <div class="category_control">
-                                <input type="checkbox" name=""/>
-                                <label for="converse">Converse</label>
-                            </div>
-                            <div class="category_control">
-                                <input type="checkbox" name="nike"/>
-                                <label for="nike">Nike</label>
-                            </div>
-                            <div class="category_control">
-                                <input type="checkbox" name=""/>
-                                <label for="uncategory">UnCategory</label>
-                            </div>
+                            <c:forEach items="${categories}" var="item">
+                                <c:if test="${item.status == 1}">
+                                    <div class="category_control">
+                                        <input value="${item.id}" id="${item.name}" type="checkbox" name="category"/>
+                                        <label for="${item.name}">${item.name}</label>
+                                    </div>
+                                </c:if>
+                            </c:forEach>
+
+
                             <button class="add_new-category">
                                 <a href="category.jsp">Thêm Mới</a>
                             </button>
                         </div>
+                        <%--                        end of category--%>
                         <div class="img">
                             <input
                                     required
@@ -205,28 +214,19 @@
                         <div class="display_img">
                             <img alt="review img" id="review_product-img"/>
                         </div>
+
                         <div style="margin: 1rem 0" class="tags category">
                             <span>Thẻ</span>
-                            <div class="category_control">
-                                <input type="checkbox" name="" id="jordan"/>
-                                <label for="jordan">Mới nhất</label>
-                            </div>
-                            <div class="category_control">
-                                <input type="checkbox" name="" id="adidas"/>
-                                <label for="adidas">Giảm giá</label>
-                            </div>
-                            <div class="category_control">
-                                <input type="checkbox" name="" id="converse"/>
-                                <label for="converse">Mới ra mắt</label>
-                            </div>
-                            <div class="category_control">
-                                <input type="checkbox" name="nike" id="nike"/>
-                                <label for="nike">Đẹp</label>
-                            </div>
-                            <div class="category_control">
-                                <input type="checkbox" name="" id="uncategory"/>
-                                <label for="uncategory">Ưu đãi</label>
-                            </div>
+                            <c:forEach items="${tags}" var="item">
+                                <c:if test="${item.status == 1}">
+                                    <div class="category_control">
+                                        <input value="${item.id}" id="${item.name}" type="checkbox" name="tag"/>
+                                        <label for="${item.name}">${item.name}</label>
+                                    </div>
+                                </c:if>
+                            </c:forEach>
+
+
                             <div class="add_new-category">
                                 <input
                                         type="text"

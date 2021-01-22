@@ -54,4 +54,8 @@ public class TagService implements Repository<Tag> {
     public void add(Tag tag) {
 
     }
+
+    public static void main(String[] args) {
+        System.out.println(new TagService().findAll().toString());
+    }
 }

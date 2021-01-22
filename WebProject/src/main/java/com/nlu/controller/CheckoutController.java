@@ -2,20 +2,27 @@ package com.nlu.controller;
 
 import com.nlu.model.Cart;
 import com.nlu.service.CartService;
+import lombok.SneakyThrows;
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.util.List;
 
 @WebServlet("/checkout")
 public class CheckoutController extends HttpServlet {
 
     CartService cartService = new CartService();
 
+    @SneakyThrows
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
@@ -25,6 +32,7 @@ public class CheckoutController extends HttpServlet {
         String phone = req.getParameter("phone");
         String address = req.getParameter("address");
         String note = req.getParameter("note");
+
 
 
         Cart cart = Cart.getCart(req.getSession());

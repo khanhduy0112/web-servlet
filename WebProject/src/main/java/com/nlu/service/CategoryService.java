@@ -52,4 +52,9 @@ public class CategoryService implements Repository<Category> {
     public void add(Category category) {
 
     }
+
+    public static void main(String[] args) {
+        CategoryService categoryService = new CategoryService();
+        System.out.println(categoryService.findAll().toString());
+    }
 }
