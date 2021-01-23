@@ -14,7 +14,7 @@ public class ProductService implements Repository<Product> {
     @Override
     public List<Product> findAll() {
         List<Product> products = new ArrayList<>();
-        String query = "SELECT * FROM products";
+        String query = "SELECT * FROM products ORDER BY product_id DESC";
         try {
             Connection connection = getConnection();
             Statement statement = connection.createStatement();
@@ -202,16 +202,16 @@ public class ProductService implements Repository<Product> {
     @Override
     public void add(Product product) {
         String query = "INSERT INTO `products`( `name`, `status`, `description`, `img`, `category_id`, `price`, `sales_percent`) VALUES (?,?,?,?,?,?,?)";
-        try{
+        try {
             Connection conn = getConnection();
             PreparedStatement ps = conn.prepareStatement(query);
-            ps.setString(1,product.getName());
-            ps.setInt(2,1);
-            ps.setString(3,product.getDescription());
-            ps.setString(4,product.getImg());
-            ps.setInt(5,product.getCategoryId());
-            ps.setInt(6,product.getPrice());
-            ps.setDouble(7,product.getSalesPercent());
+            ps.setString(1, product.getName());
+            ps.setInt(2, 1);
+            ps.setString(3, product.getDescription());
+            ps.setString(4, product.getImg());
+            ps.setInt(5, product.getCategoryId());
+            ps.setInt(6, product.getPrice());
+            ps.setDouble(7, product.getSalesPercent());
             ps.execute();
             System.out.println("Da them moi 1 san pham");
         } catch (SQLException throwables) {
@@ -219,8 +219,44 @@ public class ProductService implements Repository<Product> {
         }
     }
 
+    public int getLastedProductId() {
+        String query = "SELECT MAX(product_id) FROM `products` GROUP BY product_id";
+        Connection conn = getConnection();
+        int lastedId = -1;
+        try {
+            PreparedStatement ps = conn.prepareStatement(query);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                lastedId = rs.getInt(1);
+            }
+            System.out.println(lastedId);
+
+            returnConnection(conn);
+            return lastedId;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return -1;
+    }
+
+    public void addTag(int productId, int tagId) {
+        String query = "INSERT INTO `product_tag`( `product_id`, `tag_id`) VALUES (?,?)";
+        try {
+            Connection conn = getConnection();
+            PreparedStatement ps = conn.prepareStatement(query);
+            ps.setInt(1, productId);
+            ps.setInt(2, tagId);
+            ps.executeUpdate();
+            returnConnection(conn);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
     public static void main(String[] args) throws SQLException {
         ProductService productService = new ProductService();
-        System.out.println(productService.countProductInCategory("Adidas"));
+        productService.addTag(1,5);
     }
 }
