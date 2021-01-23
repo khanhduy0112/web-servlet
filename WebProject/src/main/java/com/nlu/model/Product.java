@@ -9,21 +9,15 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Product {
 
-    private Integer productId;
+    private int productId;
     private String name;
-    private Integer status;
+    private int status;
     private String description;
     private String img;
-    private Integer categoryId;
-    private Integer price;
-    private Double salesPercent;
+    private int categoryId;
+    private int price;
+    private double salesPercent;
 
 
-    @Override
-    public String toString() {
-        return "Product{" +
-                "productId=" + productId +
-                ", name='" + name + '\'' +
-                '}';
-    }
+    
 }

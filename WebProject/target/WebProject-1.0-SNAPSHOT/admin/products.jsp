@@ -4,62 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tất cả sản phẩm</title>
-    <link rel="shortcut icon" href="./images/webpage.svg" type="image/x-icon" />
-    <link rel="stylesheet" href="./style/main.css" />
-    <link rel="stylesheet" href="./js/zoom/css/zoom.css" />
-    <link rel="stylesheet" href="./style/products.css" />
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/admin/images/webpage.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/admin/style/main.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/admin/js/zoom/css/zoom.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/admin/style/products.css" />
+    <script src="//cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <script>
+      $(document).ready( function () {
+        $('#myTable').DataTable();
+      } );
+    </script>
+
   </head>
   <body>
     <div class="body_container">
       <!-- ===***LEFT***=== -->
-      <div class="left_wrapper">
-        <div class="left">
-          <div class="dashboard_title">
-            <img src="./images/webpage.svg" class="img-icon" alt="" />
-            <h2><a href="dashboard.jsp">DASH BOARD</a></h2>
-            <img
-              src="./images/close.svg"
-              id="close-btn"
-              alt=""
-              class="img-icon"
-            />
-          </div>
-          <div class="left_menu">
-            <div class="menu">
-              <div class="menu_title">
-                <img src="./images/received.svg" class="img-icon" alt="" />
-                <h4 class="active">Sản Phẩm</h4>
-              </div>
-              <div class="sub_menu">
-                <a href="./products.jsp" class="active">Tất Cả</a>
-                <a href="product-new.jsp">Thêm Sản Phẩm</a>
-                <a href="category.jsp">Doanh Mục</a>
-              </div>
-            </div>
-            <div class="menu">
-              <div class="menu_title">
-                <img src="./images/profile.svg" class="img-icon" alt="" />
-                <h4>Người Dùng</h4>
-              </div>
-              <div class="sub_menu">
-                <a href="users.jsp">Quản Trị</a>
-                <a href="user-new.jsp">Thêm Người Dùng</a>
-                <a href="user-setting.jsp">Cài Đặt</a>
-                <a href="customers.jsp">Khách Hàng</a>
-              </div>
-            </div>
-            <div class="menu">
-              <div class="menu_title">
-                <img src="./images/box.svg" class="img-icon" alt="" />
-                <h4>Đơn Hàng</h4>
-              </div>
-              <div class="sub_menu">
-                <a href="order.jsp">Tất Cả Đơn Hàng</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <jsp:include page="./sidebar.jsp"/>
+
       <!-- ===***END OF LEFT***=== -->
 
       <!-- ===***RIGHT***=== -->
@@ -266,6 +229,7 @@
               </div>
             </div>
             <div class="table_wrapper">
+
               <div class="action_bar mb-1">
                 <div class="select">
                   <select name="action">
@@ -274,6 +238,9 @@
                     <option value="complete">Gỡ khỏi trang</option>
                   </select>
                   <button class="btn_apply">Thực Hiện</button>
+                </div>
+                <div class="select">
+                    <h6><%=request.getAttribute("notify") != null ? request.getAttribute("notify"): ""%></h6>
                 </div>
                 <div class="select-search__field">
                   <select name="action">
@@ -284,7 +251,7 @@
                   <button class="btn_apply">Thực Hiện</button>
                 </div>
               </div>
-              <table>
+              <table id="product_table">
                 <thead>
                   <tr>
                     <th><input type="checkbox" name="" id="sellect_all" /></th>
@@ -450,7 +417,8 @@
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdn.ckeditor.com/ckeditor5/23.1.0/classic/ckeditor.js"></script>
-  <script src="./js/main.js"></script>
-  <script src="./js/zoom/dist/zoom.min.js"></script>
-  <script src="./js/products.js"></script>
+  <script src="${pageContext.request.contextPath}/admin/js/main.js"></script>
+  <script src="${pageContext.request.contextPath}/admin/js/zoom/dist/zoom.min.js"></script>
+  <script src="${pageContext.request.contextPath}/admin/js/products.js"></script>
+
 </html>

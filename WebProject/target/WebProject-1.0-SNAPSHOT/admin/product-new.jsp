@@ -22,54 +22,7 @@
 <body>
 <div class="body_container">
     <!-- ===***LEFT***=== -->
-    <div class="left_wrapper">
-        <div class="left">
-            <div class="dashboard_title">
-                <img src="./images/webpage.svg" class="img-icon" alt=""/>
-                <h2><a href="dashboard.jsp">DASH BOARD</a></h2>
-                <img
-                        src="./images/close.svg"
-                        id="close-btn"
-                        alt=""
-                        class="img-icon"
-                />
-            </div>
-            <div class="left_menu">
-                <div class="menu">
-                    <div class="menu_title">
-                        <img src="./images/received.svg" class="img-icon" alt=""/>
-                        <h4 class="active">Sản Phẩm</h4>
-                    </div>
-                    <div class="sub_menu">
-                        <a href="products.jsp">Tất Cả</a>
-                        <a href="product-new.jsp" class="active">Thêm Sản Phẩm</a>
-                        <a href="category.jsp">Doanh Mục</a>
-                    </div>
-                </div>
-                <div class="menu">
-                    <div class="menu_title">
-                        <img src="./images/profile.svg" class="img-icon" alt=""/>
-                        <h4>Người Dùng</h4>
-                    </div>
-                    <div class="sub_menu">
-                        <a href="users.jsp">Quản Trị</a>
-                        <a href="user-new.jsp">Thêm Người Dùng</a>
-                        <a href="user-setting.jsp">Cài Đặt</a>
-                        <a href="customers.jsp">Khách Hàng</a>
-                    </div>
-                </div>
-                <div class="menu">
-                    <div class="menu_title">
-                        <img src="./images/box.svg" class="img-icon" alt=""/>
-                        <h4>Đơn Hàng</h4>
-                    </div>
-                    <div class="sub_menu">
-                        <a href="order.jsp">Tất Cả Đơn Hàng</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <jsp:include page="./sidebar.jsp"/>
     <!-- ===***END OF LEFT***=== -->
 
     <!-- ===***RIGHT***=== -->
@@ -134,10 +87,7 @@
                         <div class="form_group">
                             <label>Miêu Tả Sản Phẩm</label>
                             <br/>
-                            <textarea rows="20" cols="20" id="ckeditor" name="product_description">
-
-              </textarea>
-
+                            <textarea rows="20" cols="20" id="ckeditor" name="product_description">              </textarea>
                         </div>
                         <div class="form_group">
                             <table style="margin-top: 1rem">
@@ -202,18 +152,6 @@
                                 <a href="category.jsp">Thêm Mới</a>
                             </button>
                         </div>
-                        <%--                        end of category--%>
-                        <div class="img">
-                            <input
-                                    required
-                                    type="file"
-                                    name="product_img"
-                                    id="product_img"
-                            />
-                        </div>
-                        <div class="display_img">
-                            <img alt="review img" id="review_product-img"/>
-                        </div>
 
                         <div style="margin: 1rem 0" class="tags category">
                             <span>Thẻ</span>
@@ -246,13 +184,25 @@
                                 </button>
                             </div>
                         </div>
+
+                        <div class="img">
+                            <input
+                                    required
+                                    type="file"
+                                    name="product_img"
+                                    id="product_img"
+                            />
+                        </div>
+                        <div class="display_img">
+                            <img alt="review img" id="review_product-img"/>
+                        </div>
                         <div class="save_post">
                             <div>
-                                <input type="checkbox" name="craft" id="craft"/>
+                                <input type="checkbox" value="saveAsCraft" name="craft" id="craft"/>
                                 <label for="craft">Lưu bản nháp</label>
                             </div>
                             <div>
-                                <input type="checkbox" name="post" id="post"/>
+                                <input type="checkbox" value="saveAsPost" name="post" id="post"/>
                                 <label for="post">Đăng</label>
                             </div>
 

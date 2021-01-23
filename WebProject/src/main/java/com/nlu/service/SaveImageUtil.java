@@ -4,7 +4,7 @@ import java.io.*;
 
 public class SaveImageUtil {
 
-    public static  final String path ="E:\\web-servlet\\WebProject\\src\\main\\webapp\\admin\\images\\";
+    public static  final String path ="E:\\web-servlet\\WebProject\\src\\main\\webapp\\images\\";
     public static byte[] read(InputStream is) throws IOException {
         byte[] temp = new byte[1024];
         int c = is.read(temp);
@@ -16,7 +16,7 @@ public class SaveImageUtil {
 
     public static void write( InputStream is,String fileName) {
         try {
-            OutputStream os = new BufferedOutputStream(new FileOutputStream(path));
+            OutputStream os = new BufferedOutputStream(new FileOutputStream(path+fileName));
             byte[] data;
             while ((data = read(is)) != null) {
                 os.write(data);
