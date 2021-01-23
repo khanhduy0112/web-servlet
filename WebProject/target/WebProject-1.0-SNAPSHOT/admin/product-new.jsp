@@ -4,7 +4,7 @@
 <%@ page import="java.util.List" %>
 <%@ page import="com.nlu.service.TagService" %>
 <%@ page import="com.nlu.model.Tag" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8"  %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 
 
 <html>
@@ -18,6 +18,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="<%=request.getContextPath()%>/libraries/ckeditor/ckeditor.js"></script>
     <script type="text/javascript" src="<%=request.getContextPath()%>/libraries/ckfinder/ckfinder.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+            crossorigin="anonymous"></script>
+
 </head>
 <body>
 <div class="body_container">
@@ -28,39 +35,11 @@
     <!-- ===***RIGHT***=== -->
     <div class="right_wrapper">
         <div class="right">
-            <div class="topbar">
-                <div class="topbar_content">
-                    <div class="logo">
-                        <img
-                                src="./images/bars-solid.svg"
-                                alt=""
-                                class="img-icon"
-                                id="left_menu-toggle"
-                        />
-                        <h3>SKED</h3>
-                    </div>
-                    <div class="current_user">
-                        <h5 class="current_user-name">Duy Nguyen</h5>
-                        <img
-                                class="img-small"
-                                src="./images/wallpaperflare.com_wallpaper (1).jpg"
-                                alt=""
-                        />
-                        <div class="current_user-sub-menu">
-                            <a href="user-setting.jsp">
-                                <img src="./images/settings.svg" alt=""/>Cài đặt
-                            </a>
-                            <a href="login.jsp">
-                                <img src="./images/logout.svg" alt=""/> Đăng xuất
-                            </a>
-                            <a href="../index.jsp"> THOÁT </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <jsp:include page="top-bar.jsp"/>
             <!-- end of right topbar -->
             <div class="right_content">
-                <form method="post" class="new_product" action="/new-product" enctype="multipart/form-data" accept-charset="UTF-8">
+                <form method="post" class="new_product" action="/new-product" enctype="multipart/form-data"
+                      accept-charset="UTF-8">
 
                     <div class="form">
                         <div class="form_group">
@@ -84,49 +63,30 @@
                                     id="product_price"
                             />
                         </div>
+                        <div class="form_group" style="display: flex;align-items: center">
+                            <div>
+                                <label for="size">Size</label>
+                                <input type="number" name="size" id="size">
+                            </div>
+                            <div>
+                                <label for="quality">Số lượng</label>
+                                <input type="number" name="quality" id="quality">
+                            </div>
+                            <div>
+                                <label for="color">Nhóm màu</label>
+                                <input type="text" name="color" id="color">
+                            </div>
+                        </div>
                         <div class="form_group">
                             <label>Miêu Tả Sản Phẩm</label>
                             <br/>
-                            <textarea rows="20" cols="20" id="ckeditor" name="product_description">              </textarea>
+                            <textarea rows="20" cols="20" id="ckeditor"
+                                      name="product_description">              </textarea>
                         </div>
-                        <div class="form_group">
-                            <table style="margin-top: 1rem">
-                                <thead>
-                                <th>Kích Cỡ</th>
-                                <th>40</th>
-                                <th>41</th>
-                                <th>42</th>
-                                <th>44</th>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>Số Lượng</td>
-                                    <td><input type="text" value="12"/></td>
-                                    <td><input type="text" value="12"/></td>
-                                    <td><input type="text" value="12"/></td>
-                                    <td><input type="text" value="12"/></td>
-                                </tr>
-                                </tbody>
-                                <tfoot>
-                                <tr>
-                                    <td colspan="2">
-                          <span
-                                  class="btn_add-size"
-                                  style="
-                              border-bottom: 1px solid blue;
-                              cursor: pointer;
-                            ">
-                            Thêm kích cỡ
-                          </span>
-                                    </td>
-                                </tr>
-                                </tfoot>
-                            </table>
-                        </div>
+
                     </div>
 
-
-                    <div class="select_group">
+                    <div style="width: 300px" class="select_group">
                         <%
                             List<Category> categories = new CategoryService().findAll();
                             request.setAttribute("categories", categories);
@@ -136,33 +96,60 @@
                         %>
 
                         <div class="category">
-
-                            <span>Doanh Mục</span>
-                            <c:forEach items="${categories}" var="item">
-                                <c:if test="${item.status == 1}">
-                                    <div class="category_control">
-                                        <input value="${item.id}" id="${item.name}" type="checkbox" name="category"/>
-                                        <label for="${item.name}">${item.name}</label>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                        Doanh Mục
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                     aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <c:forEach items="${categories}" var="item">
+                                            <c:if test="${item.status == 1}">
+                                                <div class="category_control">
+                                                    <input value="${item.id}" id="${item.name}" type="checkbox"
+                                                           name="category"/>
+                                                    <label for="${item.name}">${item.name}</label>
+                                                </div>
+                                            </c:if>
+                                        </c:forEach>
                                     </div>
-                                </c:if>
-                            </c:forEach>
-
-
+                                </div>
+                            </div>
                             <button class="add_new-category">
                                 <a href="category.jsp">Thêm Mới</a>
                             </button>
                         </div>
 
+
                         <div style="margin: 1rem 0" class="tags category">
-                            <span>Thẻ</span>
-                            <c:forEach items="${tags}" var="item">
-                                <c:if test="${item.status == 1}">
-                                    <div class="category_control">
-                                        <input value="${item.id}" id="${item.name}" type="checkbox" name="tag"/>
-                                        <label for="${item.name}">${item.name}</label>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTwo" aria-expanded="false"
+                                            aria-controls="collapseTwo">
+                                        Thẻ
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                     data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <c:forEach items="${tags}" var="item">
+                                            <c:if test="${item.status == 1}">
+                                                <div class="category_control">
+                                                    <input value="${item.id}" id="${item.name}" type="checkbox"
+                                                           name="tag"/>
+                                                    <label for="${item.name}">${item.name}</label>
+                                                </div>
+                                            </c:if>
+                                        </c:forEach>
                                     </div>
-                                </c:if>
-                            </c:forEach>
+                                </div>
+                            </div>
 
 
                             <div class="add_new-category">
@@ -184,6 +171,7 @@
                                 </button>
                             </div>
                         </div>
+
 
                         <div class="img">
                             <input
