@@ -13,8 +13,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Sản phẩm - Thêm mới</title>
     <link rel="shortcut icon" href="./images/webpage.svg" type="image/x-icon"/>
-    <link rel="stylesheet" href="./style/main.css"/>
-    <link rel="stylesheet" href="./style/product-new.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/admin/style/main.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/admin/style/product-new.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="<%=request.getContextPath()%>/libraries/ckeditor/ckeditor.js"></script>
     <script type="text/javascript" src="<%=request.getContextPath()%>/libraries/ckfinder/ckfinder.js"></script>
@@ -38,9 +38,7 @@
             <jsp:include page="top-bar.jsp"/>
             <!-- end of right topbar -->
             <div class="right_content">
-                <form method="post" class="new_product" action="/new-product" enctype="multipart/form-data"
-                      accept-charset="UTF-8">
-
+                <form method="post" class="new_product" action="/new-product" enctype="multipart/form-data" accept-charset="UTF-8">
                     <div class="form">
                         <div class="form_group">
                             <label for="product_name">Tên Sản Phẩm</label><br/>
@@ -85,8 +83,7 @@
                         </div>
 
                     </div>
-
-                    <div style="width: 300px" class="select_group">
+                    <div class="select_group">
                         <%
                             List<Category> categories = new CategoryService().findAll();
                             request.setAttribute("categories", categories);
@@ -200,22 +197,22 @@
                         </div>
                     </div>
                 </form>
-                <div class="add_size hidden">
-                    <form action="">
-                        <div>
-                            <label for="">Size</label>
-                            <input type="number"/>
-                        </div>
-                        <div>
-                            <label for="">Số Lượng</label>
-                            <input type="number"/>
-                        </div>
-                        <div>
-                            <button>Lưu</button>
-                            <button class="btn_cancel">Hủy</button>
-                        </div>
-                    </form>
-                </div>
+            </div>S
+            <div class="add_size hidden">
+                <form action="">
+                    <div>
+                        <label for="">Size</label>
+                        <input type="number"/>
+                    </div>
+                    <div>
+                        <label for="">Số Lượng</label>
+                        <input type="number"/>
+                    </div>
+                    <div>
+                        <button>Lưu</button>
+                        <button class="btn_cancel">Hủy</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
