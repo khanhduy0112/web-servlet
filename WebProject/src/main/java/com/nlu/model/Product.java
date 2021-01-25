@@ -16,7 +16,7 @@ public class Product {
     private String img;
     private int categoryId;
     private int price;
-    private double salesPercent;
+    private int discount;
 
 
     

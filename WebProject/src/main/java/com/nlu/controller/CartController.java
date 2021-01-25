@@ -34,8 +34,6 @@ public class CartController extends HttpServlet {
             resp.sendRedirect("/");
             return;
         }
-
-
         CartItem item = cartService.findProductById(Integer.parseInt(id));
         HttpSession session = req.getSession();
         Cart cart = Cart.getCart(session);

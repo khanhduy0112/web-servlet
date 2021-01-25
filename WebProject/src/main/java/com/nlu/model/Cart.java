@@ -3,9 +3,11 @@ package com.nlu.model;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpSession;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.Set;
 
 @Data
 @NoArgsConstructor
@@ -24,34 +26,34 @@ public class Cart {
     private String orderDate;
     private int cartNo;
     private String note;
-
-    public Cart(String cartId, int cart_number, String username, String shippingAddress, String phone, String email, int userId, int status, double total, String orderDate, HashMap<Integer, CartItem> cart) {
-        this.cartId = cartId;
-        this.cart_number = cart_number;
-        this.username = username;
-        this.shippingAddress = shippingAddress;
-        this.phone = phone;
-        this.email = email;
-        this.userId = userId;
-        this.status = status;
-        this.total = total;
-        this.orderDate = orderDate;
-        this.cart = cart;
-    }
-
-    public Cart(String cartId, int cart_number, String username, String shippingAddress, String phone, String email, int userId, int status, double total, String orderDate) {
-        this.cartId = cartId;
-        this.cart_number = cart_number;
-        this.username = username;
-        this.shippingAddress = shippingAddress;
-        this.phone = phone;
-        this.email = email;
-        this.userId = userId;
-        this.status = status;
-        this.total = total;
-        this.orderDate = orderDate;
-
-    }
+//
+//    public Cart(String cartId, int cart_number, String username, String shippingAddress, String phone, String email, int userId, int status, double total, String orderDate, HashMap<Integer, CartItem> cart) {
+//        this.cartId = cartId;
+//        this.cart_number = cart_number;
+//        this.username = username;
+//        this.shippingAddress = shippingAddress;
+//        this.phone = phone;
+//        this.email = email;
+//        this.userId = userId;
+//        this.status = status;
+//        this.total = total;
+//        this.orderDate = orderDate;
+//        this.cart = cart;
+//    }
+//
+//    public Cart(String cartId, int cart_number, String username, String shippingAddress, String phone, String email, int userId, int status, double total, String orderDate) {
+//        this.cartId = cartId;
+//        this.cart_number = cart_number;
+//        this.username = username;
+//        this.shippingAddress = shippingAddress;
+//        this.phone = phone;
+//        this.email = email;
+//        this.userId = userId;
+//        this.status = status;
+//        this.total = total;
+//        this.orderDate = orderDate;
+//
+//    }
 
     public HashMap<Integer, CartItem> cart = new HashMap<>();
 
@@ -87,22 +89,55 @@ public class Cart {
     }
 
     public double total() {
+
         double result = 0;
         for (CartItem cartItem :
                 this.getData()) {
-            result += cartItem.getPrice()*cartItem.getQuality();
+            result += cartItem.getPrice() * cartItem.getQuality();
         }
         return result;
     }
-    public int count(){
+
+    public int count() {
         return cart.size();
     }
 
     public static void main(String[] args) {
         Cart cart = new Cart();
         cart.getData();
-        for (CartItem cartItem:
+        for (CartItem cartItem :
                 cart.getData()) {
+        }
+    }
+
+    public boolean alreadyHave(int id) {
+        if (cart.containsKey(id)) {
+            return true;
+        }
+        return false;
+    }
+
+    public void upQuality(int id, HttpSession session) {
+        Cart cartt = Cart.getCart(session);
+        HashMap<Integer, CartItem> cart = cartt.getCart();
+        if (this.cart.containsKey(id)) {
+            System.out.println("TANG SO LUONG");
+            CartItem cartItem = this.cart.get(id);
+            cartItem.setSize(cartItem.getSize() + 1);
+            cart.put(id, cartItem);
+            cartt.commit(session);
+        }
+    }
+
+    public void downQuality(int id, HttpSession session) {
+        Cart cartt = Cart.getCart(session);
+        HashMap<Integer, CartItem> cart = cartt.getCart();
+        if (this.cart.containsKey(id)) {
+            System.out.println("GIAM SO LUONG");
+            CartItem cartItem = this.cart.get(id);
+            cartItem.setSize(cartItem.getSize() - 1);
+            cart.put(id, cartItem);
+            cartt.commit(session);
         }
     }
 

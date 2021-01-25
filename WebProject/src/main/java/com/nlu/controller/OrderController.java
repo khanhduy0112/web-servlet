@@ -27,7 +27,7 @@ public class OrderController extends HttpServlet {
 
 
         req.setAttribute("cart", cart);
-//        Collection<CartItem>  = cart.getData();
+
 
         req.getRequestDispatcher("/admin/order-details.jsp").forward(req, resp);
 

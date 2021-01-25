@@ -28,14 +28,13 @@ public class CheckoutController extends HttpServlet {
         String address = req.getParameter("address");
         String note = req.getParameter("note");
 
-//        Cart cart = Cart.getCart(req.getSession());
-//        if (cart.getData().size() > 0) {
-//            cartService.save(fullName, null, email, phone, city, address, note, cart);
-//            cart.clear(req.getSession());
-//            resp.sendRedirect("/");
-//        }
-        PrintWriter writer = resp.getWriter();
-        writer.println(address);
+        Cart cart = Cart.getCart(req.getSession());
+        if (cart.getData().size() > 0) {
+            cartService.save(fullName, null, email, phone, city, address, note, cart);
+            cart.clear(req.getSession());
+            resp.sendRedirect("/");
+        }
+
 
     }
 }

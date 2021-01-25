@@ -1,5 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/fmt" prefix = "fmt" %>
 <html>
 
 <head>
@@ -24,13 +25,66 @@
     <link href="${pageContext.request.contextPath}/main/css/font-awesome.css" rel="stylesheet"/>
     <!-- //font-awesome-icons -->
     <!-- /Fonts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+            crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="main/css/design.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+<style>
+    body{
+        background-color: #f5f6fa;
+    }
+    .main-container {
+        width: 100%;
+        min-height: 100vh;
+    }
 
+    .side-bar {
+        background-color: #dcdde1;
+    }
+    .search-bar{
+        padding: 1rem 0;
+    }
+    .product-shoe-info{
+        background-color: white;
+        margin-bottom: 20px;
+        position: relative;
+    }
+    .product-shoe-info:hover{
+        box-shadow: 4px 6px 3px 0px rgba(127,143,166,0.75);
+    }
+    .discount-tag{
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 20px;
+        animation: big-big 1s ease-in-out 1s infinite alternate;
+        /*transition: .2s ease-in-out;*/
+    }
+
+    .discount-tag span{
+        font-size: 18px;
+        color : red;
+    }
+    .fa-tags{
+       color : red;
+    }
+    @keyframes big-big {
+        from {
+            transform: scale(1);
+        }
+        to {
+            transform: scale(1.5);
+        }
+    }
+
+</style>
 <body>
 <div>
     <!-- Start: Header -->
@@ -52,8 +106,7 @@
 
 <%--products--%>
 <section class="ab-info-main py-md-5 py-4">
-    <div class="container py-md-3">
-        <!-- top Products -->
+    <div style="width: 90%; margin: auto" class="container-fluid  py-md-3 main-container">
         <div class="row">
             <div class="side-bar col-lg-4">
                 <div class="search-bar w3layouts-newsletter">
@@ -66,82 +119,66 @@
                         </button>
                     </form>
                 </div>
-                <div class="sidebar">
-                    <div class="row"
-                         style="width: 250PX;padding: 10px;color: var(--light);border-color: var(--white);">
-                        <div class="col">
-                            <div>
-                                <a class="btn btn-primary" data-toggle="collapse" aria-expanded="true"
-                                   aria-controls="collapse-1" href="#collapse-1" role="button"
-                                   style="color: var(--white);font-weight: 600;font-style: normal;width: 100%;padding: 0;padding-bottom: 5px;padding-top: 10px;border-color: var(--white);border-bottom-color: var(--white);background: #172a74;margin-right: 0px;padding-right: 60px;text-align: center;">
-                                    GIÁ SẢN PHẨM
-                                </a>
-                                <div class="collapse show" id="collapse-1">
-                                    <c:forEach items="${categories}" var="category">
-                                        <c:if test="${category.status == 1}">
-                                            <div class="form-check"
-                                                 style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);">
-                                                <input class="form-check-input" type="radio" id="formCheck-1">
-                                                <label class="form-check-label" for="formCheck-1"
-                                                       style="color: var(--gray);">${category.name}</label>
-                                            </div>
-                                        </c:if>
-                                    </c:forEach>
-                                </div>
+                <form class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Accordion Item #1
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                             data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <c:forEach  items="${tags}" var="tag">
+                                    <c:if test="${tag.status == 1}">
+                                        <input type="checkbox" id="${tag.name} name=${tag.name} value=${tag.id}">
+                                        <label for="${tag.name}">${tag.name}</label>
+                                        <br>
+                                    </c:if>
+                                </c:forEach>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="sidebar">
-                    <div class="row"
-                         style="width: 250PX;padding: 10px;color: var(--light);border-color: var(--white);">
-                        <div class="col">
-                            <div>
-                                <a class="btn btn-primary" data-toggle="collapse" aria-expanded="true"
-                                   aria-controls="collapse-1" href="#collapse-1" role="button"
-                                   style="color: var(--white);font-weight: 600;font-style: normal;width: 100%;padding: 0;padding-bottom: 5px;padding-top: 10px;border-color: var(--white);border-bottom-color: var(--white);background: #172a74;margin-right: 0px;padding-right: 60px;text-align: center;">
-                                    GIÁ SẢN PHẨM
-                                </a>
-                                <div class="collapse show" id="collapse-1">
-                                    <c:forEach items="${tags}" var="tag">
-                                        <c:if test="${tag.status == 1}">
-                                            <div class="form-check"
-                                                 style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);">
-                                                <input class="form-check-input" type="radio" id="formCheck-1">
-                                                <label class="form-check-label" for="formCheck-1"
-                                                       style="color: var(--gray);">${tag.name}</label>
-                                            </div>
-                                        </c:if>
-                                    </c:forEach>
-                                </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Accordion Item #2
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                             data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the second item's accordion body.</strong> It is hidden by default,
+                                until the collapse plugin adds the appropriate classes that we use to style each
+                                element. These classes control the overall appearance, as well as the showing and hiding
+                                via CSS transitions. You can modify any of this with custom CSS or overriding our
+                                default variables. It's also worth noting that just about any HTML can go within the
+                                <code>.accordion-body</code>, though the transition does limit overflow.
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="sidebar">
-                    <div class="row"
-                         style="width: 250PX;padding: 10px;color: var(--light);border-color: var(--white);">
-                        <div class="col">
-                            <div>
-                                <a class="btn btn-primary" data-toggle="collapse" aria-expanded="true"
-                                   aria-controls="collapse-1" href="#collapse-1" role="button"
-                                   style="color: var(--white);font-weight: 600;font-style: normal;width: 100%;padding: 0;padding-bottom: 5px;padding-top: 10px;border-color: var(--white);border-bottom-color: var(--white);background: #172a74;margin-right: 0px;padding-right: 60px;text-align: center;">
-                                    GIÁ SẢN PHẨM
-                                </a>
-                                <div class="collapse show" id="collapse-1">
-                                    <c:forEach items="${sizes}" var="size">
-                                        <div class="form-check"
-                                             style="width: 100%;background: var(--white);padding-left: 30px;color: var(--gray);">
-                                            <input class="form-check-input" type="radio" id="formCheck-1">
-                                            <label class="form-check-label" for="formCheck-1"
-                                                   style="color: var(--gray);">${size}</label>
-                                        </div>
-                                    </c:forEach>
-                                </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Accordion Item #3
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                             data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until
+                                the collapse plugin adds the appropriate classes that we use to style each element.
+                                These classes control the overall appearance, as well as the showing and hiding via CSS
+                                transitions. You can modify any of this with custom CSS or overriding our default
+                                variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>,
+                                though the transition does limit overflow.
                             </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
             <div class="left-ads-display col-lg-8">
                 <div class="row">
@@ -153,17 +190,32 @@
                                 </div>
                                 <div class="item-info-product">
                                     <h4>
-<%--                                                                                    <a href="/products/product-single?id=${item.productId}">${item.name}--%>
+                                            <%--                                                                                    <a href="/products/product-single?id=${item.productId}">${item.name}--%>
                                         <a href="/products/product-single?id=${item.productId}">${item.name}
                                         </a>
                                     </h4>
 
                                     <div class="product_price">
                                         <div class="grid-price">
-                                            <span class="money">${item.price}</span>
+                                            <c:if test="${item.discount > 0}">
+                                                <span style="color: #44bd32" class="money">
+                                                    <fmt:formatNumber maxFractionDigits="0" type="number"   value="${ (item.price - (item.price * item.discount /100))}"/> vnd
+                                                </span>
+
+                                            </c:if>
+                                            <c:if test="${item.discount <= 0}">
+                                                <span style="color: #44bd32" class="money">${item.price} vnd</span>
+
+                                            </c:if>
                                         </div>
                                     </div>
                                 </div>
+                                <c:if test="${item.discount > 0}">
+                                    <div class="discount-tag">
+                                        <span>${item.discount}%</span>
+                                        <i class="fas fa-tags"></i>
+                                    </div>
+                                </c:if>
                             </div>
                         </div>
                     </c:forEach>
@@ -172,10 +224,12 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="row justify-content-center">
-            <nav align="center" style="text-align: center;height: 100px;margin: 0px;">
-                <ul class="pagination">
+
+
+    <div class="container" style="background-color: red;position: relative">
+        <div style="margin: auto;text-align: center">
+            <nav style="text-align: center;margin: auto">
+                <ul class="pagination" style="text-align: center;position: absolute;left: 50%">
                     <%--prev--%>
                     <c:if test="${pagesCount >  1}">
                         <li>
