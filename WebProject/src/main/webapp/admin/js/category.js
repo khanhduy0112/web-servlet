@@ -1,13 +1,13 @@
-const closeEditCategory = document.getElementById("close_edit-category");
-const editDialog = document.querySelector(".edit_category");
+// const closeEditCategory = document.getElementById("close_edit-category");
+// const editDialog = document.querySelector(".edit_category");
 const addNewCategory = document.querySelector(".btn_edit-category");
-
-closeEditCategory.addEventListener("click", () => {
-    editDialog.style.display = "none";
-});
-addNewCategory.addEventListener("click", () => {
-    editDialog.style.display = "flex";
-});
+//
+// closeEditCategory.addEventListener("click", () => {
+//     editDialog.style.display = "none";
+// });
+// addNewCategory.addEventListener("click", () => {
+//     editDialog.style.display = "flex";
+// });
 
 const closeNewCategory = document.getElementById("close_new-category");
 const newCategoryDialog = document.querySelector(".new_category");

@@ -195,8 +195,8 @@ public class ProductService implements Repository<Product> {
     }
 
     @Override
-    public Product deleteById() {
-        return null;
+    public void deleteById(int id) {
+
     }
 
     @Override

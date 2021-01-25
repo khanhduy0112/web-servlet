@@ -13,7 +13,7 @@ public interface Repository<T> {
 
     List<T> findByName();
 
-    T deleteById();
+    void deleteById(int id);
 
     void add(T t);
 }

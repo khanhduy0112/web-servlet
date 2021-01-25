@@ -24,8 +24,7 @@ public class OrderService implements Repository<OrderService> {
     }
 
     @Override
-    public OrderService deleteById() {
-        return null;
+    public void deleteById(int id){
     }
 
     @Override

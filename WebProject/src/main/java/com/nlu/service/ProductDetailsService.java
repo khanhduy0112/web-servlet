@@ -123,6 +123,22 @@ public class ProductDetailsService implements Repository<ProductDetails> {
         return null;
     }
 
+    public void save(int size, String color, int quality, int productId, int status) {
+        String query = "INSERT INTO `product_details`( `size`, `color`, `quality`, `product_id`, `status`) VALUES (?,?,?,?,?)";
+        try {
+            Connection conn = getConnection();
+            PreparedStatement ps = conn.prepareStatement(query);
+            ps.setInt(1, size);
+            ps.setString(2, color);
+            ps.setInt(3, quality);
+            ps.setInt(4, productId);
+            ps.setInt(5, status);
+            ps.executeUpdate();
+            returnConnection(conn);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
 
     @Override
     public ProductDetails findById(Integer id) throws SQLException {
@@ -135,8 +151,8 @@ public class ProductDetailsService implements Repository<ProductDetails> {
     }
 
     @Override
-    public ProductDetails deleteById() {
-        return null;
+    public void deleteById(int id) {
+
     }
 
     @Override

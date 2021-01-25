@@ -29,6 +29,12 @@ input:focus {
   transform: scale(1.05);
   transition: transform 0.3s ease-in-out;
 }
+.section{
+  flex: 3;
+}
+.accordion-collapse{
+  transition: .3s ease-in all;
+}
 .new_product {
   display: flex;
   width: 90%;

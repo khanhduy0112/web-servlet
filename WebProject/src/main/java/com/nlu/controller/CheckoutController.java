@@ -3,19 +3,13 @@ package com.nlu.controller;
 import com.nlu.model.Cart;
 import com.nlu.service.CartService;
 import lombok.SneakyThrows;
-import org.apache.commons.fileupload.FileItem;
-import org.apache.commons.fileupload.disk.DiskFileItemFactory;
-import org.apache.commons.fileupload.servlet.ServletFileUpload;
-
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.File;
 import java.io.IOException;
-import java.util.List;
+import java.io.PrintWriter;
 
 @WebServlet("/checkout")
 public class CheckoutController extends HttpServlet {
@@ -26,6 +20,7 @@ public class CheckoutController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
+
         String fullName = req.getParameter("fullName");
         String email = req.getParameter("email");
         String city = req.getParameter("city");
@@ -33,15 +28,14 @@ public class CheckoutController extends HttpServlet {
         String address = req.getParameter("address");
         String note = req.getParameter("note");
 
-
-
-        Cart cart = Cart.getCart(req.getSession());
-        if (cart.getData().size() > 0) {
-            cartService.save(fullName, null, email, phone, city, address, note, cart);
-            cart.clear(req.getSession());
-            resp.sendRedirect("/");
-
-        }
+//        Cart cart = Cart.getCart(req.getSession());
+//        if (cart.getData().size() > 0) {
+//            cartService.save(fullName, null, email, phone, city, address, note, cart);
+//            cart.clear(req.getSession());
+//            resp.sendRedirect("/");
+//        }
+        PrintWriter writer = resp.getWriter();
+        writer.println(address);
 
     }
 }

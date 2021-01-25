@@ -1,9 +1,15 @@
-<%@ page contentType="text/html;charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="com.nlu.service.CategoryService" %>
+<%@ page import="com.nlu.model.Category" %>
+<%@ page import="java.util.List" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 <html>
   <head>
-    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Doanh mục</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
     <link rel="shortcut icon" href="./images/webpage.svg" type="image/x-icon" />
     <link rel="stylesheet" href="./style/main.css" />
     <link rel="stylesheet" href="./style/category.css" />
@@ -95,6 +101,10 @@
               </div>
             </div>
           </div>
+          <%
+            List<Category> categories = new CategoryService().findAll();
+            request.setAttribute("categories",categories);
+          %>
           <!-- end of right topbar -->
           <div class="right_content">
             <div class="table_wrapper">
@@ -123,76 +133,31 @@
                     </tr>
                   </thead>
                   <tbody id="table">
-                    <tr>
-                      <td>1</td>
-                      <td>Jordan</td>
-                      <td>2/2/2020</td>
-                      <td>12</td>
-                      <td class="button_action-container">
-                        <button class="btn_action btn_delete">Xóa</button>
-                        <button
-                          class="btn_action btn_quick-edit btn_edit-category"
-                        >
-                          Chỉnh Sửa
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Adidas</td>
-                      <td>22/12/1200</td>
-                      <td>7</td>
-                      <td class="button_action-container">
-                        <button class="btn_action btn_delete">Xóa</button>
-                        <button
-                          class="btn_action btn_quick-edit btn_edit-category"
-                        >
-                          Chỉnh Sửa
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>Nike</td>
-                      <td>1/1/2020</td>
-                      <td>3</td>
-                      <td class="button_action-container">
-                        <button class="btn_action btn_delete">Xóa</button>
-                        <button
-                          class="btn_action btn_quick-edit btn_edit-category"
-                        >
-                          Chỉnh Sửa
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>4</td>
-                      <td>Vans</td>
-                      <td>1/1/2020</td>
-                      <td>3</td>
-                      <td class="button_action-container">
-                        <button class="btn_action btn_delete">Xóa</button>
-                        <button
-                          class="btn_action btn_quick-edit btn_edit-category"
-                        >
-                          Chỉnh Sửa
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>5</td>
-                      <td>New Balance</td>
-                      <td>1/1/2020</td>
-                      <td>1</td>
-                      <td class="button_action-container">
-                        <button class="btn_action btn_delete">Xóa</button>
-                        <button
-                          class="btn_action btn_quick-edit btn_edit-category"
-                        >
-                          Chỉnh Sửa
-                        </button>
-                      </td>
-                    </tr>
+                  <c:forEach items="${categories}" var="item" >
+                    <c:if test="${item.status ==1}">
+                      <tr>
+                        <td>0</td>
+                        <td>${item.name}</td>
+                        <td>${item.dateModify}</td>
+                        <td>${item.countProductUsed}</td>
+                        <td class="button_action-container">
+                          <button class="btn_action btn_delete">
+                            <a href="/admin/delete-category?id=${item.id}">Xóa</a>
+
+                          </button>
+                          <button
+                                  class="btn_action btn_quick-edit btn_edit-category"
+                          >
+                            <a href="/admin/update-category?id=${item.id}">Chinh sua</a>
+                          </button>
+                        </td>
+                      </tr>
+                    </c:if>
+                  </c:forEach>
+
+
+
+
                   </tbody>
                 </table>
                 <!--  -->
@@ -206,32 +171,34 @@
       </div>
       <!-- ===***END OF RIGHT***=== -->
     </div>
-    <div class="new_category">
-      <div>
+
+    <form class="new_category" method="post" action="/admin/add-category">
+      <div >
         <h5>Thêm doanh mục</h5>
         <img src="./images/close.svg" id="close_new-category" />
       </div>
       <input
         required
         type="text"
+        name="category_name"
         class="category_name"
         placeholder="Nhập tên doanh mục mới"
       />
       <button>Save</button>
-    </div>
-    <div class="edit_category">
-      <div>
-        <h5>Chỉnh sửa tên doanh mục</h5>
-        <img src="./images/close.svg" id="close_edit-category" />
-      </div>
-      <input
-        required
-        type="text"
-        class="category_name"
-        placeholder="Nhập tên doanh mục mới"
-      />
-      <button>Save</button>
-    </div>
+    </form>
+<%--    <div class="edit_category">--%>
+<%--      <div>--%>
+<%--        <h5>Chỉnh sửa tên doanh mục</h5>--%>
+<%--        <img src="./images/close.svg" id="close_edit-category" />--%>
+<%--      </div>--%>
+<%--      <input--%>
+<%--        required--%>
+<%--        type="text"--%>
+<%--        class="category_name"--%>
+<%--        placeholder="Nhập tên doanh mục mới"--%>
+<%--      />--%>
+<%--      <button>Save</button>--%>
+<%--    </div>--%>
   </body>
   <script src="./js/category.js"></script>
   <script src="./js/main.js"></script>
