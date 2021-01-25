@@ -28,7 +28,7 @@ public class ProductService implements Repository<Product> {
                         rs.getString(5),
                         rs.getInt(6),
                         rs.getInt(7),
-                        rs.getDouble(8));
+                        rs.getInt(8));
                 products.add(product);
             }
             returnConnection(connection);
@@ -70,7 +70,7 @@ public class ProductService implements Repository<Product> {
                         rs.getString(5),
                         rs.getInt(6),
                         rs.getInt(7),
-                        rs.getDouble(8));
+                        rs.getInt(8));
                 products.add(product);
             }
             returnConnection(connection);
@@ -122,7 +122,7 @@ public class ProductService implements Repository<Product> {
                         rs.getString(5),
                         rs.getInt(6),
                         rs.getInt(7),
-                        rs.getDouble(8));
+                        rs.getInt(8));
             }
             returnConnection(connection);
             return product;
@@ -149,7 +149,7 @@ public class ProductService implements Repository<Product> {
                         rs.getString(5),
                         rs.getInt(6),
                         rs.getInt(7),
-                        rs.getDouble(8));
+                        rs.getInt(8));
                 products.add(product);
             }
             returnConnection(connection);
@@ -177,7 +177,7 @@ public class ProductService implements Repository<Product> {
                         rs.getString(5),
                         rs.getInt(6),
                         rs.getInt(7),
-                        rs.getDouble(8));
+                        rs.getInt(8));
                 products.add(product);
             }
             returnConnection(connection);
@@ -195,8 +195,8 @@ public class ProductService implements Repository<Product> {
     }
 
     @Override
-    public Product deleteById() {
-        return null;
+    public void deleteById(int id) {
+
     }
 
     @Override
@@ -211,7 +211,7 @@ public class ProductService implements Repository<Product> {
             ps.setString(4, product.getImg());
             ps.setInt(5, product.getCategoryId());
             ps.setInt(6, product.getPrice());
-            ps.setDouble(7, product.getSalesPercent());
+            ps.setDouble(7, product.getDiscount());
             ps.execute();
             System.out.println("Da them moi 1 san pham");
         } catch (SQLException throwables) {
@@ -255,8 +255,37 @@ public class ProductService implements Repository<Product> {
 
     }
 
+    public List<Product> findAllSortByDate(int limit){
+        String query = "SELECT * FROM `products` ORDER BY product_id DESC LIMIT ?";
+        List<Product> products = new ArrayList<>();
+        try {
+            Connection connection = getConnection();
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setInt(1, limit);
+            ResultSet rs = statement.executeQuery();
+            while (rs.next()) {
+                Product product = new Product(
+                        rs.getInt(1),
+                        rs.getString(2),
+                        rs.getInt(3),
+                        rs.getString(4),
+                        rs.getString(5),
+                        rs.getInt(6),
+                        rs.getInt(7),
+                        rs.getInt(8));
+                products.add(product);
+            }
+            returnConnection(connection);
+            return products;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return products;
+    }
+
     public static void main(String[] args) throws SQLException {
         ProductService productService = new ProductService();
-        productService.addTag(1,5);
+//        productService.addTag(1,5);
+        System.out.println(productService.findAllSortByDate(6));
     }
 }

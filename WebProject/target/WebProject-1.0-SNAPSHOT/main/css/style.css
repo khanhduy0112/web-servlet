@@ -116,10 +116,10 @@ ul.tic-info li span {
     font-weight: 700;
 }
 
-span.money {
+span .money {
     font-size: 1em;
-    font-weight: 800;
-    color: #ff4c4c;
+    font-weight: 700;
+    color : #44bd32;
     letter-spacing: 2px;
 }
 
@@ -280,8 +280,11 @@ ol.breadcrumb {
 }
 
 .grid-img-right span.money {
-    color: #fff;
+
     display: block;
+}
+.grid-price .money{
+    color : #44bd32 !important;
 }
 
 .grid-img-right a {
@@ -811,7 +814,9 @@ table {
     width: 100%;
     margin-left: -100px;
 }
-
+.side-bar{
+    background-color: #4f772d;
+}
 .formInformCus label {
     font-weight: 350;
 }

@@ -3,6 +3,8 @@
 <%@ page import="com.nlu.model.CartItem" %>
 <%@ page import="java.util.Collection" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8"  %>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/fmt" prefix = "fmt" %>
+
 <html>
 <head>
     <link
@@ -118,7 +120,7 @@
     <li class="breadcrumb-item active">THANH TOÁN</li>
 </ol>
 <section class="ab-info-main py-5">
-    <div class="container" style="display: flex; align-items: center">
+    <div class="container" style="display: flex">
         <!-- Start: Modern Contact Form -->
         <section style="flex: 6" class="getintouch">
             <div class="container modern-form">
@@ -253,14 +255,21 @@
                         <td>${item.name}</td>
                         <td>${item.size}đ</td>
                         <td>${item.quality}</td>
-                        <td>${item.price * item.quality}</td>
+
+                        <td>
+                            <fmt:formatNumber maxFractionDigits="0" type="number"   value="${item.price * item.quality}"/>
+                            vnd
+                        </td>
                     </tr>
                 </c:forEach>
                 </tbody>
                 <tfoot>
                 <td>Tổng Cộng</td>
                 <td></td>
-                <td colspan="2">${cart.total()}</td>
+                <td colspan="2">
+                    <fmt:formatNumber maxFractionDigits="0" type="number"   value="${cart.total()}"/>
+                    vnd
+                </td>
                 </tfoot>
             </table>
             <div class="payments">

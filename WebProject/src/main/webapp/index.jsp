@@ -1,3 +1,6 @@
+<%@ page import="com.nlu.service.ProductService" %>
+<%@ page import="com.nlu.model.Product" %>
+<%@ page import="java.util.List" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -12,8 +15,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta charset="UTF-8"/>
 
-    <link rel="stylesheet" href="main/css/bootstrap.css"/>
-    <link rel="stylesheet" href="main/css/style.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/main/css/bootstrap.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/main/css/style.css" type="text/css" media="all"/>
     <link href="main/css/font-awesome.css" rel="stylesheet"/>
     <!--  -->
     <link
@@ -107,7 +110,11 @@
     <div class="container pb-lg-3">
         <h3 class="tittle text-center">SẢN PHẨM MỚI</h3>
         <div class="row">
-            <c:forEach items="${products}" var="product">
+            <%
+                List<Product> newestProduct = new ProductService().findAllSortByDate(6);
+                request.setAttribute("newestProduct", newestProduct);
+            %>
+            <c:forEach items="${newestProduct}" var="product">
                 <div class="col-md-4 product-men">
                     <div class="product-shoe-info shoe text-center">
                         <div class="men-thumb-item">
@@ -126,8 +133,8 @@
 
                             <div class="product_price">
                                 <div class="grid-price">
-                                    <span class="regular-price">${product.price}</span>
-                                    <span class="money">${product.salesPercent}</span>
+                                    <span class="regular-price">${product.price} vnd</span>
+                                    <span class="money">${product.discount}%</span>
                                 </div>
                             </div>
                         </div>

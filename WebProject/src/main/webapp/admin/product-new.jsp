@@ -4,15 +4,12 @@
 <%@ page import="java.util.List" %>
 <%@ page import="com.nlu.service.TagService" %>
 <%@ page import="com.nlu.model.Tag" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
-
-
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <html>
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Sản phẩm - Thêm mới</title>
-    <link rel="shortcut icon" href="./images/webpage.svg" type="image/x-icon"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
     <link rel="stylesheet" href="${pageContext.request.contextPath}/admin/style/main.css"/>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/admin/style/product-new.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -24,7 +21,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
             crossorigin="anonymous"></script>
-
 </head>
 <body>
 <div class="body_container">
@@ -38,7 +34,7 @@
             <jsp:include page="top-bar.jsp"/>
             <!-- end of right topbar -->
             <div class="right_content">
-                <form method="post" class="new_product" action="/new-product" enctype="multipart/form-data" accept-charset="UTF-8">
+                <form action="/new-product" method="post" class="new_product"  enctype="multipart/form-data" accept-charset="UTF-8"  >
                     <div class="form">
                         <div class="form_group">
                             <label for="product_name">Tên Sản Phẩm</label><br/>
@@ -83,121 +79,121 @@
                         </div>
 
                     </div>
-                    <div class="select_group">
-                        <%
-                            List<Category> categories = new CategoryService().findAll();
-                            request.setAttribute("categories", categories);
-                            List<Tag> tags = new TagService().findAll();
-                            request.setAttribute("tags", tags);
+                    <div class="section">
+                        <div class="select_group">
+                            <%
+                                List<Category> categories = new CategoryService().findAll();
+                                request.setAttribute("categories", categories);
+                                List<Tag> tags = new TagService().findAll();
+                                request.setAttribute("tags", tags);
 
-                        %>
+                            %>
 
-                        <div class="category">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseOne" aria-expanded="true"
-                                            aria-controls="collapseOne">
-                                        Doanh Mục
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show"
-                                     aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <c:forEach items="${categories}" var="item">
-                                            <c:if test="${item.status == 1}">
-                                                <div class="category_control">
-                                                    <input value="${item.id}" id="${item.name}" type="checkbox"
-                                                           name="category"/>
-                                                    <label for="${item.name}">${item.name}</label>
-                                                </div>
-                                            </c:if>
-                                        </c:forEach>
+                            <div class="category">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseOne" aria-expanded="true"
+                                                aria-controls="collapseOne">
+                                            Doanh Mục
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                         aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <c:forEach items="${categories}" var="item">
+                                                <c:if test="${item.status == 1}">
+                                                    <div class="category_control">
+                                                        <input value="${item.id}" id="${item.name}" type="checkbox"
+                                                               name="category"/>
+                                                        <label for="${item.name}">${item.name}</label>
+                                                    </div>
+                                                </c:if>
+                                            </c:forEach>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <button class="add_new-category">
-                                <a href="category.jsp">Thêm Mới</a>
-                            </button>
-                        </div>
-
-
-                        <div style="margin: 1rem 0" class="tags category">
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseTwo" aria-expanded="false"
-                                            aria-controls="collapseTwo">
-                                        Thẻ
-                                    </button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                     data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <c:forEach items="${tags}" var="item">
-                                            <c:if test="${item.status == 1}">
-                                                <div class="category_control">
-                                                    <input value="${item.id}" id="${item.name}" type="checkbox"
-                                                           name="tag"/>
-                                                    <label for="${item.name}">${item.name}</label>
-                                                </div>
-                                            </c:if>
-                                        </c:forEach>
-                                    </div>
-                                </div>
+                                <button class="add_new-category">
+                                    <a href="category.jsp">Thêm Mới</a>
+                                </button>
                             </div>
 
 
-                            <div class="add_new-category">
-                                <input
-                                        type="text"
-                                        name=""
-                                        id=""
-                                        placeholder="Nhập tên thẻ mới"
-                                />
-                                <button
-                                        style="
+                            <div style="margin: 1rem 0" class="tags category">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseTwo" aria-expanded="false"
+                                                aria-controls="collapseTwo">
+                                            Thẻ
+                                        </button>
+                                    </h2>
+                                    <div style="transition: .3s ease-in all" id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                         data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <c:forEach items="${tags}" var="item">
+                                                <c:if test="${item.status == 1}">
+                                                    <div class="category_control">
+                                                        <input value="${item.id}" id="${item.name}" type="checkbox"
+                                                               name="tag"/>
+                                                        <label for="${item.name}">${item.name}</label>
+                                                    </div>
+                                                </c:if>
+                                            </c:forEach>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="add_new-category">
+                                    <input
+                                            type="text"
+                                            name=""
+                                            id=""
+                                            placeholder="Nhập tên thẻ mới"
+                                    />
+                                    <button
+                                            style="
                         padding: 0.25rem;
                         color: white;
                         border: 1px solid transparent;
                         background-color: rgb(2, 131, 45);
                       "
-                                >
-                                    Thêm
-                                </button>
-                            </div>
-                        </div>
-
-
-                        <div class="img">
-                            <input
-                                    required
-                                    type="file"
-                                    name="product_img"
-                                    id="product_img"
-                            />
-                        </div>
-                        <div class="display_img">
-                            <img alt="review img" id="review_product-img"/>
-                        </div>
-                        <div class="save_post">
-                            <div>
-                                <input type="checkbox" value="saveAsCraft" name="craft" id="craft"/>
-                                <label for="craft">Lưu bản nháp</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" value="saveAsPost" name="post" id="post"/>
-                                <label for="post">Đăng</label>
+                                    >
+                                        Thêm
+                                    </button>
+                                </div>
                             </div>
 
-                            <div style="margin-top: 1rem">
-                                <button>Thực Hiện</button>
+
+                            <div class="img">
+                                <input
+                                        class="product_img"
+                                        required
+                                        type="file"
+                                        name="product_img"
+                                        id="product_img"
+                                />
+                            </div>
+                            <div class="display_img">
+                                <img alt="review img" id="review_product-img"/>
+                            </div>
+                            <div class="save_post">
+                                <div>
+                                    <input type="checkbox" value="saveAsCraft" name="craft" id="craft"/>
+                                    <label for="craft">Lưu bản nháp</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" value="saveAsPost" name="post" id="post"/>
+                                    <label for="post">Đăng</label>
+                                </div>
+
+                                <div style="margin-top: 1rem">
+                                    <button>Thực Hiện</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </form>
-            </div>S
+            </div>
             <div class="add_size hidden">
                 <form action="">
                     <div>
@@ -222,7 +218,6 @@
     const editor = CKEDITOR.replace('ckeditor');
     CKFinder.setupCKEditor(editor, 'libraries/ckfinder/');
 </script>
-</body>
 <script>
     const btnEdit = document.getElementsByClassName("btn_edit");
     const productEditWrapper = document.querySelector(".edit_wrapper");
@@ -252,5 +247,7 @@
         previewProductImg.src = URL.createObjectURL(e.target.files[0]);
     });
 </script>
+</body>
+
 <script src="./js/main.js"></script>
 </html>

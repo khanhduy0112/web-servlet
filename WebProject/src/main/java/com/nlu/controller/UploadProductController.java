@@ -1,9 +1,7 @@
 package com.nlu.controller;
 
 import com.nlu.model.Product;
-import com.nlu.model.Tag;
 import com.nlu.service.ProductService;
-import com.nlu.service.SaveImageUtil;
 import lombok.SneakyThrows;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
@@ -25,20 +23,28 @@ public class UploadProductController extends HttpServlet {
 
     ProductService productService = new ProductService();
 
+
+
     @SneakyThrows
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
 
         DiskFileItemFactory factory = new DiskFileItemFactory();
+//        factory.setDefaultCharset("UTF-8");
         ServletContext servletContext = this.getServletConfig().getServletContext();
+
         File repository = (File) servletContext.getAttribute("javax.servlet.context.tempdir");
         factory.setRepository(repository);
 
         ServletFileUpload upload = new ServletFileUpload(factory);
+//        upload.setHeaderEncoding("UTF-8");
         List<FileItem> items = upload.parseRequest(req);
         Iterator<FileItem> iter = items.iterator();
         Product productnew = new Product();
+        int size = 21;
+        int quality = 1;
+        String color = "";
         List<Integer> tagIds = new ArrayList<>();
         while (iter.hasNext()) {
             FileItem item = iter.next();
@@ -70,31 +76,46 @@ public class UploadProductController extends HttpServlet {
                         break;
 
                     }
+                    case "size": {
+                        size = Integer.parseInt(value);
+                    }
+                    case "quality": {
+                        quality = Integer.parseInt(value);
+                    }
+                    case "color": {
+                        color = value;
+                    }
                 }
                 System.out.println(name + ":" + value);
             } else {
-//                String fieldName = item.getFieldName();
+                String fieldName = item.getFieldName();
                 String fileName = item.getName();
                 productnew.setImg("/images/" + fileName);
-//                String contentType = item.getContentType();
-//                boolean isInMemory = item.isInMemory();
-//                long sizeInBytes = item.getSize();
+                String contentType = item.getContentType();
+                boolean isInMemory = item.isInMemory();
+                long sizeInBytes = item.getSize();
 
                 InputStream is = item.getInputStream();
-                SaveImageUtil.write(is,fileName);
+//                SaveImageUtil.write(is, fileName);
                 System.out.println("DA LUU FILE THANH CONG");
             }
 
         }
-        productService.add(productnew);
-        int id = productService.getLastedProductId();
-        for (Integer tagId :
-                tagIds) {
-            productService.addTag(id,tagId);
-        }
-        req.setAttribute("notify","San pham vua duoc them vao");
-        req.getRequestDispatcher("/admin/products.jsp").forward(req,resp);
-        System.out.println(productnew.toString());
+//        productService.add(productnew);
+//        int id = productService.getLastedProductId();
+//        for (Integer tagId :
+//                tagIds) {
+//            productService.addTag(id, tagId);
+//        }
+//        new ProductDetailsService().save(size, color, quality, id, 1);
+//        req.setAttribute("notify", "San pham vua duoc them vao");
+//        req.getRequestDispatcher("/admin/products.jsp").forward(req, resp);
+//        System.out.println(productnew.toString());
+
+        PrintWriter writer = resp.getWriter();
+
+        writer.println(productnew.getName());
+        writer.println(color);
 
 
     }

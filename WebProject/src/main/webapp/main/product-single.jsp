@@ -1,5 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/fmt" prefix = "fmt" %>
+
 <html>
 <head>
     <link
@@ -178,6 +180,7 @@
                         <div class="total">
                             <div class="total_title" style="margin: 1rem 0">
                                 <strong>Giá :</strong>
+
                                 <span> ${product.price}</span>
                                 <span>đ</span>
                             </div>
@@ -188,14 +191,17 @@
                             <span style="color: green"> đ</span>
                         </div>
                         <!-- <hr /> -->
+
                         <div class="button-product">
+
+
+
                             <button type="submit" class="buttons buttons-cart btn-add">
                                 Thêm vào giỏ
-<%--                                <a href="/cart/add">Thêm vào giỏ</a>--%>
                             </button>
                             <a href="cart.jsp">
                                 <button class="buttons buttons-carts" type="button">
-                                    Xem giỏ hàng
+                                    <a href="/main/cart.jsp">Xem Giỏ Hàng</a>
                                 </button>
                             </a>
                         </div>

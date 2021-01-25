@@ -3,6 +3,7 @@
 <%@ page import="com.nlu.model.CartItem" %>
 <%@ page import="java.util.Collection" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
 <html>
 <head>
@@ -77,20 +78,24 @@
                         </div>
                     </td>
                     <td>${item.name}</td>
-                    <td>200000đ</td>
+                    <td>${item.price}</td>
                     <td>
-                        <button class="custom_btn">-</button>
+                        <button class="custom_btn"><a href="/cart?id=${item.productDetailsId}&quality=-1">-</a></button>
                         <span>${item.quality}</span>
-                        <button class="custom_btn">+</button>
+                        id:
+                        <span>${item.productDetailsId}</span>
+                        <button class="custom_btn"><a href="/cart?id=${item.productDetailsId}&quality=1">+</a></button>
                     </td>
                     <td>${item.size}</td>
-                        <%--                    tong tien--%>
-                    <td>${item.price * item.quality}</td>
+                    <td>
+                        <fmt:formatNumber maxFractionDigits="0" type="number" value="${item.price * item.quality}"/> vnd
+                    </td>
                     <td class="delete">
                         <a href="/cart/remove?id=${item.productDetailsId}">
                             <i style="transform: scale(2)" class="fa fa-trash" aria-hidden="true"></i>
                         </a>
                     </td>
+
                 </tr>
             </c:forEach>
             </tbody>
@@ -101,7 +106,10 @@
                 <td></td>
                 <td>${cart.count()}</td>
                 <td></td>
-                <td>${cart.total()}</td>
+                <td>
+                    <fmt:formatNumber maxFractionDigits="0" type="number" value="${cart.total()}"/> vnd
+<%--                ${cart.total()}--%>
+                </td>
                 <td class="buy">
                     <a href="#">
                         <button class="btnhuy">Hủy</button>
