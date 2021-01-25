@@ -29,20 +29,6 @@ public class UploadProductController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
-//        String productName = req.getParameter("product_name");
-//        String productPrice = req.getParameter("product_price");
-//        String description = req.getParameter("product_description");
-//        String category = req.getParameter("category");
-//        String[] tags = req.getParameterValues("tag");
-//
-//       Product product = new Product();
-//       product.setName(productName);
-//       product.setPrice(Integer.valueOf(productPrice));
-//       product.setDescription(description);
-//       product.setCategoryId(Integer.parseInt(category));
-//       product.setSalesPercent(0.0);
-//       productService.add(product);
-//
 
         DiskFileItemFactory factory = new DiskFileItemFactory();
         ServletContext servletContext = this.getServletConfig().getServletContext();
