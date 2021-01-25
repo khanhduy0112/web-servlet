@@ -34,7 +34,7 @@
             <jsp:include page="top-bar.jsp"/>
             <!-- end of right topbar -->
             <div class="right_content">
-                <form action="/new-product" method="get" class="new_product"  enctype="multipart/form-data" accept-charset="UTF-8"  >
+                <form action="/new-product" method="post" class="new_product"  enctype="multipart/form-data" accept-charset="UTF-8"  >
                     <div class="form">
                         <div class="form_group">
                             <label for="product_name">Tên Sản Phẩm</label><br/>
