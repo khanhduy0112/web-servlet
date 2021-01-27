@@ -190,7 +190,7 @@
                                 </div>
                                 <div class="item-info-product">
                                     <h4>
-                                            <%--                                                                                    <a href="/products/product-single?id=${item.productId}">${item.name}--%>
+
                                         <a href="/products/product-single?id=${item.productId}">${item.name}
                                         </a>
                                     </h4>

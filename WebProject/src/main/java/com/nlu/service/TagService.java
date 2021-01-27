@@ -3,10 +3,7 @@ package com.nlu.service;
 import com.nlu.model.Tag;
 import com.nlu.repository.Repository;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,6 +30,26 @@ public class TagService implements Repository<Tag> {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public List<Integer> findTagIdsByProductId(int productId) {
+        String query = "SELECT tag_id from product_tag WHERE product_id = ?";
+        List<Integer> integers = new ArrayList<>();
+        try {
+            Connection conn = getConnection();
+            PreparedStatement ps = conn.prepareStatement(query);
+            ps.setInt(1, productId);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                integers.add(rs.getInt(1));
+            }
+            returnConnection(conn);
+            return integers;
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return integers;
     }
 
     @Override

@@ -1,10 +1,12 @@
 package com.nlu.service;
 
 import com.nlu.model.Product;
+import com.nlu.model.ProductDetails;
 import com.nlu.repository.Repository;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import static com.nlu.db.Datasource.*;
@@ -19,7 +21,10 @@ public class ProductService implements Repository<Product> {
             Connection connection = getConnection();
             Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery(query);
+            ProductDetailsService productDetailsService = new ProductDetailsService();
+            int productId;
             while (rs.next()) {
+                productId = rs.getInt(1);
                 Product product = new Product(
                         rs.getInt(1),
                         rs.getString(2),
@@ -28,9 +33,16 @@ public class ProductService implements Repository<Product> {
                         rs.getString(5),
                         rs.getInt(6),
                         rs.getInt(7),
-                        rs.getInt(8));
+                        rs.getInt(8),
+                        rs.getDate(9));
+
+                List<ProductDetails> details = productDetailsService.findByProductId(productId);
+                List<Integer> tagsIds = new TagService().findTagIdsByProductId(productId);
+                product.setTagIds(tagsIds);
+                product.setProductDetails(details);
                 products.add(product);
             }
+
             returnConnection(connection);
             return products;
         } catch (SQLException e) {
@@ -70,7 +82,7 @@ public class ProductService implements Repository<Product> {
                         rs.getString(5),
                         rs.getInt(6),
                         rs.getInt(7),
-                        rs.getInt(8));
+                        rs.getInt(8), rs.getDate(9));
                 products.add(product);
             }
             returnConnection(connection);
@@ -122,7 +134,9 @@ public class ProductService implements Repository<Product> {
                         rs.getString(5),
                         rs.getInt(6),
                         rs.getInt(7),
-                        rs.getInt(8));
+                        rs.getInt(8), rs.getDate(9));
+                product.setTagIds(new TagService().findTagIdsByProductId(rs.getInt(1)));
+                product.setProductDetails(new ProductDetailsService().findByProductId(rs.getInt(1)));
             }
             returnConnection(connection);
             return product;
@@ -149,7 +163,7 @@ public class ProductService implements Repository<Product> {
                         rs.getString(5),
                         rs.getInt(6),
                         rs.getInt(7),
-                        rs.getInt(8));
+                        rs.getInt(8), rs.getDate(9));
                 products.add(product);
             }
             returnConnection(connection);
@@ -162,22 +176,30 @@ public class ProductService implements Repository<Product> {
 
     public List<Product> findProductByCategoryId(int categoryId) {
         List<Product> products = new ArrayList<>();
+        Product product = null;
         String query = "select products.* from products join category on products.category_id = category.category_id where category.category_id = ?;";
         try {
             Connection connection = getConnection();
             PreparedStatement statement = connection.prepareStatement(query);
             statement.setInt(1, categoryId);
             ResultSet rs = statement.executeQuery();
+            int productId = 1;
             while (rs.next()) {
-                Product product = new Product(
-                        rs.getInt(1),
+                productId = rs.getInt(1);
+                product = new Product(
+                        productId,
                         rs.getString(2),
                         rs.getInt(3),
                         rs.getString(4),
                         rs.getString(5),
                         rs.getInt(6),
                         rs.getInt(7),
-                        rs.getInt(8));
+                        rs.getInt(8),
+                        rs.getDate(9)
+                );
+                ProductDetailsService productDetailsService = new ProductDetailsService();
+                List<ProductDetails> productDetails = productDetailsService.findByProductId(productId);
+                product.setProductDetails(productDetails);
                 products.add(product);
             }
             returnConnection(connection);
@@ -196,7 +218,51 @@ public class ProductService implements Repository<Product> {
 
     @Override
     public void deleteById(int id) {
+        String query = "DELETE FROM `products` WHERE `products`.`product_id` = ?";
+        try {
+            Connection conn = getConnection();
+            PreparedStatement ps = conn.prepareStatement(query);
+            ps.setInt(1, 1);
+            int i = ps.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
 
+    public int updateStatus(int id, int status) {
+        String query = "UPDATE `products` SET `status` = ? WHERE `products`.`product_id` =? ";
+        try {
+            Connection conn = getConnection();
+            PreparedStatement ps = conn.prepareStatement(query);
+            ps.setInt(1, status);
+            ps.setInt(2, id);
+            int i = ps.executeUpdate();
+            returnConnection(conn);
+
+            return i;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
+    public void updateProduct(Product product) {
+        String query = " UPDATE `products` SET `name`= ?,`status`=?,`description`=?,`img`=?,`category_id`=?,`price`=?,`sales_percent`=? WHERE product_id =?";
+        try {
+            Connection conn = getConnection();
+            PreparedStatement ps = conn.prepareStatement(query);
+            ps.setString(1, product.getName());
+            ps.setInt(2, product.getStatus());
+            ps.setString(3, product.getDescription());
+            ps.setString(4, product.getImg());
+            ps.setInt(5, product.getCategoryId());
+            ps.setInt(6, product.getPrice());
+            ps.setInt(7, product.getDiscount());
+            ps.setInt(8, product.getProductId());
+            ps.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 
     @Override
@@ -255,7 +321,7 @@ public class ProductService implements Repository<Product> {
 
     }
 
-    public List<Product> findAllSortByDate(int limit){
+    public List<Product> findAllSortByDate(int limit) {
         String query = "SELECT * FROM `products` ORDER BY product_id DESC LIMIT ?";
         List<Product> products = new ArrayList<>();
         try {
@@ -272,7 +338,7 @@ public class ProductService implements Repository<Product> {
                         rs.getString(5),
                         rs.getInt(6),
                         rs.getInt(7),
-                        rs.getInt(8));
+                        rs.getInt(8), rs.getDate(9));
                 products.add(product);
             }
             returnConnection(connection);
@@ -285,7 +351,7 @@ public class ProductService implements Repository<Product> {
 
     public static void main(String[] args) throws SQLException {
         ProductService productService = new ProductService();
-//        productService.addTag(1,5);
-        System.out.println(productService.findAllSortByDate(6));
+        productService.updateProduct(new Product(1,"update",1,"des","",1,10000000,10 ,new Date()));
+//        1 thanh cong
     }
 }

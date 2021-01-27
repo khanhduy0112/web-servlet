@@ -1,7 +1,9 @@
 package com.nlu.controller;
 
 import com.nlu.model.Product;
+import com.nlu.service.ProductDetailsService;
 import com.nlu.service.ProductService;
+import com.nlu.service.SaveImageUtil;
 import lombok.SneakyThrows;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
@@ -86,36 +88,25 @@ public class UploadProductController extends HttpServlet {
                         color = value;
                     }
                 }
-                System.out.println(name + ":" + value);
             } else {
-                String fieldName = item.getFieldName();
                 String fileName = item.getName();
                 productnew.setImg("/images/" + fileName);
-                String contentType = item.getContentType();
-                boolean isInMemory = item.isInMemory();
-                long sizeInBytes = item.getSize();
 
                 InputStream is = item.getInputStream();
-//                SaveImageUtil.write(is, fileName);
+                SaveImageUtil.write(is, fileName);
                 System.out.println("DA LUU FILE THANH CONG");
             }
 
         }
-//        productService.add(productnew);
-//        int id = productService.getLastedProductId();
-//        for (Integer tagId :
-//                tagIds) {
-//            productService.addTag(id, tagId);
-//        }
-//        new ProductDetailsService().save(size, color, quality, id, 1);
-//        req.setAttribute("notify", "San pham vua duoc them vao");
-//        req.getRequestDispatcher("/admin/products.jsp").forward(req, resp);
-//        System.out.println(productnew.toString());
-
-        PrintWriter writer = resp.getWriter();
-
-        writer.println(productnew.getName());
-        writer.println(color);
+        productService.add(productnew);
+        int id = productService.getLastedProductId();
+        for (Integer tagId :
+                tagIds) {
+            productService.addTag(id, tagId);
+        }
+        new ProductDetailsService().save(size, color, quality, id, 1);
+        req.setAttribute("notify", "San pham vua duoc them vao");
+        req.getRequestDispatcher("/admin/products.jsp").forward(req, resp);
 
 
     }
