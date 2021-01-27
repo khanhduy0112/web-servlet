@@ -1,3 +1,11 @@
+<%@ page import="com.nlu.model.User" %>
+
+<%
+    User user = (User) session.getAttribute("auth");
+    if (user == null || !user.getRole().equals("admin")) {
+        response.sendRedirect("/");
+    }
+%>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>

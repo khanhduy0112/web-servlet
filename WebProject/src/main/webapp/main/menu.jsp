@@ -1,3 +1,4 @@
+<%@ page import="com.nlu.model.User" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <nav class="navbar navbar-light navbar-expand-md navigation-clean-search">
@@ -10,7 +11,7 @@
                 <li class="nav-item"><a class="nav-link" href="/products?category=all&pages=1">Sản phẩm</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Liên hệ</a></li>
                 <li class="nav-item"><a class="nav-link" href="/main/cart.jsp">Giỏ hàng<i class="fa fa-shopping-cart"
-                                                                             style="padding-left: 5px;"></i></a>
+                                                                                          style="padding-left: 5px;"></i></a>
                 </li>
                 <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown"
                                                  aria-expanded="false" href="#">Doanh Mục</a>
@@ -30,8 +31,17 @@
                 </form>
 
             </ul>
-            <span class="navbar-text "> <a class="login" href="/main/login.jsp">Đăng Nhập</a></span>
-            <a class="btn btn-light action-button" role="button" href="#">Đăng Kí</a>
+            <%
+                User auth = (User) session.getAttribute("auth");
+                request.setAttribute("auth", auth);
+            %>
+            <c:if test="${auth == null}">
+                <span class="navbar-text "> <a class="login" href="/main/login.jsp">Đăng Nhập</a></span>
+            </c:if>
+            <c:if test="${auth != null}">
+                <span class="navbar-text "> <a class="login" href="/logout">Đăng Xuất</a></span>
+            </c:if>
+            <a class="btn btn-light action-button" role="button" href="/main/register.jsp">Đăng Kí</a>
         </div>
 
     </div>

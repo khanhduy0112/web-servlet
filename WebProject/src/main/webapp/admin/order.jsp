@@ -1,7 +1,16 @@
+<%
+    User user =(User) session.getAttribute("auth");
+    if (user == null || !user.getRole().equals("admin")){
+        response.sendRedirect("/");
+    }
+%>
+
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="com.nlu.service.CartService" %>
 <%@ page import="com.nlu.model.Cart" %>
 <%@ page import="java.util.List" %>
+<%@ page import="com.nlu.model.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <html>
 <head>

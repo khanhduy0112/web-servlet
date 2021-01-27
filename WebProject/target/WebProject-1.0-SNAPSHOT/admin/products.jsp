@@ -1,3 +1,12 @@
+
+<%@ page import="com.nlu.model.User" %>
+
+<%
+    User user =(User) session.getAttribute("auth");
+    if (user == null || !user.getRole().equals("admin")){
+        response.sendRedirect("/");
+    }
+%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page import="com.nlu.service.ProductService" %>

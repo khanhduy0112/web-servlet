@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
@@ -15,7 +15,8 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="assets/css/styles.min.css" />
+    <link rel="stylesheet" href="assets/css/styles.min.css"/>
+    <meta name="java-servlet-login" content="943711010190-tbtu1urd81cru4lb7qmnk2pg0ml0dafi.apps.googleusercontent.com">
 </head>
 <style>
     #login-box {
@@ -278,10 +279,10 @@
 >
 <div class="container" style="margin-top: 40px; height: 510px">
     <!-- Start: Login Box [En] -->
-    <div
-            class="d-flex flex-column justify-content-center"
-            id="login-box"
-            style="margin-top: 15px; height: 480px; border-style: none"
+    <form method="post" action="/login"
+          class="d-flex flex-column justify-content-center"
+          id="login-box"
+          style="margin-top: 15px; height: 480px; border-style: none"
     >
         <div class="login-box-header">
             <h4
@@ -328,13 +329,11 @@
                     padding-left: 10px;
                     padding-top: 10px;
                   "
-                                href="#"
-                        ><i
+                                href="https://accounts.google.com/o/oauth2/auth?scope=email&redirect_uri=http://localhost:8080/main/login-sucess.jsp&response_type=code
+    &client_id=943711010190-tbtu1urd81cru4lb7qmnk2pg0ml0dafi.apps.googleusercontent.com&approval_prompt=force"><i
                                 class="fa fa-google"
-                                style="color: rgb(255, 255, 255); width: 56px"
-                        ></i
-                        >Google+</a
-                        >
+                                style="color: rgb(255, 255, 255); width: 56px"></i
+                        >Google+</a>
                     </div>
                 </div>
             </div>
@@ -367,16 +366,14 @@
                     style="margin-top: 10px"
                     required=""
                     placeholder="Tên Đăng Nhập"
-                    minlength="6"
+
             /><input
                 style="height: 50px; margin-top: 10px"
                 type="password"
                 name="password"
                 class="password-input form-control"
                 style="margin-top: 10px"
-                required=""
                 placeholder="Mật khẩu"
-                minlength="6"
         />
         </div>
         <div class="submit-row" style="margin-bottom: 8px; padding-top: 0px">
@@ -414,7 +411,7 @@
                 Chưa có tào khoản?<a id="register-link" href="#">Đăng Kí!</a>
             </p>
         </div>
-    </div>
+    </form>
     <!-- End: Login Box [En] -->
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

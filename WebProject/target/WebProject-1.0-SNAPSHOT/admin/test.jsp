@@ -1,10 +1,11 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Admin
-  Date: 0023 01 23 02021
-  Time: 2:21 PM
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="com.nlu.model.User" %>
+
+<%
+    User user =(User) session.getAttribute("auth");
+    if (user == null || !user.getRole().equals("admin")){
+        response.sendRedirect("/");
+    }
+%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>

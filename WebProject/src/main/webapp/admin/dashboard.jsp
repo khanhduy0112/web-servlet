@@ -1,100 +1,33 @@
+
+<%@ page import="com.nlu.model.User" %>
+
+<%
+  User user =(User) session.getAttribute("auth");
+  if (user == null || !user.getRole().equals("admin")){
+    response.sendRedirect("/");
+  }
+%>
 <%@ page contentType="text/html;charset=UTF-8"%>
 <html>
   <head>
     <title>Dashboard</title>
     <meta charset="UTF-8" />
-    <link rel="shortcut icon" href="./images/webpage.svg" type="image/x-icon" />
-    <link rel="stylesheet" href="./style/main.css" />
-    <link rel="stylesheet" href="./style/dashboard.css" />
+    <link rel="shortcut icon" href="/admin/images/webpage.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/admin/style/main.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/admin/style/dashboard.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   </head>
   <body>
     <div class="body_container">
       <!-- ===***LEFT***=== -->
-      <div class="left_wrapper">
-        <div class="left">
-          <div class="dashboard_title">
-            <img src="./images/webpage.svg" class="img-icon" alt="" />
-            <h2><a href="dashboard.jsp">DASH BOARD</a></h2>
-            <img
-              src="./images/close.svg"
-              id="close-btn"
-              alt=""
-              class="img-icon"
-            />
-          </div>
-          <div class="left_menu">
-            <div class="menu">
-              <div class="menu_title">
-                <img src="./images/received.svg" class="img-icon" alt="" />
-                <h4>Sản Phẩm</h4>
-              </div>
-              <div class="sub_menu">
-                <a href="products.jsp">Tất Cả</a>
-                <a href="product-new.jsp">Thêm Sản Phẩm</a>
-                <a href="category.jsp">Doanh Mục</a>
-              </div>
-            </div>
-            <div class="menu">
-              <div class="menu_title">
-                <img src="./images/profile.svg" class="img-icon" alt="" />
-                <h4>Người Dùng</h4>
-              </div>
-              <div class="sub_menu">
-                <a href="users.jsp">Quản Trị</a>
-                <a href="user-new.jsp">Thêm Người Dùng</a>
-                <a href="user-setting.jsp">Cài Đặt</a>
-                <a href="customers.jsp">Khách Hàng</a>
-              </div>
-            </div>
-            <div class="menu">
-              <div class="menu_title">
-                <img src="./images/box.svg" class="img-icon" alt="" />
-                <h4>Đơn Hàng</h4>
-              </div>
-              <div class="sub_menu">
-                <a href="order.jsp">Tất Cả Đơn Hàng</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <jsp:include page="sidebar.jsp"/>
       <!-- ===***END OF LEFT***=== -->
 
       <!-- ===***RIGHT***=== -->
       <div class="right_wrapper">
         <div class="right">
-          <div class="topbar">
-            <div class="topbar_content">
-              <div class="logo">
-                <img
-                  src="./images/bars-solid.svg"
-                  alt=""
-                  class="img-icon"
-                  id="left_menu-toggle"
-                />
-                <h3>SKED</h3>
-              </div>
-              <div class="current_user">
-                <h5 class="current_user-name">Duy Nguyen</h5>
-                <img
-                  class="img-small"
-                  src="./images/wallpaperflare.com_wallpaper (1).jpg"
-                  alt=""
-                />
-                <div class="current_user-sub-menu">
-                  <a href=""
-                    ><img src="./images/settings.svg" alt="" />Cài Đặt</a
-                  >
-                  <a href="login.jsp"
-                    ><img src="./images/logout.svg" alt="" /> Đăng xuất
-                  </a>
-                  <a href="../index.jsp"> THOÁT </a>
-                </div>
-              </div>
-            </div>
-          </div>
+         <jsp:include page="top-bar.jsp"/>
           <!-- end of right topbar -->
           <div class="right_content">
             <div class="view_option">

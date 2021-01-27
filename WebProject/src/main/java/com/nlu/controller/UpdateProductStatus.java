@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet("/products/update-status")
-public class RemoveProductController extends HttpServlet {
+public class UpdateProductStatus extends HttpServlet {
 
     ProductService productService = new ProductService();
 

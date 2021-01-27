@@ -1,3 +1,12 @@
+
+<%@ page import="com.nlu.model.User" %>
+
+<%
+  User user =(User) session.getAttribute("auth");
+  if (user == null || !user.getRole().equals("admin")){
+    response.sendRedirect("/");
+  }
+%>
 <%@ page contentType="text/html;charset=UTF-8"%>
 <html >
   <head>
@@ -13,107 +22,33 @@
   <body>
     <div class="body_container">
       <!-- ===***LEFT***=== -->
-      <div class="left_wrapper">
-        <div class="left">
-          <div class="dashboard_title">
-            <img src="./images/webpage.svg" class="img-icon" alt="" />
-            <h2><a href="dashboard.jsp">DASH BOARD</a></h2>
-            <img
-              src="./images/close.svg"
-              id="close-btn"
-              alt=""
-              class="img-icon"
-            />
-          </div>
-          <div class="left_menu">
-            <div class="menu">
-              <div class="menu_title">
-                <img src="./images/received.svg" class="img-icon" alt="" />
-                <h4>Sản Phẩm</h4>
-              </div>
-              <div class="sub_menu">
-                <a href="products.jsp">Tất Cả</a>
-                <a href="product-new.jsp">Thêm Sản Phẩm</a>
-                <a href="category.jsp">Doanh Mục</a>
-              </div>
-            </div>
-            <div class="menu">
-              <div class="menu_title">
-                <img src="./images/profile.svg" class="img-icon" alt="" />
-                <h4 class="active">Người Dùng</h4>
-              </div>
-              <div class="sub_menu">
-                <a href="users.jsp">Quản Trị</a>
-                <a href="user-new.jsp">Thêm Người Dùng</a>
-                <a href="user-setting.jsp">Cài Đặt</a>
-                <a href="customers.jsp">Khách Hàng</a>
-              </div>
-            </div>
-            <div class="menu">
-              <div class="menu_title">
-                <img src="./images/box.svg" class="img-icon" alt="" />
-                <h4>Đơn Hàng</h4>
-              </div>
-              <div class="sub_menu">
-                <a href="order.jsp">Tất Cả Đơn Hàng</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+   <jsp:include page="sidebar.jsp"/>
       <!-- ===***END OF LEFT***=== -->
 
       <!-- ===***RIGHT***=== -->
       <div class="right_wrapper">
         <div class="right">
-          <div class="topbar">
-            <div class="topbar_content">
-              <div class="logo">
-                <img
-                  src="./images/bars-solid.svg"
-                  alt=""
-                  class="img-icon"
-                  id="left_menu-toggle"
-                />
-                <h3>SKED</h3>
-              </div>
-              <div class="current_user">
-                <h5 class="current_user-name">Duy Nguyen</h5>
-                <img
-                  class="img-small"
-                  src="./wallpaperflare.com_wallpaper (1).jpg"
-                  alt=""
-                />
-                <div class="current_user-sub-menu">
-                  <a href=""
-                    ><img src="./images/settings.svg" alt="" />Cài Đặt</a
-                  >
-                  <a href="login.jsp"
-                    ><img src="./images/logout.svg" alt="" /> Đăng Xuất
-                  </a>
-                  <a href="../index.jsp"> THOÁT </a>
-                </div>
-              </div>
-            </div>
-          </div>
+          <jsp:include page="top-bar.jsp"/>
           <!-- end of right topbar -->
           <div class="right_content">
             <h3 style="font-weight: 400">Thêm Người Dùng</h3>
             <small style="font-weight: 100; font-style: italic"
               >Tạo người dùng mới và thêm vào trang</small
             >
-            <div class="new_user">
+            <form method="post" action="/admin/new-admin" class="new_user">
               <table style="width: 100%">
                 <tr>
+                  <span>jkssdjsdkjdsh</span>
                   <th>
                     Tên người dùng
                     <small style="font-weight: 100; font-style: italic"
                       >(bắt buộc)</small
                     >
                   </th>
-                  <td><input type="text" id="username" required /></td>
+                  <td><input type="text" id="username" name="username" required /></td>
                 </tr>
                 <tr>
+                  <span>jkssdjsdkjdsh</span>
                   <th>
                     Email
                     <small style="font-weight: 100; font-style: italic"
@@ -123,20 +58,6 @@
                   <td><input type="email" name="email" id="email" /></td>
                 </tr>
                 <tr>
-                  <th>Tên</th>
-                  <td><input type="text" name="firstname" id="firstname" /></td>
-                </tr>
-                <tr>
-                  <th>Họ</th>
-                  <td>
-                    <input type="text" name="lastname" id="lastname" />
-                  </td>
-                </tr>
-                <tr>
-                  <th>Trang Cá Nhân</th>
-                  <td><input type="url" name="page" id="page" /></td>
-                </tr>
-                <tr>
                   <th>
                     Mật khẩu
                     <small style="font-weight: 100; font-style: italic"
@@ -144,7 +65,7 @@
                     >
                   </th>
                   <td>
-                    <input name="password" id="password" />
+                    <input type="password" name="password" id="password" />
                   </td>
                 </tr>
                 <tr>
@@ -155,24 +76,14 @@
                     >
                   </th>
                   <td>
-                    <input name="password" id="password" />
+                    <input type="password" name="confirm-password" id="confirm-password" />
                   </td>
                 </tr>
 
-                <tr>
-                  <th>Vai trò</th>
-                  <td>
-                    <select name="" id="">
-                      <option value="">Admin</option>
-                      <option value="">Quản lí cửa hàng</option>
-                      <option value="">Nhân viên</option>
-                      <option value="">Khách hàng</option>
-                    </select>
-                  </td>
-                </tr>
+
               </table>
-            </div>
-            <button>Add new user</button>
+              <button type="submit">Thêm</button>
+            </form>
           </div>
         </div>
       </div>

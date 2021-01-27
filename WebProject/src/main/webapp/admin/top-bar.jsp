@@ -21,7 +21,7 @@
                     <img src="/admin/images/settings.svg" alt=""/>Cài đặt
                 </a>
                 <a href="login.jsp">
-                    <img src="/admin/images/logout.svg" alt=""/> Đăng xuất
+                    <img src="/logout" alt=""/> Đăng xuất
                 </a>
                 <a href="../index.jsp"> THOÁT </a>
             </div>
