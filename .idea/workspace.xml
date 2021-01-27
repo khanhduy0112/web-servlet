@@ -25,7 +25,147 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2bab16c-7d14-46e3-a295-edc2e38cd0d9" name="Default Changelist" comment="fix ck">
-      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/admin/style/category_setting.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Adidas-Human-Race-NMD-Pharrell-Pale-Nude-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Adidas-Human-Race-NMD-Pharrell-Sun-Glow-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Adidas-NMD-R1-Bape-Olive-Camo-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Adidas-Ultra-Boost-Mid-Kith-x-Nonnative-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Adidas-Ultra-Boost-Sneakersnstuff-Social-Status-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Adidas-Ultra-Boost-Wood-Wood-Black-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Adidas-Yeezy-500-Moon-Yellow-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Air-Jordan-1-Mid-SE-Fearless-Maison-Chateau-Rouge-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Air-Jordan-1-Retro-High-Hyper-Royal-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Air-Jordan-1-Retro-High-Union-Los-Angeles-Black-Toe-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Air-Jordan-1-Retro-Low-Slip-Chicago-W-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Air-Jordan-11-Retro-Low-Cool-Grey-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Air-Jordan-12-Retro-Black-University-Gold-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Air-Jordan-12-Retro-Michigan-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Air-Jordan-13-Retro-Lakers-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Air-Jordan-13-Retro-Ray-Allen-PE.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Air-Jordan-3-Retro-Black-Cement-2011-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Air-Jordan-3-Retro-JTH-Bio-Beige-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Air-Jordan-3-Retro-Quai54-2018-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Air-Jordan-3-Retro-SE-Fire-Red-Product-Back.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Air-Jordan-3-Retro-White-Cement-88-2013-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Air-Jordan-5-Retro-Top-3-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Air-Jordan-6-Retro-Travis-Scott-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Air-Jordan-7-Retro-Premio-Bin-23-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Air-Jordan-Delta-SP-Sail.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Asics-Gel-Lyte-III-Ronnie-Fieg-Super-Green-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-All-Star-BB-Evo-Black-University-Red.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-All-Star-Pro-BB-Kelly-Oubre-Soul.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-Chuck-70-Archive-Restructured-Hi-American-Flag-Black-White-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-Chuck-70-Hi-Cherry-Red-Pink-Pop.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-Chuck-70-Ox-Classic-Carhartt-WIP-Orange-Realtree.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-Chuck-Taylor-All-Star-70s-Hi-Golf-Le-Fleur-Burlap-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-Chuck-Taylor-All-Star-70s-Hi-Golf-le-Fleur-Flames-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-Chuck-Taylor-All-Star-70s-Hi-Gore-tex-Orange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-Chuck-Taylor-All-Star-70s-Hi-JW-Anderson-Felt-Quiet-Shade.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-Chuck-Taylor-All-Star-70s-Hi-Off-White-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-Chuck-Taylor-All-Star-70s-Hi-Pride-Rainbow-2019.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-Chuck-Taylor-All-Star-70s-Hi-Shaniqwa-Jarvis-Floral.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-Chuck-Taylor-All-Star-70s-Hi-Tom-and-Jerry-Product.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-Chuck-Taylor-All-Star-70s-Hi-Undercover-The-New-Warriors-Camo-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-Chuck-Taylor-All-Star-70s-Hiker-Slam-Jam-x-Cali-Thornhill-DeWitt-Olive.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-Chuck-Taylor-All-Star-70s-Ox-Archival-Zebra-Print.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-Chuck-Taylor-All-Star-70s-Ox-Comme-des-Garcons-Play-Bright-Green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-Chuck-Taylor-All-Star-70s-Ox-Comme-des-Garcons-Play-Bright-Pink-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-Chuck-Taylor-All-Star-70s-Ox-Denim-Tears-Black.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-Chuck-Taylor-All-Star-Hi-Anderson-Bluu-Lemonade.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-Chuck-Taylor-All-Star-Hi-BHM-2020.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-Chuck-Taylor-All-Star-Hi-Frozen-2-White.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-Chuck-Taylor-All-Star-Hi-Pride-Silver-2019-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-Chuck-Taylor-All-Star-Ox-Scooby-Doo-Group-1.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-Chuck-Taylor-All-Star-Reconstructed-70s-Hi-Sunblocked-Black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-Chuck-Taylor-II-Hi-Black-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-ERX-260-Hi-TheSoloist.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-ERX-260-Mid-Feng-Chen-Wang-W.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-ERX-260-Mid-Just-Don-Animal-Pack-Black-Product.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-GLF-Gianno-Ox-Vintage-White.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-Jack-Purcell-Chukka-Mid-ASAP-Nast-Beechnut.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-Jack-Purcell-Chukka-Mid-ASAP-Nast-Red.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-Mono-Patchwork-Chuck-70-High-Top-Forest-Egret-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-One-Star-Ox-Carhartt-WIP-White-Product.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-One-Star-Ox-Golf-Le-Fleur-Rainbow-Sole-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-One-Star-Ox-Tyler-The-Creator-Golf-Le-Fleur-Mono-Green-Product.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-One-Star-Platform-Low-MadeMe-Pink-W.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-One-Star-SNS-Camo-Brown.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-Pro-Leather-Mid-Chinese-New-Year-2020.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Converse-Run-Star-Hike-Sunblocked-Total-Orange.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Foamposite-One-Supreme-NYC-Black-Product.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Jordan-4-Retro-White-Laser-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/NIke-Air-More-Uptempo-Supreme-Black-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/New-Balance-999-Canvas-Waxed-Navy.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-Air-Force-1-High-Emotionally-Unavailable-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-Air-Force-1-Low-Clot-Blue-Silk-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-Air-Force-1-Low-Day-of-the-Dead-2019-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-Air-Force-1-Low-Off-White-Black-White-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-Air-Force-1-Low-Off-White-Volt-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-Air-Force-1-Low-Travis-Scott-Sail-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-Air-Max-1-97-Sean-Wotherspoon-NA-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-Air-Max-1-Tinker-Sketch.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-Air-Max-2-Light-Atmos-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-Air-Max-90-Duck-Camo-Volt-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-Air-Max-90-Recraft-Royal-W-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-Air-Max-97-Have-a-Nike-Day-1.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-Air-Max-97-Ultra-17-Skepta-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-Air-More-Uptempo-Supreme-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-Air-VaporMax-Off-White-2018-1.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-Dunk-High-Black-Varsity-Maize-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-Dunk-Low-Brazil-2020.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-Dunk-Low-Comme-des-Garcons-Print-W-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-Kobe-4-Protro-Undefeated-Milwaukee-Bucks-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-Kobe-6-Grinch-Christmas-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-Kyrie-5-Spongebob-Patrick.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-Kyrie-5-Spongebob-Squidward.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-LD-Waffle-Sacai-White-Grey-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-Lebron-X-10-EXT-Hazelnut-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-PG-2-5-Playstation-Wolf-Grey-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-PG-3-NASA.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-SB-Dunk-High-Paul-Rodriguez-Mexico_01.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-SB-Dunk-Low-CNY-Chinese-New-Year-2021-1.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-SB-Dunk-Low-Parra-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-Zoom-Fly-Off-White-Pink-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Nike-Zoom-Fly-Off-White-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Puma-Bow-Slide-Rihanna-Fenty-Olive-W-Product.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Authentic-Frida-Kahlo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Ave-Pro-Black-White.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Chukka-Pro-The-Simpsons-Bart-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Chukka-Supreme-Jean-Paul-Gaultier-Peach.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-ComfyCush-Slip-Skool-Checkerboard-Clear-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Comfycush-Slip-On-Half-Big-Checker-Product.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Era-Led-Zeppelin-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Era-Patchwork.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Era-Stacked-The-Nightmare-Before-Christmas-Product.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Era-Supreme-Jean-Paul-Gaultier-Peach-Product.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Era-WTAPS-Bones-Orange.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Half-Cab-Dime-Pink-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Lampin-Comme-des-Garcons-1.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Old-Skool-Crazy-Checks-Multi_01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Old-Skool-Dark-Aura-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Old-Skool-Los.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Old-Skool-Notre-Red-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Sk8-Hi-Checkerboard-Multi.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Sk8-Hi-Concepts-Mohair.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Sk8-Hi-Discovery-Shark-Week-2019.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Sk8-Hi-Led-Zeppelin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Sk8-Hi-MTE-NASA-Space-Voyager-Black-Product.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Sk8-Hi-Marvel-Black-Panther-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Sk8-Hi-Patchwork-Product.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Sk8-Hi-Supreme-Fuck-the-World-Blue-Product.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Sk8-Hi-Supreme-Fuck-the-World-White-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Sk8-Hi-Supreme-Skull-Pile-Green-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Sk8-Hi-The-Nightmare-Before-Christmas-Sally.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Sk8-Hi-Van-Gogh-Almond-Blossom-W-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Slip-On-Marvel-Spider-Man-Product.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Slip-On-Tie-Dye-Grateful-Dead-W.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Slip-On-V-The-Simpsons-Fish-Blinky-TD.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/Vans-Slip-On-WTAPS-White-Black.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/adidas-Crazylight-Boost-Low-2016-James-Harden-Ghost-Pepper.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/adidas-NMD-Hu-Pharrell-Solar-Pack-Orange.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/adidas-Superstar-Lunar-New-Year-2020.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/adidas-Ultra-Boost-4-Game-of-Thrones-House-Stark-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/adidas-Yeezy-500-Salt-Product.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebProject/src/main/webapp/images/adidas-Yeezy-Boost-380-Mist-Product.webp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,13 +225,15 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -211,6 +353,7 @@
       <workItem from="1610686876441" duration="1557000" />
       <workItem from="1610702831578" duration="1329000" />
       <workItem from="1611580461706" duration="311000" />
+      <workItem from="1611711701458" duration="9069000" />
     </task>
     <task id="LOCAL-00001" summary="add ckeditor and ckfinder">
       <created>1610180352274</created>
