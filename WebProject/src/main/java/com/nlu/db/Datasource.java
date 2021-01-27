@@ -11,12 +11,12 @@ public class Datasource {
     }
 
     public static Connection getConnection() {
-        System.out.println("Get one connection");
+//        System.out.println("Get one connection");
         return connectionPool.getConnectionFromPool();
     }
 
     public static void returnConnection(Connection conn) {
-        System.out.println("Release connection");
+//        System.out.println("Release connection");
         connectionPool.returnConnectionToPool(conn);
     }
 

@@ -298,103 +298,104 @@ body {
 #minus_stock {
   width: 1rem;
 }
+/*}*/
 /* END OF EDIT PRODUCT  */
 
 /* TABLE STYLE */
-.table_wrapper {
-  width: 95%;
-  margin: auto;
-}
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-.caption {
-  height: 10vh;
-  position: relative;
-  text-align: center;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-}
-table th {
-  text-align: left;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  background-color: blueviolet;
-  color: white;
-}
-table tr {
-  width: 100%;
-  border-bottom: 1px solid #f2f2f2;
-  font-size: 0.75rem;
-  color: #6c757d;
-}
-table tr {
-  width: 100%;
-}
-table tbody tr:hover {
-  background-color: #f2f2f2;
-}
+/*.table_wrapper {*/
+/*  width: 95%;*/
+/*  margin: auto;*/
+/*}*/
+/*table {*/
+/*  border-collapse: collapse;*/
+/*  width: 100%;*/
+/*}*/
+/*.caption {*/
+/*  height: 10vh;*/
+/*  position: relative;*/
+/*  text-align: center;*/
+/*  margin-top: 1rem;*/
+/*  margin-bottom: 2rem;*/
+/*}*/
+/*table th {*/
+/*  text-align: left;*/
+/*  padding-top: 1rem;*/
+/*  padding-bottom: 1rem;*/
+/*  background-color: blueviolet;*/
+/*  color: white;*/
+/*}*/
+/*table tr {*/
+/*  width: 100%;*/
+/*  border-bottom: 1px solid #f2f2f2;*/
+/*  font-size: 0.75rem;*/
+/*  color: #6c757d;*/
+/*}*/
+/*table tr {*/
+/*  width: 100%;*/
+/*}*/
+/*table tbody tr:hover {*/
+/*  background-color: #f2f2f2;*/
+/*}*/
 
-table td,
-th {
-  padding: 8px;
-}
-.find_item {
-  position: absolute;
-  padding: 5px;
-  right: 0;
-  width: 50%;
-  height: 40px;
-  border: 1px solid #adb5bd;
-  border-radius: 5px;
-  top: 50%;
-  outline: none;
-  margin-right: 1rem;
-}
-.find_item::placeholder {
-  padding-left: 10px;
-}
+/*table td,*/
+/*th {*/
+/*  padding: 8px;*/
+/*}*/
+/*.find_item {*/
+/*  position: absolute;*/
+/*  padding: 5px;*/
+/*  right: 0;*/
+/*  width: 50%;*/
+/*  height: 40px;*/
+/*  border: 1px solid #adb5bd;*/
+/*  border-radius: 5px;*/
+/*  top: 50%;*/
+/*  outline: none;*/
+/*  margin-right: 1rem;*/
+/*}*/
+/*.find_item::placeholder {*/
+/*  padding-left: 10px;*/
+/*}*/
 /* END OF TABLE STYLE  */
 
 @media screen and (max-width: 1255px) {
-  table {
-    border: 0;
-  }
+  /*table {*/
+  /*  border: 0;*/
+  /*}*/
 
   .caption {
     font-size: 1.3em;
   }
 
-  table thead {
-    border: none;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-  }
+  /*table thead {*/
+  /*  border: none;*/
+  /*  clip: rect(0 0 0 0);*/
+  /*  height: 1px;*/
+  /*  margin: -1px;*/
+  /*  overflow: hidden;*/
+  /*  padding: 0;*/
+  /*  position: absolute;*/
+  /*  width: 1px;*/
+  /*}*/
 
-  table tr {
-    border-bottom: 3px solid #2ec4b6;
-    display: block;
-    margin-bottom: 0.625em;
-    width: 100%;
-    text-align: left;
-  }
+  /*table tr {*/
+  /*  border-bottom: 3px solid #2ec4b6;*/
+  /*  display: block;*/
+  /*  margin-bottom: 0.625em;*/
+  /*  width: 100%;*/
+  /*  text-align: left;*/
+  /*}*/
 
-  table td {
-    border-bottom: 1px solid #ddd;
-    display: block;
-    font-size: 0.8em;
-    text-align: left;
-  }
+  /*table td {*/
+  /*  border-bottom: 1px solid #ddd;*/
+  /*  display: block;*/
+  /*  font-size: 0.8em;*/
+  /*  text-align: left;*/
+  /*}*/
 
-  table td:last-child {
-    border-bottom: 0;
-  }
+  /*table td:last-child {*/
+  /*  border-bottom: 0;*/
+  /*}*/
   .menu_title {
     min-width: 100% !important;
   }
